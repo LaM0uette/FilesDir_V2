@@ -14,4 +14,9 @@ public static class Flags
             _ => SEnum.SearchMode.In
         };
     }
+    
+    public static string[] GetWords()
+    {
+        return Flaggers.Flags.String("w", "").Split(":");
+    }
 }

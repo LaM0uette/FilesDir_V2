@@ -9,8 +9,6 @@ public static class FilesDir
     public static void Main()
     {
         var flags = GetFlags();
-        
-        Console.WriteLine(flags.SearchMode);
     }
 
     #endregion
@@ -24,6 +22,7 @@ public static class FilesDir
         return new Structs.SFlags
         {
             SearchMode = Flags.GetFlagSearchMode(),
+            Words = Flags.GetWords(),
         };
     }
 
