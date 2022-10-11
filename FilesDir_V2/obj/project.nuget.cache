@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WbY99xI41jPeXFTM9oT5c/Qn4TfpiqoeiHRhc1IWpjdqWG2rn+yhQbqq3hwFtQSs80OPQVaKyrHhZLcY8rrW7g==",
+  "dgSpecHash": "TdwOTOOwMovwJGlusXhe8a7ZUNSq/Wg4Mbgql7eHXJb8lfmxGfs0G/Gefm7xqoKHOj1B16/0a1DNJ7FFs8KPmg==",
   "success": true,
   "projectFilePath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDir_V2\\FilesDir_V2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\XD5965\\.nuget\\packages\\flaggers\\1.0.0\\flaggers.1.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

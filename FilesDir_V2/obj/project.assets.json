@@ -1,11 +1,35 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Flaggers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Flaggers.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Flaggers.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Flaggers/1.0.0": {
+      "sha512": "ISnmh15WlptSezAp2/eEDa5R0+4Sf2qB9b2z3nh0siZJZjyhOv10wifH33XbUrRPULdRYRPMOaOPF449aE06Gg==",
+      "type": "package",
+      "path": "flaggers/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "flaggers.1.0.0.nupkg.sha512",
+        "flaggers.nuspec",
+        "lib/net6.0/Flaggers.dll"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Flaggers >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\XD5965\\.nuget\\packages\\": {}
@@ -46,6 +70,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "Flaggers": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

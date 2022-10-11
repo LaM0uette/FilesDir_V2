@@ -1,0 +1,17 @@
+﻿namespace FilesDir_V2.Core;
+
+public static class Flags
+{
+    public static SEnum.SearchMode GetFlagSearchMode()
+    {
+        return Flaggers.Flags.String("m", "%") switch
+        {
+            "%" => SEnum.SearchMode.In,
+            "=" => SEnum.SearchMode.Equal,
+            "^" => SEnum.SearchMode.Begin,
+            "$" => SEnum.SearchMode.End,
+            "r" => SEnum.SearchMode.Regex,
+            _ => SEnum.SearchMode.In
+        };
+    }
+}
