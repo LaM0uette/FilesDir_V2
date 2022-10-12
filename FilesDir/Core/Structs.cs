@@ -7,5 +7,6 @@ public static class Structs
         public SEnum.SearchMode SearchMode;
         public string[] Words;
         public string[] Extensions;
+        public int PoolSize;
     }
 }

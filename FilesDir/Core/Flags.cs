@@ -24,4 +24,9 @@ public static class Flags
     {
         return Flaggers.Flags.String("e", "").Split(":");
     }
+
+    public static int GetPoolSize()
+    {
+        return Flaggers.Flags.Int("p", 100);
+    }
 }

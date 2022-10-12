@@ -13,6 +13,7 @@ public static class Api
             SearchMode = Flags.GetFlagSearchMode(),
             Words = Flags.GetWords(),
             Extensions = Flags.GetExtensions(),
+            PoolSize = Flags.GetPoolSize(),
         };
     }
 
