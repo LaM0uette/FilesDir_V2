@@ -24,6 +24,16 @@ public static class Flags
     {
         return Flaggers.Flags.String("e", "*").Split(":");
     }
+    
+    public static string[] GetFoldersBlackList()
+    {
+        return Flaggers.Flags.String("bl", "").Split(":");
+    }
+    
+    public static string[] GetFoldersWhiteList()
+    {
+        return Flaggers.Flags.String("wl", "").Split(":");
+    }
 
     public static int GetPoolSize()
     {
@@ -43,15 +53,5 @@ public static class Flags
     public static bool GetSilent()
     {
         return Flaggers.Flags.Bool("s", false);
-    }
-    
-    public static string[] GetFoldersBlackList()
-    {
-        return Flaggers.Flags.String("bl", "").Split(":");
-    }
-    
-    public static string[] GetFoldersWhiteList()
-    {
-        return Flaggers.Flags.String("wl", "").Split(":");
     }
 }

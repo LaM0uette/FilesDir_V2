@@ -13,12 +13,12 @@ public static class Api
             SearchMode = Flags.GetFlagSearchMode(),
             Words = Flags.GetWords(),
             Extensions = Flags.GetExtensions(),
+            FoldersBlackList = Flags.GetFoldersBlackList(),
+            FoldersWhiteList = Flags.GetFoldersWhiteList(),
             PoolSize = Flags.GetPoolSize(),
             Casse = Flags.GetCasse(),
             Utf = Flags.GetUtf(),
-            Silent = Flags.GetSilent(),
-            FoldersBlackList = Flags.GetFoldersBlackList(),
-            FoldersWhiteList = Flags.GetFoldersWhiteList()
+            Silent = Flags.GetSilent()
         };
     }
 

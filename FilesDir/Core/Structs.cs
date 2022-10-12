@@ -13,6 +13,12 @@ public static class Structs
         /// Extension ou liste d'extensions à filtrer
         public string[] Extensions;
         
+        /// BlackList des dossiers
+        public string[] FoldersBlackList;
+        
+        /// WhiteList des dossiers (ne cherche que dans ces dossiers)
+        public string[] FoldersWhiteList;
+        
         /// Taille de processus en simultanés
         public int PoolSize;
         
@@ -24,11 +30,5 @@ public static class Structs
         
         /// Mode silencieux, évite les prints à l'écran et latence inutile
         public bool Silent;
-        
-        /// BlackList des dossiers
-        public string[] FoldersBlackList;
-        
-        /// WhiteList des dossiers (ne cherche que dans ces dossiers)
-        public string[] FoldersWhiteList;
     }
 }
