@@ -34,6 +34,22 @@ public static class Structs
     
     public struct SResults
     {
+        /// Requête utilisée pour la recherche
         public string Req;
+        
+        /// Timer total
+        public double TotalTimer;
+        
+        /// Timer de la recherche
+        public double SearchTimer;
+        
+        /// Nombres de fichiers trouvés
+        public int NbFiles;
+        
+        /// Nombres total de fichiers traités
+        public int NbFilesTotal;
+        
+        /// Nombres total de dossiers traités
+        public int NbFolders;
     }
 }

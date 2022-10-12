@@ -36,12 +36,13 @@ public static class Search
     {
         Var.Log.Separator("RECHERCHE");
         
-        var searchTimer = new Stopwatch();
-        searchTimer.Start();
+        var sw = new Stopwatch();
+        sw.Start();
         
         
         
-        searchTimer.Stop();
+        sw.Stop();
+        Var.Results.SearchTimer = sw.Elapsed.TotalMinutes;
     }
 
     #endregion
