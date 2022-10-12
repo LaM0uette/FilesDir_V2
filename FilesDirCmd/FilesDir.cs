@@ -37,6 +37,8 @@ public static class FilesDir
         flags.Init();
         flags.CheckPoolSize();
         
+        Var.Dump.String("id;Fichier;Date_Creation;Date_Modification;Lien_Fichier;Lien");
+        
         await flags.Run();
 
         sw.Stop();

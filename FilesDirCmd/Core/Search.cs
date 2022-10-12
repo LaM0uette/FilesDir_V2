@@ -41,7 +41,7 @@ public static class Search
         
         // TODO: REMETTRE LE BON DOSSIER !
         //await Api.DirSearchAsync(Var.CurrentDir);
-        await Api.DirSearchAsync("T:\\- 4 Suivi Appuis\\18-Partage");
+        await Api.DirSearchAsync("T:\\- 4 Suivi Appuis\\18-Partage\\de VILLELE DORIAN");
         
         sw.Stop();
         Var.Results.SearchTimer = sw.Elapsed.TotalSeconds;

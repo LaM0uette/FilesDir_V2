@@ -46,13 +46,16 @@ public static class Api
             {
                 await Task.Run(() =>
                 {
-                    var name = System.IO.Path.GetFileNameWithoutExtension(file);
+                    var fileInfo = new FileInfo(file);
+                    var creaDate = File.GetCreationTime(file);
+                    var modifDate = File.GetLastWriteTime(file);
 
-                    if (!name.ToLower().Contains("cem") || file.Contains('~')) return;
-                    
-                    Var.Log.Ok(name);
-                    Var.Dump.String(name);
+                    if (!fileInfo.Name.ToLower().Contains("cem") || file.Contains('~')) return;
+
                     Interlocked.Add(ref Var.Results.NbFiles, 1);
+                    
+                    Var.Log.Ok(fileInfo.Name);
+                    Var.Dump.String($"{Var.Results.NbFiles};{fileInfo.Name};{creaDate};{modifDate};{fileInfo.DirectoryName};{fileInfo.Directory}");
                 }, _);
             }
             catch (Exception)

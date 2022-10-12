@@ -8,11 +8,6 @@ public static class Tasks
 {
     #region Windows
     
-    public static string GetDirTemp()
-    {
-        return $"C:\\Users\\{TskWindows.GetGuid()}\\FilesDIR_Temp";
-    }
-    
     public static string GetCurrentDir()
     {
         return Directory.GetCurrentDirectory();
@@ -22,6 +17,21 @@ public static class Tasks
     {
         var assVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? string.Empty;
         return assVersion.Remove(assVersion.Length - 2);
+    }
+    
+    public static string GetDirTemp()
+    {
+        return $"C:\\Users\\{TskWindows.GetGuid()}\\FilesDIR_Temp";
+    }
+
+    public static string GetFileName(this string dir)
+    {
+        return Path.GetFileName(dir);
+    }
+    
+    public static string GetFilePath(this string dir)
+    {
+        return Path.GetDirectoryName(dir) ?? string.Empty;
     }
 
     #endregion
