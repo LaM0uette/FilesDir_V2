@@ -1,6 +1,6 @@
-﻿using FilesDir_V2.Core;
+﻿using Api.Core;
 
-namespace FilesDir_V2;
+namespace Api;
 
 public static class FilesDir
 {

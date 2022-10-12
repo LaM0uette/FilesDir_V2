@@ -1,4 +1,4 @@
-﻿namespace FilesDir_V2.Core;
+﻿namespace Api.Core;
 
 public static class Flags
 {

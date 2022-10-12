@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesDir_V2", "FilesDir_V2\FilesDir_V2.csproj", "{191165A3-3252-4D01-8E7E-219EDF2E9D50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{191165A3-3252-4D01-8E7E-219EDF2E9D50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
