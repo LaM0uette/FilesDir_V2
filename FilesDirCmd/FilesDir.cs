@@ -13,7 +13,7 @@ public static class FilesDir
 
     public static async Task Main()
     {
-        await Api.GetFlags().RunFilesDir();
+        await Flags.Get().RunFilesDir();
     }
 
     public static async Task WpfMain(this Structs.SFlags flags)

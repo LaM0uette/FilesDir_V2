@@ -2,7 +2,31 @@
 
 public static class Flags
 {
-    public static SEnum.SearchMode GetFlagSearchMode()
+    #region Statements
+
+    public static Structs.SFlags Get()
+    {
+        return new Structs.SFlags
+        {
+            SearchMode = GetFlagSearchMode(),
+            Words = GetWords(),
+            Extensions = GetExtensions(),
+            FoldersBlackList = GetFoldersBlackList(),
+            FoldersWhiteList = GetFoldersWhiteList(),
+            PoolSize = GetPoolSize(),
+            Casse = GetCasse(),
+            Utf = GetUtf(),
+            Silent = GetSilent()
+        };
+    }
+
+    #endregion
+
+    //
+
+    #region Fonctions
+
+    private static SEnum.SearchMode GetFlagSearchMode()
     {
         return Flaggers.Flags.String("m", "%") switch
         {
@@ -15,43 +39,45 @@ public static class Flags
         };
     }
     
-    public static string[] GetWords()
+    private static string[] GetWords()
     {
         return Flaggers.Flags.String("w", "").Split(":");
     }
     
-    public static string[] GetExtensions()
+    private static string[] GetExtensions()
     {
         return Flaggers.Flags.String("e", "*").Split(":");
     }
     
-    public static string[] GetFoldersBlackList()
+    private static string[] GetFoldersBlackList()
     {
         return Flaggers.Flags.String("bl", "").Split(":");
     }
     
-    public static string[] GetFoldersWhiteList()
+    private static string[] GetFoldersWhiteList()
     {
         return Flaggers.Flags.String("wl", "").Split(":");
     }
 
-    public static int GetPoolSize()
+    private static int GetPoolSize()
     {
         return Flaggers.Flags.Int("p", 100);
     }
     
-    public static bool GetCasse()
+    private static bool GetCasse()
     {
         return Flaggers.Flags.Bool("c", false);
     }
     
-    public static bool GetUtf()
+    private static bool GetUtf()
     {
         return Flaggers.Flags.Bool("utf", false);
     }
     
-    public static bool GetSilent()
+    private static bool GetSilent()
     {
         return Flaggers.Flags.Bool("s", false);
     }
+
+    #endregion
 }
