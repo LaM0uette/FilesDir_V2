@@ -11,6 +11,6 @@ public static class Search
         Var.Log.Separator("PARAMETRES");
         Var.Log.Param("INITIALISATION DE LA RECHERCHE EN COURS...");
         
-        Var.Log.Param("REQUETE UTILISEE :", flags.GetReqOfSearch());
+        Var.Log.Param("REQUETE UTILISEE : ", flags.GetReqOfSearch());
     }
 }

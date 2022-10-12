@@ -7,10 +7,10 @@ public static class Tasks
 {
     public static string GetReqOfSearch(this Structs.SFlags flags)
     {
-        var req = "FilesDir";
+        var req = "FilesDir ";
 
-        req += $"m={flags.SearchMode.GetSearchModeReq()}";
-        req += $"w={string.Join(":", flags.Words)}";
+        req += $"m={flags.SearchMode.GetSearchModeReq()} ";
+        req += $"w={string.Join(":", flags.Words)} ";
 
         return req;
     }
