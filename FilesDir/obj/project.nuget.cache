@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g3XqhTtJByhScVesH5BEVqkc8x54J97bqEu4bDue2fx2I8qtCuFbm3K6q1EzLLg+br7VJMBJG47S3APnW4ZIBQ==",
+  "dgSpecHash": "Mbvqfb1Z9byQ5tv9ZI6Oir3PWd0+y7kdjObb4gjHZxDN6dow4SnAZujCAnrFfAQyOtBpth2GVOPkNhO24qvSow==",
   "success": true,
-  "projectFilePath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDirCmd\\FilesDirCmd.csproj",
+  "projectFilePath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDir\\FilesDir.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\XD5965\\.nuget\\packages\\commontasks\\1.0.1\\commontasks.1.0.1.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\flaggers\\1.0.0\\flaggers.1.0.0.nupkg.sha512",
