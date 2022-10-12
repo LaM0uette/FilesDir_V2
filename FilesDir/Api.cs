@@ -17,6 +17,7 @@ public static class Api
             Casse = Flags.GetCasse(),
             Utf = Flags.GetUtf(),
             Silent = Flags.GetSilent(),
+            FoldersBlackList = Flags.GetFoldersBlackList(),
         };
     }
 

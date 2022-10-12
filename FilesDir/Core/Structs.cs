@@ -24,5 +24,8 @@ public static class Structs
         
         /// Mode silencieux, évite les prints à l'écran et latence inutile
         public bool Silent;
+        
+        /// BlackList des dossiers
+        public string[] FoldersBlackList;
     }
 }

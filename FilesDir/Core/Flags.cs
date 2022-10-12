@@ -44,4 +44,9 @@ public static class Flags
     {
         return Flaggers.Flags.Bool("s", false);
     }
+    
+    public static string[] GetFoldersBlackList()
+    {
+        return Flaggers.Flags.String("bl", "").Split(":");
+    }
 }
