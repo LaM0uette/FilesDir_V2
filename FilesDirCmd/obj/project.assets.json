@@ -42,10 +42,11 @@
           "lib/net6.0/Pastel.dll": {}
         }
       },
-      "FilesDir/1.0.0": {
+      "FilesDir/2.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "CommonTasks": "1.0.1",
           "Flaggers": "1.0.0",
           "Logger": "1.2.5"
         },
@@ -110,7 +111,7 @@
         "pastel.nuspec"
       ]
     },
-    "FilesDir/1.0.0": {
+    "FilesDir/2.0.0": {
       "type": "project",
       "path": "../FilesDir/FilesDir.csproj",
       "msbuildProject": "../FilesDir/FilesDir.csproj"
@@ -118,7 +119,8 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "FilesDir >= 1.0.0"
+      "CommonTasks >= 1.0.1",
+      "FilesDir >= 2.0.0"
     ]
   },
   "packageFolders": {
@@ -164,6 +166,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "CommonTasks": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

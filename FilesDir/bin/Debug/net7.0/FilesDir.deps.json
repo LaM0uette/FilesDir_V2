@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "FilesDir/2.0.0": {
         "dependencies": {
+          "CommonTasks": "1.0.1",
           "Flaggers": "1.0.0",
           "Logger": "1.2.5"
         },

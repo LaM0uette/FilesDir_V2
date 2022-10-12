@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using CommonTasks;
 using FilesDir.Core;
 
 namespace FilesDir.Utils;
@@ -9,7 +10,12 @@ public static class Tasks
     
     public static string GetDirTemp()
     {
-        return Path.GetTempPath();
+        return $"C:\\Users\\{TskWindows.GetGuid()}\\FilesDIR_Temp";
+    }
+    
+    public static string GetCurrentDir()
+    {
+        return Directory.GetCurrentDirectory();
     }
     
     public static string GetCurrentVersion()
@@ -54,9 +60,9 @@ public static class Tasks
         req += $"bl={string.Join(":", flags.FoldersBlackList)} ";
         req += $"wl={string.Join(":", flags.FoldersWhiteList)} ";
         
-        if (flags.Casse) req += "-c";
-        if (flags.Utf) req += "-utf";
-        if (flags.Silent) req += "-s";
+        if (flags.Casse) req += "-c ";
+        if (flags.Utf) req += "-utf ";
+        if (flags.Silent) req += "-s ";
         
         return req;
     }

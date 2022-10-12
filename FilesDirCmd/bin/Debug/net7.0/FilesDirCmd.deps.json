@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v7.0": {
       "FilesDirCmd/1.0.0": {
         "dependencies": {
-          "FilesDir": "1.0.0"
+          "CommonTasks": "1.0.1",
+          "FilesDir": "2.0.0"
         },
         "runtime": {
           "FilesDirCmd.dll": {}
@@ -50,8 +51,9 @@
           }
         }
       },
-      "FilesDir/1.0.0": {
+      "FilesDir/2.0.0": {
         "dependencies": {
+          "CommonTasks": "1.0.1",
           "Flaggers": "1.0.0",
           "Logger": "1.2.5"
         },
@@ -95,7 +97,7 @@
       "path": "pastel/3.0.1",
       "hashPath": "pastel.3.0.1.nupkg.sha512"
     },
-    "FilesDir/1.0.0": {
+    "FilesDir/2.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

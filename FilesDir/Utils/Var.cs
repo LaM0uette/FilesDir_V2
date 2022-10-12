@@ -8,6 +8,8 @@ public static class Var
     #region Windows
 
     public static readonly string DirTemp = Tasks.GetDirTemp();
+    
+    public static readonly string CurrentDir = Tasks.GetCurrentDir();
 
     #endregion
     

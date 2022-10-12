@@ -12,4 +12,8 @@
       <ProjectReference Include="..\FilesDir\FilesDir.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="CommonTasks" Version="1.0.1" />
+    </ItemGroup>
+
 </Project>

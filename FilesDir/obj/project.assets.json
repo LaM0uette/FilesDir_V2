@@ -99,6 +99,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "CommonTasks >= 1.0.1",
       "Flaggers >= 1.0.0",
       "Logger >= 1.2.5"
     ]
@@ -107,7 +108,7 @@
     "C:\\Users\\XD5965\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "2.0.0",
     "restore": {
       "projectUniqueName": "C:\\Prog\\C#\\FilesDir_V2\\FilesDir\\FilesDir.csproj",
       "projectName": "FilesDir",
@@ -143,6 +144,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "CommonTasks": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
           "Flaggers": {
             "target": "Package",
             "version": "[1.0.0, )"

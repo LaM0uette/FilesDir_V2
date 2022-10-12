@@ -39,12 +39,14 @@ public static class Search
         var sw = new Stopwatch();
         sw.Start();
         
+        // TODO: REMETTRE LE BON DOSSIER !
+        //await Api.DirSearchAsync(Var.CurrentDir);
         await Api.DirSearchAsync("T:\\- 4 Suivi Appuis\\18-Partage");
         
         sw.Stop();
         Var.Results.SearchTimer = sw.Elapsed.TotalSeconds;
         
-        Var.Log.Ok($"{Var.Results.NbFiles} - {Var.Results.SearchTimer} - {Var.Results.NbFilesTotal} - {Var.Results.NbFolders}");
+        Var.Log.VoidPink($"{Var.Results.NbFiles} - {Var.Results.SearchTimer} - {Var.Results.NbFilesTotal} - {Var.Results.NbFolders}");
     }
 
     #endregion
