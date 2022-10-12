@@ -13,8 +13,7 @@ public static class FilesDir
 
     public static async Task Main()
     {
-        var flags = Api.GetFlags();
-        await flags.RunFilesDir();
+        await Api.GetFlags().RunFilesDir();
     }
 
     public static async Task WpfMain(this Structs.SFlags flags)
@@ -30,21 +29,21 @@ public static class FilesDir
 
     private static async Task RunFilesDir(this Structs.SFlags flags)
     {
-        Drawing.Start();
         var sw = new Stopwatch();
         sw.Start();
         
+        Drawing.Start();
+
         flags.Init();
         flags.CheckPoolSize();
-        
-        Var.Dump.String("Id;Fichier;Date creation;Date de modification;Lien du fichier;Lien du dossier");
-        
+        flags.SetPoolSize();
+
         await flags.Run();
 
         sw.Stop();
         Var.Results.TotalTimer = sw.Elapsed.TotalSeconds;
         
-        //Drawing.End();
+        Drawing.End();
     }
 
     #endregion

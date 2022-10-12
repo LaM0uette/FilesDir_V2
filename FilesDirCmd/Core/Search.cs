@@ -7,8 +7,8 @@ namespace FilesDirCmd.Core;
 
 public static class Search
 {
-    #region Fonctions
-    
+    #region Configurations
+
     public static void Init(this Structs.SFlags flags)
     {
         Var.Log.Separator("PARAMETRES");
@@ -18,27 +18,42 @@ public static class Search
         Var.Results.Req = flags.GetReqOfSearch();
         
         Var.Log.Param("REQUETE UTILISEE : ", Var.Results.Req);
+        
+        Var.Log.Param("INITIALISATION DU FICHIER DUMP...");
+        Var.Dump.String("Id;Fichier;Date creation;Date de modification;Lien du fichier;Lien du dossier");
     }
 
     public static void CheckPoolSize(this Structs.SFlags flags)
     {
         if (flags.PoolSize < 2)
         {
-            flags.PoolSize = 2;
             Var.Log.Nok("Poolsize trop petite, impossible de mettre moins de 2");
-            Var.Log.Info("Modification de la Poolsize en cours");
+            Var.Log.Param("Modification de la Poolsize en cours...");
+            flags.PoolSize = 2;
         }
         
         Var.Log.Param("POOLSIZE MISE A : ", flags.PoolSize.ToString());
     }
 
+    public static void SetPoolSize(this Structs.SFlags flags)
+    {
+        Var.ParallelOptions = new ParallelOptions {MaxDegreeOfParallelism = flags.PoolSize};
+        Var.Log.Param("CONFIGURATION DE LA POOLSIZE : ", "OK");
+    }
+
+    #endregion
+    
+    //
+    
+    #region Functions
+
     public static async Task Run(this Structs.SFlags flags)
     {
-        Var.Log.Separator("RECHERCHE");
-        
         var sw = new Stopwatch();
         sw.Start();
         
+        Var.Log.Separator("RECHERCHE");
+
         // TODO: REMETTRE LE BON DOSSIER !
         //await Api.DirSearchAsync(Var.CurrentDir);
         await Api.DirSearchAsync("T:\\- 4 Suivi Appuis\\18-Partage\\de VILLELE DORIAN");
@@ -46,6 +61,7 @@ public static class Search
         sw.Stop();
         Var.Results.SearchTimer = sw.Elapsed.TotalSeconds;
         
+        // TODO: A SUPPRIMER ET A REMPLACER PAR UN BILAN
         Var.Log.VoidPink($"{Var.Results.NbFiles} - {Var.Results.SearchTimer} - {Var.Results.NbFilesTotal} - {Var.Results.NbFolders}");
     }
 

@@ -28,7 +28,7 @@ public static class Tasks
     
     //
 
-    #region SEnum
+    #region Functions
 
     public static string GetSearchModeReq(this SEnum.SearchMode searchMode)
     {
@@ -42,12 +42,6 @@ public static class Tasks
             _ => "%"
         };
     }
-
-    #endregion
-    
-    //
-
-    #region Structs
 
     public static string GetReqOfSearch(this Structs.SFlags flags)
     {
