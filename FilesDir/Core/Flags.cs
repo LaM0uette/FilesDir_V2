@@ -22,11 +22,21 @@ public static class Flags
     
     public static string[] GetExtensions()
     {
-        return Flaggers.Flags.String("e", "").Split(":");
+        return Flaggers.Flags.String("e", "*").Split(":");
     }
 
     public static int GetPoolSize()
     {
         return Flaggers.Flags.Int("p", 100);
+    }
+    
+    public static bool GetCasse()
+    {
+        return Flaggers.Flags.Bool("c", false);
+    }
+    
+    public static bool GetUtf()
+    {
+        return Flaggers.Flags.Bool("utf", false);
     }
 }

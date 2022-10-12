@@ -14,6 +14,8 @@ public static class Api
             Words = Flags.GetWords(),
             Extensions = Flags.GetExtensions(),
             PoolSize = Flags.GetPoolSize(),
+            Casse = Flags.GetCasse(),
+            Utf = Flags.GetUtf(),
         };
     }
 
