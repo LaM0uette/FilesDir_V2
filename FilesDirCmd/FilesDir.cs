@@ -1,5 +1,6 @@
 ﻿using FilesDir;
 using FilesDir.Core;
+using FilesDirCmd.Core;
 using FilesDirCmd.Utils;
 
 namespace FilesDirCmd;
@@ -28,8 +29,10 @@ public static class FilesDir
     private static void RunFilesDir(this Structs.SFlags flags)
     {
         Drawing.Start();
+        
+        flags.Init();
 
-        Drawing.End();
+        //Drawing.End();
     }
 
     #endregion
