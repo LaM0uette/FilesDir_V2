@@ -27,5 +27,5 @@ public static class Var
 
     //
 
-    public static Structs.SResults Results = new();
+    public static Results Results = new();
 }

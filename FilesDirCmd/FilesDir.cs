@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
-using FilesDir;
 using FilesDir.Core;
+using FilesDir.Interfaces;
 using FilesDir.Utils;
 using FilesDirCmd.Core;
 using FilesDirCmd.Utils;
@@ -13,10 +13,10 @@ public static class FilesDir
 
     public static async Task Main()
     {
-        await Flags.Get().RunFilesDir();
+        await new Flags().RunFilesDir();
     }
 
-    public static async Task WpfMain(this Structs.SFlags flags)
+    public static async Task WpfMain(this IFlags flags)
     {
         await flags.RunFilesDir();
     }
@@ -27,7 +27,7 @@ public static class FilesDir
 
     #region Fonctions
 
-    private static async Task RunFilesDir(this Structs.SFlags flags)
+    private static async Task RunFilesDir(this IFlags flags)
     {
         var sw = new Stopwatch();
         sw.Start();

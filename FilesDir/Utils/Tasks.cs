@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using CommonTasks;
 using FilesDir.Core;
+using FilesDir.Interfaces;
 
 namespace FilesDir.Utils;
 
@@ -30,20 +31,20 @@ public static class Tasks
 
     #region Functions
 
-    public static string GetSearchModeReq(this SEnum.SearchMode searchMode)
+    public static string GetSearchModeReq(this MyEnum.SearchMode searchMode)
     {
         return searchMode switch
         {
-            SEnum.SearchMode.In => "%",
-            SEnum.SearchMode.Equal => "=",
-            SEnum.SearchMode.Begin => "^",
-            SEnum.SearchMode.End => "$",
-            SEnum.SearchMode.Regex => "r",
+            MyEnum.SearchMode.In => "%",
+            MyEnum.SearchMode.Equal => "=",
+            MyEnum.SearchMode.Begin => "^",
+            MyEnum.SearchMode.End => "$",
+            MyEnum.SearchMode.Regex => "r",
             _ => "%"
         };
     }
 
-    public static string GetReqOfSearch(this Structs.SFlags flags)
+    public static string GetReqOfSearch(this IFlags flags)
     {
         var req = "FilesDir ";
 

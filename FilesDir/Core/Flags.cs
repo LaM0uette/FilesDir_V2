@@ -1,83 +1,49 @@
-﻿namespace FilesDir.Core;
+﻿using FilesDir.Interfaces;
 
-public static class Flags
+namespace FilesDir.Core;
+
+public partial class Flags : IFlags
 {
-    #region Statements
+    /// Mode de recherche
+    public  MyEnum.SearchMode SearchMode { get; set; }
+        
+    /// Mot ou liste de mots à rechercher
+    public string[] Words { get; set; }
+        
+    /// Extension ou liste d'extensions à filtrer
+    public string[] Extensions { get; set; }
+        
+    /// BlackList des dossiers
+    public string[] FoldersBlackList { get; set; }
+        
+    /// WhiteList des dossiers (ne cherche que dans ces dossiers)
+    public string[] FoldersWhiteList { get; set; }
+        
+    /// Taille de processus en simultanés
+    public int PoolSize { get; set; }
+        
+    /// Sensible à la casse ?
+    public bool Casse { get; set; }
+        
+    /// Sensible à l'encoding utf-8 ?
+    public bool Utf { get; set; }
+        
+    /// Mode silencieux, évite les prints à l'écran et latence inutile
+    public bool Silent { get; set; }
 
-    public static Structs.SFlags Get()
+    /// <summary>
+    /// Initialisation du constructeur
+    /// </summary>
+    public Flags()
     {
-        return new Structs.SFlags
-        {
-            SearchMode = GetFlagSearchMode(),
-            Words = GetWords(),
-            Extensions = GetExtensions(),
-            FoldersBlackList = GetFoldersBlackList(),
-            FoldersWhiteList = GetFoldersWhiteList(),
-            PoolSize = GetPoolSize(),
-            Casse = GetCasse(),
-            Utf = GetUtf(),
-            Silent = GetSilent()
-        };
+        SearchMode = GetFlagSearchMode();
+        Words = GetWords();
+        Extensions = GetExtensions();
+        FoldersBlackList = GetFoldersBlackList();
+        FoldersWhiteList = GetFoldersWhiteList();
+        PoolSize = GetPoolSize();
+        Casse = GetCasse();
+        Utf = GetUtf();
+        Silent = GetSilent();
     }
-
-    #endregion
-
-    //
-
-    #region Fonctions
-
-    private static SEnum.SearchMode GetFlagSearchMode()
-    {
-        return Flaggers.Flags.String("m", "%") switch
-        {
-            "%" => SEnum.SearchMode.In,
-            "=" => SEnum.SearchMode.Equal,
-            "^" => SEnum.SearchMode.Begin,
-            "$" => SEnum.SearchMode.End,
-            "r" => SEnum.SearchMode.Regex,
-            _ => SEnum.SearchMode.In
-        };
-    }
-    
-    private static string[] GetWords()
-    {
-        return Flaggers.Flags.String("w", "").Split(":");
-    }
-    
-    private static string[] GetExtensions()
-    {
-        return Flaggers.Flags.String("e", "*").Split(":");
-    }
-    
-    private static string[] GetFoldersBlackList()
-    {
-        return Flaggers.Flags.String("bl", "").Split(":");
-    }
-    
-    private static string[] GetFoldersWhiteList()
-    {
-        return Flaggers.Flags.String("wl", "").Split(":");
-    }
-
-    private static int GetPoolSize()
-    {
-        return Flaggers.Flags.Int("p", 100);
-    }
-    
-    private static bool GetCasse()
-    {
-        return Flaggers.Flags.Bool("c", false);
-    }
-    
-    private static bool GetUtf()
-    {
-        return Flaggers.Flags.Bool("utf", false);
-    }
-    
-    private static bool GetSilent()
-    {
-        return Flaggers.Flags.Bool("s", false);
-    }
-
-    #endregion
 }

@@ -1,13 +1,13 @@
 ﻿using System.Diagnostics;
 using FilesDir;
-using FilesDir.Core;
+using FilesDir.Interfaces;
 using FilesDir.Utils;
 
 namespace FilesDirCmd.Core;
 
 public static partial class Search
 {
-    public static async Task Run(this Structs.SFlags flags)
+    public static async Task Run(this IFlags flags)
     {
         var sw = new Stopwatch();
         sw.Start();

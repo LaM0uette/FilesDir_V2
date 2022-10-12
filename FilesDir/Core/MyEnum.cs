@@ -1,6 +1,6 @@
 ﻿namespace FilesDir.Core;
 
-public static class SEnum
+public static class MyEnum
 {
     public enum SearchMode
     {
