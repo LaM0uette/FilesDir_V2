@@ -1,5 +1,4 @@
-﻿using FilesDir.Core;
-using FilesDir.Interfaces;
+﻿using FilesDir.Interfaces;
 using FilesDir.Utils;
 
 namespace FilesDirCmd.Core;

@@ -21,11 +21,9 @@ public static class Var
     
     public static Dump Dump { get; } = new(DirTemp);
     
+    public static Results Results = new();
+    
     public static ParallelOptions ParallelOptions = new(){MaxDegreeOfParallelism = 1000};
 
     #endregion
-
-    //
-
-    public static Results Results = new();
 }

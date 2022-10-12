@@ -4,10 +4,6 @@ namespace FilesDir;
 
 public static class Api
 {
-    #region Functions
-
-    
-    
     public static async Task DirSearchAsync(string sDir)
     {
         // For each folders
@@ -51,6 +47,4 @@ public static class Api
             }
         });
     }
-
-    #endregion
 }
