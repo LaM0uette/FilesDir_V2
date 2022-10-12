@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "FilesDir/1.0.0": {
+      "FilesDir/2.0.0": {
         "dependencies": {
           "Flaggers": "1.0.0",
           "Logger": "1.2.5"
@@ -54,7 +54,7 @@
     }
   },
   "libraries": {
-    "FilesDir/1.0.0": {
+    "FilesDir/2.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

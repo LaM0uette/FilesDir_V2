@@ -1,7 +1,6 @@
 ﻿using FilesDir;
 using FilesDir.Core;
-using FilesDir.Utils;
-using Logger;
+using FilesDirCmd.Utils;
 
 namespace FilesDirCmd;
 
@@ -28,7 +27,9 @@ public static class FilesDir
 
     private static void RunFilesDir(this Structs.SFlags flags)
     {
-        Var.Log.DrawStart(Cst.Logo, Cst.Author, Cst.Version);
+        Drawing.Start();
+
+        Drawing.End();
     }
 
     #endregion
