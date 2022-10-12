@@ -5,7 +5,7 @@ using FilesDir.Interfaces;
 
 namespace FilesDir.Utils;
 
-public static class Tasks
+public static partial class Tasks
 {
     #region Windows
     
@@ -60,6 +60,16 @@ public static class Tasks
         if (flags.Silent) req += "-s ";
         
         return req;
+    }
+
+    public static void Check(this FileInfo fi)
+    {
+        if (!fi.FileInFilter()) return;
+
+        Interlocked.Add(ref Var.Results.NbFiles, 1);
+                    
+        Var.Log.Ok(fi.Name);
+        Var.Dump.String($"{Var.Results.NbFiles};{fi.Name};{fi.CreationTime};{fi.LastWriteTime};{fi.FullName};{fi.Directory}");
     }
 
     #endregion
