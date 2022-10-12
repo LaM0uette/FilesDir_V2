@@ -1,4 +1,5 @@
-﻿using FilesDir;
+﻿using System.Diagnostics;
+using FilesDir;
 using FilesDir.Core;
 using FilesDirCmd.Core;
 using FilesDirCmd.Utils;
@@ -29,10 +30,15 @@ public static class FilesDir
     private static void RunFilesDir(this Structs.SFlags flags)
     {
         Drawing.Start();
+        var totalTimer = new Stopwatch();
+        totalTimer.Start();
         
         flags.Init();
         flags.CheckPoolSize();
+        
+        flags.Run();
 
+        totalTimer.Stop();
         //Drawing.End();
     }
 

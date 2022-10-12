@@ -31,4 +31,9 @@ public static class Structs
         /// Mode silencieux, évite les prints à l'écran et latence inutile
         public bool Silent;
     }
+    
+    public struct SResults
+    {
+        public string Req;
+    }
 }

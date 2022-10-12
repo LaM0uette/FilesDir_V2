@@ -1,4 +1,5 @@
-﻿using Logger;
+﻿using FilesDir.Core;
+using Logger;
 
 namespace FilesDir.Utils;
 
@@ -13,4 +14,6 @@ public static class Var
     //
     
     public static Log Log { get; } = new(DirTemp);
+
+    public static Structs.SResults Results = new();
 }
