@@ -1,4 +1,5 @@
 ﻿using FilesDir.Core;
+using FilesDir.Utils;
 
 namespace FilesDir;
 
@@ -20,6 +21,49 @@ public static class Api
             Utf = Flags.GetUtf(),
             Silent = Flags.GetSilent()
         };
+    }
+    
+    public static async Task DirSearchAsync(string sDir)
+    {
+        // For each folders
+        await Parallel.ForEachAsync(Directory.GetDirectories(sDir), Var.ParallelOptions, async (dir, _) =>
+        {
+            try
+            {
+                await DirSearchAsync(dir);
+                Interlocked.Add(ref Var.Results.NbFolders, 1);
+            }
+            catch (Exception)
+            {
+                Interlocked.Add(ref Var.Results.NbFolders, 1);
+            }
+        });
+        
+        // For each files
+        await Parallel.ForEachAsync(Directory.GetFiles(sDir), Var.ParallelOptions, async (file, _) =>
+        {
+            try
+            {
+                await Task.Run(() =>
+                {
+                    var name = System.IO.Path.GetFileNameWithoutExtension(file);
+
+                    if (!name.ToLower().Contains("cem") || file.Contains('~')) return;
+                    
+                    Var.Log.Ok(name);
+                    Var.Dump.String(name);
+                    Interlocked.Add(ref Var.Results.NbFiles, 1);
+                }, _);
+            }
+            catch (Exception)
+            {
+                // ignored
+            }
+            finally
+            {
+                Interlocked.Add(ref Var.Results.NbFilesTotal, 1);
+            }
+        });
     }
 
     #endregion

@@ -11,15 +11,15 @@ public static class FilesDir
 {
     #region Statements
 
-    public static void Main()
+    public static async Task Main()
     {
         var flags = Api.GetFlags();
-        flags.RunFilesDir();
+        await flags.RunFilesDir();
     }
 
-    public static void WpfMain(this Structs.SFlags flags)
+    public static async Task WpfMain(this Structs.SFlags flags)
     {
-        flags.RunFilesDir();
+        await flags.RunFilesDir();
     }
 
     #endregion
@@ -28,7 +28,7 @@ public static class FilesDir
 
     #region Fonctions
 
-    private static void RunFilesDir(this Structs.SFlags flags)
+    private static async Task RunFilesDir(this Structs.SFlags flags)
     {
         Drawing.Start();
         var sw = new Stopwatch();
@@ -37,10 +37,10 @@ public static class FilesDir
         flags.Init();
         flags.CheckPoolSize();
         
-        flags.Run();
+        await flags.Run();
 
         sw.Stop();
-        Var.Results.TotalTimer = sw.Elapsed.TotalMinutes;
+        Var.Results.TotalTimer = sw.Elapsed.TotalSeconds;
         
         //Drawing.End();
     }

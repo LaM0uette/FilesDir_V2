@@ -12,8 +12,18 @@ public static class Var
     #endregion
     
     //
-    
+
+    #region Configs
+
     public static Log Log { get; } = new(DirTemp);
+    
+    public static Dump Dump { get; } = new(DirTemp);
+    
+    public static ParallelOptions ParallelOptions = new(){MaxDegreeOfParallelism = 1000};
+
+    #endregion
+
+    //
 
     public static Structs.SResults Results = new();
 }

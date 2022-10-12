@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
+using FilesDir;
 using FilesDir.Core;
 using FilesDir.Utils;
-using FilesDirCmd.Utils;
 
 namespace FilesDirCmd.Core;
 
@@ -32,17 +32,19 @@ public static class Search
         Var.Log.Param("POOLSIZE MISE A : ", flags.PoolSize.ToString());
     }
 
-    public static void Run(this Structs.SFlags flags)
+    public static async Task Run(this Structs.SFlags flags)
     {
         Var.Log.Separator("RECHERCHE");
         
         var sw = new Stopwatch();
         sw.Start();
         
-        
+        await Api.DirSearchAsync("T:\\- 4 Suivi Appuis\\18-Partage");
         
         sw.Stop();
-        Var.Results.SearchTimer = sw.Elapsed.TotalMinutes;
+        Var.Results.SearchTimer = sw.Elapsed.TotalSeconds;
+        
+        Var.Log.Ok($"{Var.Results.NbFiles} - {Var.Results.SearchTimer} - {Var.Results.NbFilesTotal} - {Var.Results.NbFolders}");
     }
 
     #endregion
