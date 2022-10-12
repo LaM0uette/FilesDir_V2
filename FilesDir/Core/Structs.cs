@@ -27,5 +27,8 @@ public static class Structs
         
         /// BlackList des dossiers
         public string[] FoldersBlackList;
+        
+        /// WhiteList des dossiers (ne cherche que dans ces dossiers)
+        public string[] FoldersWhiteList;
     }
 }

@@ -18,6 +18,7 @@ public static class Api
             Utf = Flags.GetUtf(),
             Silent = Flags.GetSilent(),
             FoldersBlackList = Flags.GetFoldersBlackList(),
+            FoldersWhiteList = Flags.GetFoldersWhiteList(),
         };
     }
 

@@ -18,6 +18,7 @@ public static class FilesDir
         Console.WriteLine(flags.Utf);
         Console.WriteLine(flags.Silent);
         foreach (var folder in flags.FoldersBlackList) Console.WriteLine(folder);
+        foreach (var folder in flags.FoldersWhiteList) Console.WriteLine(folder);
     }
 
     #endregion

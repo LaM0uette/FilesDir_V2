@@ -49,4 +49,9 @@ public static class Flags
     {
         return Flaggers.Flags.String("bl", "").Split(":");
     }
+    
+    public static string[] GetFoldersWhiteList()
+    {
+        return Flaggers.Flags.String("wl", "").Split(":");
+    }
 }
