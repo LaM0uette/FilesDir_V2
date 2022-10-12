@@ -31,6 +31,7 @@ public static class FilesDir
         Drawing.Start();
         
         flags.Init();
+        flags.CheckPoolSize();
 
         //Drawing.End();
     }
