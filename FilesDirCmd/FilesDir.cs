@@ -11,7 +11,6 @@ public static class FilesDir
         var flags = Api.GetFlags();
         
         Console.WriteLine(flags.SearchMode);
-
         foreach (var word in flags.Words)
         {
             Console.WriteLine(word);
@@ -20,10 +19,10 @@ public static class FilesDir
         {
             Console.WriteLine(ext);
         }
-        
         Console.WriteLine(flags.PoolSize);
         Console.WriteLine(flags.Casse);
         Console.WriteLine(flags.Utf);
+        Console.WriteLine(flags.Silent);
     }
 
     #endregion

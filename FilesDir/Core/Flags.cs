@@ -39,4 +39,9 @@ public static class Flags
     {
         return Flaggers.Flags.Bool("utf", false);
     }
+    
+    public static bool GetSilent()
+    {
+        return Flaggers.Flags.Bool("s", false);
+    }
 }

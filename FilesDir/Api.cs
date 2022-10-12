@@ -16,6 +16,7 @@ public static class Api
             PoolSize = Flags.GetPoolSize(),
             Casse = Flags.GetCasse(),
             Utf = Flags.GetUtf(),
+            Silent = Flags.GetSilent(),
         };
     }
 
