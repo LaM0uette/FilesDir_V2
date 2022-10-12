@@ -19,4 +19,9 @@ public static class Flags
     {
         return Flaggers.Flags.String("w", "").Split(":");
     }
+    
+    public static string[] GetExtensions()
+    {
+        return Flaggers.Flags.String("e", "").Split(":");
+    }
 }
