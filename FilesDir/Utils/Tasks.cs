@@ -24,16 +24,6 @@ public static class Tasks
         return $"C:\\Users\\{TskWindows.GetGuid()}\\FilesDIR_Temp";
     }
 
-    public static string GetFileName(this string dir)
-    {
-        return Path.GetFileName(dir);
-    }
-    
-    public static string GetFilePath(this string dir)
-    {
-        return Path.GetDirectoryName(dir) ?? string.Empty;
-    }
-
     #endregion
     
     //
