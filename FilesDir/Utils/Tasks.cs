@@ -54,8 +54,9 @@ public static partial class Tasks
         req += $"w={string.Join(":", flags.Words)} ";
         req += $"e={string.Join(":", flags.Extensions)} ";
         req += $"p={flags.PoolSize} ";
-        req += $"bl={string.Join(":", flags.FoldersBlackList)} ";
-        req += $"wl={string.Join(":", flags.FoldersWhiteList)} ";
+        
+        if (!flags.FoldersBlackList[0].Equals("")) req += $"bl={string.Join(":", flags.FoldersBlackList)} ";
+        if (!flags.FoldersWhiteList[0].Equals("")) req += $"wl={string.Join(":", flags.FoldersWhiteList)} ";
         
         if (flags.Casse) req += "-c ";
         if (flags.Utf) req += "-utf ";
