@@ -71,11 +71,13 @@ public static partial class Tasks
 
     public static void CheckFile(this IFlags flags, FileInfo fi)
     {
+        Var.Log.ProgressInfini($"Dossiers: {Var.Results.NbFolders} || Fichiers traités: {Var.Results.NbFilesTotal} || Fichiers trouvés: {Var.Results.NbFiles}");
+        
         if (!flags.FileInFilter(fi)) return;
 
         Interlocked.Add(ref Var.Results.NbFiles, 1);
-                    
-        Var.Log.Ok(fi.Name);
+
+        Var.Log.OkDel(fi.Name);
         Var.Dump.String($"{Var.Results.NbFiles};{fi.Name};{fi.CreationTime};{fi.LastWriteTime};{fi.FullName};{fi.Directory}");
     }
     
