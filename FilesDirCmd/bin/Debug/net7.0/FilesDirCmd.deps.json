@@ -31,7 +31,7 @@
           }
         }
       },
-      "Logger/1.2.10": {
+      "Logger/1.2.12": {
         "dependencies": {
           "CommonTasks": "1.0.1",
           "Pastel": "3.0.1"
@@ -55,7 +55,7 @@
         "dependencies": {
           "CommonTasks": "1.0.1",
           "Flaggers": "1.0.0",
-          "Logger": "1.2.10"
+          "Logger": "1.2.12"
         },
         "runtime": {
           "FilesDir.dll": {}
@@ -83,12 +83,12 @@
       "path": "flaggers/1.0.0",
       "hashPath": "flaggers.1.0.0.nupkg.sha512"
     },
-    "Logger/1.2.10": {
+    "Logger/1.2.12": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-eLlRPvRKFsoJcoqwVNkSeSuCVGIH+CjZmZUbUdGSESAmK72cGa3+f907u4eUTao+vlKhrWty/lOWuR9h7FfK0Q==",
-      "path": "logger/1.2.10",
-      "hashPath": "logger.1.2.10.nupkg.sha512"
+      "sha512": "sha512-8c3tvCZi/pf8KM2a8gHWQ4UKn2Ldq+jMh+xDusEGGu1dYmav0XUug/oGACpfy46dBJt+M3HddHP7JPOib5FzJw==",
+      "path": "logger/1.2.12",
+      "hashPath": "logger.1.2.12.nupkg.sha512"
     },
     "Pastel/3.0.1": {
       "type": "package",
