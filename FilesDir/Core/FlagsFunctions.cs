@@ -22,7 +22,7 @@ public partial class Flags
     
     private static string[] GetExtensions()
     {
-        return Flaggers.Flags.String("e", "*").Split(":");
+        return Flaggers.Flags.String("e", "*").ToLower().Split(":");
     }
     
     private static string[] GetFoldersBlackList()

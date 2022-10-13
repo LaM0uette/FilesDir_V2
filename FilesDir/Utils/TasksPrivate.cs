@@ -13,9 +13,9 @@ public static partial class Tasks
 
         if (
             !fileName.CheckFileIsClosed() ||
-            !flags.Words.Any(fileName.Contains)
-            ) 
-            return false;
+            !flags.Words.Any(fileName.Contains) ||
+            (!flags.Extensions.Any("*".Contains) && !flags.Extensions.Any(fi.Extension.ToLower().Contains))
+            ) return false;
 
         return true;
     }
