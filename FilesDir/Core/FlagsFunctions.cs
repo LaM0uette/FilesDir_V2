@@ -15,6 +15,11 @@ public partial class Flags
         };
     }
     
+    private static string GetFlagRegex()
+    {
+        return Flaggers.Flags.String("re", "");
+    }
+    
     private static string[] GetWords()
     {
         return Flaggers.Flags.String("w", "").Split(":");

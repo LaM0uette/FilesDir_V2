@@ -6,6 +6,9 @@ public partial class Flags : IFlags
 {
     /// Mode de recherche
     public  MyEnum.SearchMode SearchMode { get; set; }
+    
+    /// Commande regex
+    public  string Regex { get; set; }
         
     /// Mot ou liste de mots à rechercher
     public string[] Words { get; set; }
@@ -37,6 +40,7 @@ public partial class Flags : IFlags
     public Flags()
     {
         SearchMode = GetFlagSearchMode();
+        Regex = GetFlagRegex();
         Words = GetWords();
         Extensions = GetExtensions();
         FoldersBlackList = GetFoldersBlackList();

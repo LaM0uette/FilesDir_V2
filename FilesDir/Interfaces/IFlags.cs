@@ -5,6 +5,7 @@ namespace FilesDir.Interfaces;
 public interface IFlags
 {
     public  MyEnum.SearchMode SearchMode { get; set; }
+    public  string Regex { get; set; }
     public  string[] Words { get; set; }
     public  string[] Extensions { get; set; }
     public  string[] FoldersBlackList { get; set; }

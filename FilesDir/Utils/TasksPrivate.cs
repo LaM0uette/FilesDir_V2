@@ -11,12 +11,10 @@ public static partial class Tasks
         fileName = flags.CheckFileCasse(fileName);
         fileName = flags.CheckFileEncoding(fileName);
 
-        if (
-            !fileName.CheckFileIsClosed() ||
-            !flags.Words.Any(fileName.Contains) ||
-            (!flags.Extensions.Any("*".Contains) && !flags.Extensions.Any(fi.Extension.ToLower().Contains))
-            ) return false;
-
-        return true;
+        var fileShortName = fileName.Split(".")[0];
+        
+        return fileName.CheckFileIsClosed() &&
+               flags.CheckSearchMode(fileShortName) &&
+               (flags.Extensions.Any("*".Contains) || flags.Extensions.Any(fi.Extension.ToLower().Contains));
     }
 }
