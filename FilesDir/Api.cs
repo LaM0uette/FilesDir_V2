@@ -30,7 +30,7 @@ public static class Api
             {
                 await Task.Run(() =>
                 {
-                    new FileInfo(file).Check();
+                    flags.Check(new FileInfo(file));
                 }, _);
             }
             finally

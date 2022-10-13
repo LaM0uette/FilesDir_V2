@@ -1,4 +1,6 @@
-﻿using System.Reflection;
+﻿using System.Globalization;
+using System.Reflection;
+using System.Text;
 using CommonTasks;
 using FilesDir.Core;
 using FilesDir.Interfaces;
@@ -62,14 +64,31 @@ public static partial class Tasks
         return req;
     }
 
-    public static void Check(this FileInfo fi)
+    public static void Check(this IFlags flags, FileInfo fi)
     {
-        if (!fi.FileInFilter()) return;
+        if (!flags.FileInFilter(fi)) return;
 
         Interlocked.Add(ref Var.Results.NbFiles, 1);
                     
         Var.Log.Ok(fi.Name);
         Var.Dump.String($"{Var.Results.NbFiles};{fi.Name};{fi.CreationTime};{fi.LastWriteTime};{fi.FullName};{fi.Directory}");
+    }
+    
+    public static string RemoveAccent(this string txt)
+    {
+        var normalizedString = txt.Normalize(NormalizationForm.FormD);
+        var stringBuilder = new StringBuilder();
+
+        foreach (var c in normalizedString)
+        {
+            var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
+            if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+            {
+                stringBuilder.Append(c);
+            }
+        }
+
+        return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
     }
 
     #endregion
