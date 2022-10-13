@@ -19,6 +19,8 @@ public static class Api
             }
         });
 
+        if (!flags.CheckFolder(sDir)) return;
+        
         await flags.FileSearchAsync(sDir);
     }
     
@@ -30,7 +32,7 @@ public static class Api
             {
                 await Task.Run(() =>
                 {
-                    flags.Check(new FileInfo(file));
+                    flags.CheckFile(new FileInfo(file));
                 }, _);
             }
             finally

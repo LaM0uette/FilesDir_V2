@@ -64,7 +64,12 @@ public static partial class Tasks
         return req;
     }
 
-    public static void Check(this IFlags flags, FileInfo fi)
+    public static bool CheckFolder(this IFlags flags, string folder)
+    {
+        return flags.FolderInFilter(folder);
+    }
+
+    public static void CheckFile(this IFlags flags, FileInfo fi)
     {
         if (!flags.FileInFilter(fi)) return;
 
