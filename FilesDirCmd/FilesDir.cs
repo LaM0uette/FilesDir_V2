@@ -44,6 +44,7 @@ public static class FilesDir
         Var.Results.TotalTimer = sw.Elapsed.TotalSeconds;
         
         // TODO: A SUPPRIMER ET A REMPLACER PAR UN BILAN
+        Var.Log.Del();
         Var.Log.Separator("BILAN");
         Var.Log.VoidPink($"{Var.Results.NbFiles} - {Var.Results.SearchTimer} - {Var.Results.NbFilesTotal} - {Var.Results.NbFolders}");
         

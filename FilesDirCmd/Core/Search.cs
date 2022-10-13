@@ -17,9 +17,7 @@ public static partial class Search
         // TODO: REMETTRE LE BON DOSSIER !
         //await Api.DirSearchAsync(Var.CurrentDir);
         await flags.DirSearchAsync("T:\\- 4 Suivi Appuis\\18-Partage\\de VILLELE DORIAN");
-        
-        Var.Log.Del();
-        
+
         sw.Stop();
         Var.Results.SearchTimer = sw.Elapsed.TotalSeconds;
     }
