@@ -1,10 +1,8 @@
 ﻿using System.Diagnostics;
-using System.Text.RegularExpressions;
 using FilesDir.Core;
 using FilesDir.Interfaces;
 using FilesDir.Utils;
 using FilesDirCmd.Utils;
-using Logger;
 
 namespace FilesDir.Flags;
 
