@@ -1,9 +1,10 @@
-﻿using FilesDir.Core;
+﻿using System.Text.RegularExpressions;
+using FilesDir.Core;
 using FilesDir.Interfaces;
 
 namespace FilesDir.Utils;
 
-public static partial class Filter
+public static class Filter
 {
     public static string CheckFileCasse(this IFlags flags, string fileName)
     {
@@ -37,5 +38,36 @@ public static partial class Filter
             MyEnum.SearchMode.Regex => flags.CheckSearchModeRegex(fileName),
             _ => flags.CheckSearchModeIn(fileName)
         };
+    }
+    
+    
+    
+    //
+    
+    
+    
+    private static bool CheckSearchModeIn(this IFlags flags, string fileName)
+    {
+        return flags.Words.Any(fileName.Contains);
+    }
+    
+    private static bool CheckSearchModeEqual(this IFlags flags, string fileName)
+    {
+        return flags.Words.Any(fileName.Equals);
+    }
+    
+    private static bool CheckSearchModeBegin(this IFlags flags, string fileName)
+    {
+        return flags.Words.Any(fileName.StartsWith);
+    }
+    
+    private static bool CheckSearchModeEnd(this IFlags flags, string fileName)
+    {
+        return flags.Words.Any(fileName.EndsWith);
+    }
+    
+    private static bool CheckSearchModeRegex(this IFlags flags, string fileName)
+    {
+        return Regex.Match(fileName, flags.Regex).Success;
     }
 }

@@ -25,5 +25,17 @@ public interface IFlags
 
     public Task Run();
 
+    public Task DirSearchAsync(string sDir);
+
+    public Task FileSearchAsync(string sDir);
+
+    public bool CheckFolder(string folder);
+
+    public void CheckFile(FileInfo fi);
+
+    public bool FolderInFilter(string folder);
+
+    public bool FileInFilter(FileInfo fi);
+
     #endregion
 }

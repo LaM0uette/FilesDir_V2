@@ -76,6 +76,104 @@ public partial class Flags : IFlags
         sw.Stop();
         Var.Results.SearchTimer = sw.Elapsed.TotalSeconds;
     }
+    
+    public async Task DirSearchAsync(string sDir)
+    {
+        await Parallel.ForEachAsync(Directory.GetDirectories(sDir), Var.ParallelOptions, async (dir, _) =>
+        {
+            try
+            {
+                await DirSearchAsync(dir);
+            }
+            finally
+            {
+                Interlocked.Add(ref Var.Results.NbFolders, 1);
+            }
+        });
+
+        if (!this.CheckFolder(sDir)) return;
+        
+        await FileSearchAsync(sDir);
+    }
+    
+    public async Task FileSearchAsync(string sDir)
+    {
+        await Parallel.ForEachAsync(Directory.GetFiles(sDir), Var.ParallelOptions, async (file, _) =>
+        {
+            try
+            {
+                await Task.Run(() =>
+                {
+                    this.CheckFile(new FileInfo(file));
+                }, _);
+            }
+            finally
+            {
+                Interlocked.Add(ref Var.Results.NbFilesTotal, 1);
+            }
+        });
+    }
+    
+    public bool CheckFolder(string folder)
+    {
+        return this.FolderInFilter(folder);
+    }
+
+    public void CheckFile(FileInfo fi)
+    {
+        // TODO: A optimiser tout les 500msg avec le mode silencieux
+        if (!Words[0].Equals(""))
+            Var.Log.ProgressInfini("Dossiers: ", Var.Results.NbFolders, " || Fichiers traités: ", Var.Results.NbFilesTotal, " || Fichiers trouvés: ", Var.Results.NbFiles);
+
+        if (!this.FileInFilter(fi)) return;
+
+        Interlocked.Add(ref Var.Results.NbFiles, 1);
+
+        Var.Log.OkDel($"N°{Var.Results.NbFiles} => {fi.Name}");
+        Var.Dump.String($"{Var.Results.NbFiles};{fi.Name};{fi.CreationTime};{fi.LastWriteTime};{fi.FullName};{fi.Directory}");
+        
+        Var.Exports.Add(new Exports
+        {
+            Id = Var.Results.NbFiles,
+            Name = fi.Name,
+            CreaDate = fi.CreationTime,
+            ModifDate = fi.LastWriteTime,
+            FullName = fi.FullName,
+            Path = $"{fi.Directory}"
+        });
+    }
+    
+    public bool FolderInFilter(string folder)
+    {
+        FoldersBlackList = Array.ConvertAll(FoldersBlackList, word => word.ToLower());
+        FoldersWhiteList = Array.ConvertAll(FoldersWhiteList, word => word.ToLower());
+
+        if (!FoldersBlackList[0].Equals("") && FoldersBlackList.Any(folder.ToLower().Contains))
+        {
+            return false;
+        }
+        
+        if (!FoldersWhiteList[0].Equals("") && !FoldersWhiteList.Any(folder.ToLower().Contains))
+        {
+            return false;
+        }
+
+        return true;
+    }
+    
+    public bool FileInFilter(FileInfo fi)
+    {
+        var fileName = fi.Name;
+
+        fileName = this.CheckFileCasse(fileName);
+        fileName = this.CheckFileEncoding(fileName);
+
+        var fileShortName = fileName.Split(".")[0];
+        
+        return fileName.CheckFileIsClosed() &&
+               this.CheckSearchMode(fileShortName) &&
+               (this.Extensions.Any("*".Contains) || this.Extensions.Any(fi.Extension.ToLower().Contains));
+    }
 
     #endregion
 }
