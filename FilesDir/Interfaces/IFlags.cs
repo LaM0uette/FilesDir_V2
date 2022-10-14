@@ -23,24 +23,9 @@ public interface IFlags
 
     #region Fonctions
 
-    public Task Run();
+    public Task RunSearch();
 
-    public Task DirSearchAsync(string sDir);
-
-    public Task FileSearchAsync(string sDir);
-
-    public bool CheckFolder(string folder);
-
-    public void CheckFile(FileInfo fi);
-
-    public bool FolderInFilter(string folder);
-
-    public bool FileInFilter(FileInfo fi);
-    
-    public string CheckFileCasse(string fileName);
-    public string CheckFileEncoding(string fileName);
-    public bool CheckFileIsClosed(string fileName);
-    public bool CheckSearchMode(string fileName);
+    public string GetReqOfSearch();
 
     #endregion
 }

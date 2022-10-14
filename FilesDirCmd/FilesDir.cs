@@ -38,7 +38,7 @@ public static class FilesDir
         flags.CheckPoolSize();
         flags.SetPoolSize();
 
-        await flags.Run();
+        await flags.RunSearch();
 
         sw.Stop();
         Var.Results.TotalTimer = sw.Elapsed.TotalSeconds;

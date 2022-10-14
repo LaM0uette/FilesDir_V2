@@ -63,7 +63,7 @@ public partial class Flags : IFlags
 
     #region Fonctions
 
-    public async Task Run()
+    public async Task RunSearch()
     {
         var sw = new Stopwatch();
         sw.Start();
@@ -78,7 +78,32 @@ public partial class Flags : IFlags
         Var.Results.SearchTimer = sw.Elapsed.TotalSeconds;
     }
     
-    public async Task DirSearchAsync(string sDir)
+    public string GetReqOfSearch()
+    {
+        var req = "FilesDir ";
+
+        req += $"m={GetSearchModeReq(SearchMode)} ";
+        req += $"w={string.Join(":", Words)} ";
+        req += $"e={string.Join(":", Extensions)} ";
+        req += $"p={PoolSize} ";
+        
+        if (!FoldersBlackList[0].Equals("")) req += $"bl={string.Join(":", FoldersBlackList)} ";
+        if (!FoldersWhiteList[0].Equals("")) req += $"wl={string.Join(":", FoldersWhiteList)} ";
+        
+        if (Casse) req += "-c ";
+        if (Utf) req += "-utf ";
+        if (Silent) req += "-s ";
+        
+        return req;
+    }
+
+    #endregion
+    
+    //
+
+    #region Actions
+
+    private async Task DirSearchAsync(string sDir)
     {
         await Parallel.ForEachAsync(Directory.GetDirectories(sDir), Var.ParallelOptions, async (dir, _) =>
         {
@@ -92,12 +117,12 @@ public partial class Flags : IFlags
             }
         });
 
-        if (!this.CheckFolder(sDir)) return;
+        if (!CheckFolder(sDir)) return;
         
         await FileSearchAsync(sDir);
     }
     
-    public async Task FileSearchAsync(string sDir)
+    private async Task FileSearchAsync(string sDir)
     {
         await Parallel.ForEachAsync(Directory.GetFiles(sDir), Var.ParallelOptions, async (file, _) =>
         {
@@ -105,7 +130,7 @@ public partial class Flags : IFlags
             {
                 await Task.Run(() =>
                 {
-                    this.CheckFile(new FileInfo(file));
+                    CheckFile(new FileInfo(file));
                 }, _);
             }
             finally
@@ -115,18 +140,18 @@ public partial class Flags : IFlags
         });
     }
     
-    public bool CheckFolder(string folder)
+    private bool CheckFolder(string folder)
     {
-        return this.FolderInFilter(folder);
+        return FolderInFilter(folder);
     }
 
-    public void CheckFile(FileInfo fi)
+    private void CheckFile(FileInfo fi)
     {
         // TODO: A optimiser tout les 500msg avec le mode silencieux
         if (!Words[0].Equals(""))
             Var.Log.ProgressInfini("Dossiers: ", Var.Results.NbFolders, " || Fichiers traités: ", Var.Results.NbFilesTotal, " || Fichiers trouvés: ", Var.Results.NbFiles);
 
-        if (!this.FileInFilter(fi)) return;
+        if (!FileInFilter(fi)) return;
 
         Interlocked.Add(ref Var.Results.NbFiles, 1);
 
@@ -144,7 +169,7 @@ public partial class Flags : IFlags
         });
     }
     
-    public bool FolderInFilter(string folder)
+    private bool FolderInFilter(string folder)
     {
         FoldersBlackList = Array.ConvertAll(FoldersBlackList, word => word.ToLower());
         FoldersWhiteList = Array.ConvertAll(FoldersWhiteList, word => word.ToLower());
@@ -162,21 +187,21 @@ public partial class Flags : IFlags
         return true;
     }
     
-    public bool FileInFilter(FileInfo fi)
+    private bool FileInFilter(FileInfo fi)
     {
         var fileName = fi.Name;
 
-        fileName = this.CheckFileCasse(fileName);
-        fileName = this.CheckFileEncoding(fileName);
+        fileName = CheckFileCasse(fileName);
+        fileName = CheckFileEncoding(fileName);
 
         var fileShortName = fileName.Split(".")[0];
         
         return CheckFileIsClosed(fileName) &&
-               this.CheckSearchMode(fileShortName) &&
-               (this.Extensions.Any("*".Contains) || this.Extensions.Any(fi.Extension.ToLower().Contains));
+               CheckSearchMode(fileShortName) &&
+               (Extensions.Any("*".Contains) || Extensions.Any(fi.Extension.ToLower().Contains));
     }
     
-    public string CheckFileCasse(string fileName)
+    private string CheckFileCasse(string fileName)
     {
         if (Casse || SearchMode.Equals(MyEnum.SearchMode.Re)) return fileName;
 
@@ -184,7 +209,7 @@ public partial class Flags : IFlags
         return fileName.ToLower();
     }
     
-    public string CheckFileEncoding(string fileName)
+    private string CheckFileEncoding(string fileName)
     {
         if (Utf) return fileName;
 
@@ -192,12 +217,12 @@ public partial class Flags : IFlags
         return fileName.RemoveAccent();
     }
     
-    public bool CheckFileIsClosed(string fileName)
+    private static bool CheckFileIsClosed(string fileName)
     {
         return !fileName.Contains('~');
     }
     
-    public bool CheckSearchMode(string fileName)
+    private bool CheckSearchMode(string fileName)
     {
         return SearchMode switch
         {
@@ -207,6 +232,19 @@ public partial class Flags : IFlags
             MyEnum.SearchMode.End => Words.Any(fileName.EndsWith),
             MyEnum.SearchMode.Re => Regex.Match(fileName, Re).Success,
             _ => Words.Any(fileName.Contains)
+        };
+    }
+    
+    private static string GetSearchModeReq(MyEnum.SearchMode searchMode)
+    {
+        return searchMode switch
+        {
+            MyEnum.SearchMode.In => "%",
+            MyEnum.SearchMode.Equal => "=",
+            MyEnum.SearchMode.Begin => "^",
+            MyEnum.SearchMode.End => "$",
+            MyEnum.SearchMode.Re => "r",
+            _ => "%"
         };
     }
 

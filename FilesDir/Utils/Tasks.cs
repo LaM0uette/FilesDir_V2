@@ -2,8 +2,6 @@
 using System.Reflection;
 using System.Text;
 using CommonTasks;
-using FilesDir.Core;
-using FilesDir.Interfaces;
 using Logger;
 using NPOI.SS.UserModel;
 using NPOI.SS.Util;
@@ -41,38 +39,6 @@ public static class Tasks
     //
 
     #region Functions
-
-    public static string GetSearchModeReq(this MyEnum.SearchMode searchMode)
-    {
-        return searchMode switch
-        {
-            MyEnum.SearchMode.In => "%",
-            MyEnum.SearchMode.Equal => "=",
-            MyEnum.SearchMode.Begin => "^",
-            MyEnum.SearchMode.End => "$",
-            MyEnum.SearchMode.Re => "r",
-            _ => "%"
-        };
-    }
-
-    public static string GetReqOfSearch(this IFlags flags)
-    {
-        var req = "FilesDir ";
-
-        req += $"m={flags.SearchMode.GetSearchModeReq()} ";
-        req += $"w={string.Join(":", flags.Words)} ";
-        req += $"e={string.Join(":", flags.Extensions)} ";
-        req += $"p={flags.PoolSize} ";
-        
-        if (!flags.FoldersBlackList[0].Equals("")) req += $"bl={string.Join(":", flags.FoldersBlackList)} ";
-        if (!flags.FoldersWhiteList[0].Equals("")) req += $"wl={string.Join(":", flags.FoldersWhiteList)} ";
-        
-        if (flags.Casse) req += "-c ";
-        if (flags.Utf) req += "-utf ";
-        if (flags.Silent) req += "-s ";
-        
-        return req;
-    }
 
     public static string RemoveAccent(this string txt)
     {
