@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "eupU6f+oXzMHfSFGSPre1PFM6omQnHWMjAw2V/nScQtr65gXs4Yad2LZZJnJuqN0vU6oJBn3U3o1/oJ2TnXNSw==",
+  "dgSpecHash": "GFqQfEcDb8NBKuXZXjStDP6pc6CzMjZltvgGnWmE1wiQzJzYfRmsIFqg0IORxUk0z5Lntlb57JEVMKtqvDeJrw==",
   "success": true,
   "projectFilePath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDir\\FilesDir.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\XD5965\\.nuget\\packages\\commontasks\\1.0.1\\commontasks.1.0.1.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\flaggers\\1.0.0\\flaggers.1.0.0.nupkg.sha512",
-    "C:\\Users\\XD5965\\.nuget\\packages\\logger\\1.2.14\\logger.1.2.14.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\logger\\1.2.19\\logger.1.2.19.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\pastel\\3.0.1\\pastel.3.0.1.nupkg.sha512"
   ],
   "logs": []

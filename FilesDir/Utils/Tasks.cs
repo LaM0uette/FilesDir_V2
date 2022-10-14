@@ -73,8 +73,9 @@ public static partial class Tasks
     public static void CheckFile(this IFlags flags, FileInfo fi)
     {
         // TODO: A optimiser tout les 500msg avec le mode silencieux
-        Var.Log.ProgressInfini("Dossiers: ", Var.Results.NbFolders, " || Fichiers traités: ", Var.Results.NbFilesTotal, " || Fichiers trouvés: ", Var.Results.NbFiles);
-        
+        if (!flags.Words[0].Equals(""))
+            Var.Log.ProgressInfini("Dossiers: ", Var.Results.NbFolders, " || Fichiers traités: ", Var.Results.NbFilesTotal, " || Fichiers trouvés: ", Var.Results.NbFiles);
+
         if (!flags.FileInFilter(fi)) return;
 
         Interlocked.Add(ref Var.Results.NbFiles, 1);
