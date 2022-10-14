@@ -1,9 +1,14 @@
-﻿using FilesDir.Interfaces;
+﻿using System.Diagnostics;
+using FilesDir.Interfaces;
+using FilesDir.Utils;
+using Logger;
 
 namespace FilesDir.Core;
 
 public partial class Flags : IFlags
 {
+    #region Statements
+
     /// Mode de recherche
     public  MyEnum.SearchMode SearchMode { get; set; }
     
@@ -50,4 +55,27 @@ public partial class Flags : IFlags
         Utf = GetUtf();
         Silent = GetSilent();
     }
+
+    #endregion
+
+    //
+
+    #region Fonctions
+
+    public async Task Run()
+    {
+        var sw = new Stopwatch();
+        sw.Start();
+        
+        Var.Log.Separator("RECHERCHE", Log.TypeLog.Cmd);
+
+        // TODO: REMETTRE LE BON DOSSIER !
+        //await Api.DirSearchAsync(Var.CurrentDir);
+        await this.DirSearchAsync("T:\\- 4 Suivi Appuis\\18-Partage\\de VILLELE DORIAN");
+
+        sw.Stop();
+        Var.Results.SearchTimer = sw.Elapsed.TotalSeconds;
+    }
+
+    #endregion
 }

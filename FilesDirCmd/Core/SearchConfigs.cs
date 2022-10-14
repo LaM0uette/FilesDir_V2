@@ -3,7 +3,7 @@ using FilesDir.Utils;
 
 namespace FilesDirCmd.Core;
 
-public static partial class Search
+public static class SearchConfigs
 {
     public static void Init(this IFlags flags)
     {

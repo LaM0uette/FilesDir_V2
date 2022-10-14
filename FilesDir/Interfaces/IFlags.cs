@@ -4,6 +4,8 @@ namespace FilesDir.Interfaces;
 
 public interface IFlags
 {
+    #region Statements
+
     public  MyEnum.SearchMode SearchMode { get; set; }
     public  string Regex { get; set; }
     public  string[] Words { get; set; }
@@ -14,4 +16,14 @@ public interface IFlags
     public  bool Casse { get; set; }
     public  bool Utf { get; set; }
     public  bool Silent { get; set; }
+
+    #endregion
+
+    //
+
+    #region Fonctions
+
+    public Task Run();
+
+    #endregion
 }
