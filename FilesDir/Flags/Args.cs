@@ -44,7 +44,7 @@ public static class Args
 
     public static int GetPoolSize()
     {
-        return Flaggers.Flags.Int("p", 100);
+        return Flaggers.Flags.Int("p", 1000);
     }
     
     public static bool GetCasse()
