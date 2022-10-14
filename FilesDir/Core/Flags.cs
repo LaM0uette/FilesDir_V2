@@ -77,7 +77,7 @@ public partial class Flags : IFlags
         sw.Stop();
         Var.Results.SearchTimer = sw.Elapsed.TotalSeconds;
     }
-    
+
     public string GetReqOfSearch()
     {
         var req = "FilesDir ";
