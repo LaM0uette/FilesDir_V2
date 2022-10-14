@@ -128,8 +128,16 @@ public static partial class Tasks
         var styleDate = wb.CreateCellStyle();
         var dataFormatCustom = wb.CreateDataFormat();
         styleDate.DataFormat = dataFormatCustom.GetFormat("dd/MM/yyyy");
+        
+        var rowHeader = sht.CreateRow(0);
+        rowHeader.CreateCell(0).SetCellValue("Id");
+        rowHeader.CreateCell(1).SetCellValue("Nom du fichier");
+        rowHeader.CreateCell(2).SetCellValue("Date de création");
+        rowHeader.CreateCell(3).SetCellValue("Date de modification");
+        rowHeader.CreateCell(4).SetCellValue("Nom complet du fichier");
+        rowHeader.CreateCell(5).SetCellValue("Lien du fichier");
 
-        var idx = 0;
+        var idx = 1;
         foreach (var exp in Var.Exports)
         {
             var row = sht.CreateRow(idx);
@@ -167,6 +175,8 @@ public static partial class Tasks
         sht.AutoSizeColumn(3);
         sht.AutoSizeColumn(4);
         sht.AutoSizeColumn(5);
+
+        sht.SetAutoFilter(new CellRangeAddress(0, Var.Exports.Count + 1, 1, 5));
         
         wb.Write(fs);
     }
