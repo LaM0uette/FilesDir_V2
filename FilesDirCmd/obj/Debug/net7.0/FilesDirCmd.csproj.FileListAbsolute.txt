@@ -20,3 +20,14 @@ C:\Prog\C#\FilesDir_V2\FilesDirCmd\obj\Debug\net7.0\refint\FilesDirCmd.dll
 C:\Prog\C#\FilesDir_V2\FilesDirCmd\obj\Debug\net7.0\FilesDirCmd.pdb
 C:\Prog\C#\FilesDir_V2\FilesDirCmd\obj\Debug\net7.0\FilesDirCmd.genruntimeconfig.cache
 C:\Prog\C#\FilesDir_V2\FilesDirCmd\obj\Debug\net7.0\ref\FilesDirCmd.dll
+C:\Prog\C#\FilesDir_V2\FilesDirCmd\bin\Debug\net7.0\NOTICE.TXT
+C:\Prog\C#\FilesDir_V2\FilesDirCmd\bin\Debug\net7.0\NPOI.OOXML.dll
+C:\Prog\C#\FilesDir_V2\FilesDirCmd\bin\Debug\net7.0\NPOI.dll
+C:\Prog\C#\FilesDir_V2\FilesDirCmd\bin\Debug\net7.0\NPOI.OpenXml4Net.dll
+C:\Prog\C#\FilesDir_V2\FilesDirCmd\bin\Debug\net7.0\NPOI.OpenXmlFormats.dll
+C:\Prog\C#\FilesDir_V2\FilesDirCmd\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Prog\C#\FilesDir_V2\FilesDirCmd\bin\Debug\net7.0\ICSharpCode.SharpZipLib.dll
+C:\Prog\C#\FilesDir_V2\FilesDirCmd\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Prog\C#\FilesDir_V2\FilesDirCmd\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.0\Microsoft.Win32.SystemEvents.dll
+C:\Prog\C#\FilesDir_V2\FilesDirCmd\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.0\System.Drawing.Common.dll
+C:\Prog\C#\FilesDir_V2\FilesDirCmd\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll

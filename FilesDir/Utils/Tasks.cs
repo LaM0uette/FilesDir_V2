@@ -4,6 +4,11 @@ using System.Text;
 using CommonTasks;
 using FilesDir.Core;
 using FilesDir.Interfaces;
+using Logger;
+using NPOI.HSSF.Util;
+using NPOI.SS.UserModel;
+using NPOI.SS.Util;
+using NPOI.XSSF.UserModel;
 
 namespace FilesDir.Utils;
 
@@ -111,12 +116,59 @@ public static partial class Tasks
         return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
     }
 
-    public static void ConvertCsvToXlsx()
+    public static void GenerateExcel()
     {
-        var csv = @$"{Var.DirTemp}\dumps\{Var.Dump.FileName}.csv";
-        var xls = @$"{Var.DirTemp}\{Var.ExportsPath}\{Var.Dump.FileName.Replace("Dump", "Export")}.xlsx";
+        var xls = @$"{Var.ExportsPath}\Export_{Func.GetTimestamp()}.xlsx";
+
+        using var fs = new FileStream(xls, FileMode.Create, FileAccess.Write);
         
+        IWorkbook wb = new XSSFWorkbook();
+        var sht = wb.CreateSheet("Export");
         
+        var styleDate = wb.CreateCellStyle();
+        var dataFormatCustom = wb.CreateDataFormat();
+        styleDate.DataFormat = dataFormatCustom.GetFormat("dd/MM/yyyy");
+
+        var idx = 0;
+        foreach (var exp in Var.Exports)
+        {
+            var row = sht.CreateRow(idx);
+
+            var cellId = row.CreateCell(0);
+            cellId.SetCellType(CellType.Numeric);
+            cellId.SetCellValue(exp.Id);
+            
+            var cellName = row.CreateCell(1);
+            cellName.SetCellType(CellType.String);
+            cellName.SetCellValue(exp.Name);
+            
+            var cellDateCrea = row.CreateCell(2);
+            cellDateCrea.SetCellValue(exp.CreaDate);
+            cellDateCrea.CellStyle = styleDate;
+            
+            var cellDateModif = row.CreateCell(3);
+            cellDateModif.SetCellValue(exp.ModifDate);
+            cellDateModif.CellStyle = styleDate;
+            
+            var cellFullName = row.CreateCell(4);
+            cellFullName.SetCellType(CellType.String);
+            cellFullName.SetCellValue(exp.FullName);
+            
+            var cellPath = row.CreateCell(5);
+            cellPath.SetCellType(CellType.String);
+            cellPath.SetCellValue(exp.Path);
+            
+            idx++;
+        }
+        
+        sht.AutoSizeColumn(0);
+        sht.AutoSizeColumn(1);
+        sht.AutoSizeColumn(2);
+        sht.AutoSizeColumn(3);
+        sht.AutoSizeColumn(4);
+        sht.AutoSizeColumn(5);
+        
+        wb.Write(fs);
     }
 
     #endregion

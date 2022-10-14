@@ -45,6 +45,10 @@
               "target": "Package",
               "version": "[1.0.1, )"
             },
+            "DotNetCore.NPOI": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
             "Flaggers": {
               "target": "Package",
               "version": "[1.0.0, )"

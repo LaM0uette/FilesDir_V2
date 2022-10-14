@@ -10,3 +10,4 @@ C:\Prog\C#\FilesDir_V2\FilesDir\obj\Debug\net7.0\FilesDir.dll
 C:\Prog\C#\FilesDir_V2\FilesDir\obj\Debug\net7.0\refint\FilesDir.dll
 C:\Prog\C#\FilesDir_V2\FilesDir\obj\Debug\net7.0\FilesDir.pdb
 C:\Prog\C#\FilesDir_V2\FilesDir\obj\Debug\net7.0\ref\FilesDir.dll
+C:\Prog\C#\FilesDir_V2\FilesDir\bin\Debug\net7.0\NOTICE.TXT
