@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3yCjf/buhGnrroyVYjF5BS1Dz7rNN77WJ9q6zROU4bkIpgeulCfWjxltuiZPrWpOWON/dbXA7infvJsgBdw9Eg==",
+  "dgSpecHash": "WEdDtMzsurEjQPbjzEFlIW68IEg4UJV52EMkZOP8zeZHgf1eaCdhw+FRzwpsab3tbAevhyKRkihI5+lD+CpBBA==",
   "success": true,
   "projectFilePath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDirCmd\\FilesDirCmd.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,7 @@
     "C:\\Users\\XD5965\\.nuget\\packages\\dotnetcore.npoi.openxml4net\\1.2.3\\dotnetcore.npoi.openxml4net.1.2.3.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\dotnetcore.npoi.openxmlformats\\1.2.3\\dotnetcore.npoi.openxmlformats.1.2.3.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\flaggers\\1.0.0\\flaggers.1.0.0.nupkg.sha512",
-    "C:\\Users\\XD5965\\.nuget\\packages\\logger\\1.2.24\\logger.1.2.24.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\logger\\1.2.25\\logger.1.2.25.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\pastel\\3.0.1\\pastel.3.0.1.nupkg.sha512",
