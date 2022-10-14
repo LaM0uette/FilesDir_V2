@@ -2,6 +2,7 @@
 using FilesDir;
 using FilesDir.Interfaces;
 using FilesDir.Utils;
+using Logger;
 
 namespace FilesDirCmd.Core;
 
@@ -12,7 +13,7 @@ public static partial class Search
         var sw = new Stopwatch();
         sw.Start();
         
-        Var.Log.Separator("RECHERCHE");
+        Var.Log.Separator("RECHERCHE", Log.TypeLog.Cmd);
 
         // TODO: REMETTRE LE BON DOSSIER !
         //await Api.DirSearchAsync(Var.CurrentDir);
