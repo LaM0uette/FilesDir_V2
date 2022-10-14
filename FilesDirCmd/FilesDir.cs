@@ -1,4 +1,4 @@
-﻿using FilesDir.Core;
+﻿using FilesDir.Flags;
 using FilesDir.Interfaces;
 
 namespace FilesDirCmd;

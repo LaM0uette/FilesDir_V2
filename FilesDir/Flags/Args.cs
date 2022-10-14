@@ -1,8 +1,10 @@
-﻿namespace FilesDir.Core;
+﻿using FilesDir.Core;
 
-public partial class Flags
+namespace FilesDir.Flags;
+
+public static class Args
 {
-    private static MyEnum.SearchMode GetFlagSearchMode()
+    public static MyEnum.SearchMode GetSearchMode()
     {
         return Flaggers.Flags.String("m", "%") switch
         {
@@ -15,47 +17,47 @@ public partial class Flags
         };
     }
     
-    private static string GetFlagRegex()
+    public static string GetRegex()
     {
         return Flaggers.Flags.String("re", "");
     }
     
-    private static string[] GetWords()
+    public static string[] GetWords()
     {
         return Flaggers.Flags.String("w", "").Split(":");
     }
     
-    private static string[] GetExtensions()
+    public static string[] GetExtensions()
     {
         return Flaggers.Flags.String("e", "*").ToLower().Split(":");
     }
     
-    private static string[] GetFoldersBlackList()
+    public static string[] GetFoldersBlackList()
     {
         return Flaggers.Flags.String("bl", "").Split(":");
     }
     
-    private static string[] GetFoldersWhiteList()
+    public static string[] GetFoldersWhiteList()
     {
         return Flaggers.Flags.String("wl", "").Split(":");
     }
 
-    private static int GetPoolSize()
+    public static int GetPoolSize()
     {
         return Flaggers.Flags.Int("p", 100);
     }
     
-    private static bool GetCasse()
+    public static bool GetCasse()
     {
         return Flaggers.Flags.Bool("c", false);
     }
     
-    private static bool GetUtf()
+    public static bool GetUtf()
     {
         return Flaggers.Flags.Bool("utf", false);
     }
     
-    private static bool GetSilent()
+    public static bool GetSilent()
     {
         return Flaggers.Flags.Bool("s", false);
     }

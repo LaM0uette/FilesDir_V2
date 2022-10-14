@@ -1,17 +1,16 @@
-﻿using FilesDir.Interfaces;
-using FilesDir.Utils;
+﻿using FilesDir.Utils;
 
-namespace FilesDirCmd.Core;
+namespace FilesDir.Flags;
 
-public static class SearchConfigs
+public partial class Flags
 {
-    public static void Init(this IFlags flags)
+    private void Init()
     {
         Var.Log.Separator("PARAMETRES");
         Var.Log.Param("INITIALISATION DE LA RECHERCHE EN COURS...");
 
         Var.Log.Param("CREATION DE LA REQUETE EN COURS...");
-        Var.Results.Req = flags.GetReqOfSearch();
+        Var.Results.Req = GetReqOfSearch();
         
         Var.Log.Param("REQUETE UTILISEE : ", Var.Results.Req);
         
@@ -22,21 +21,21 @@ public static class SearchConfigs
         Tasks.CreateDir(Path.Join(Var.DirTemp, "exports"));
     }
 
-    public static void CheckPoolSize(this IFlags flags)
+    private void CheckPoolSize()
     {
-        if (flags.PoolSize < 2)
+        if (PoolSize < 2)
         {
             Var.Log.Nok("Poolsize trop petite, impossible de mettre moins de 2");
             Var.Log.Param("Modification de la Poolsize en cours...");
-            flags.PoolSize = 2;
+            PoolSize = 2;
         }
         
-        Var.Log.Param("POOLSIZE MISE A : ", flags.PoolSize.ToString());
+        Var.Log.Param("POOLSIZE MISE A : ", PoolSize.ToString());
     }
 
-    public static void SetPoolSize(this IFlags flags)
+    private void SetPoolSize()
     {
-        Var.ParallelOptions = new ParallelOptions {MaxDegreeOfParallelism = flags.PoolSize};
+        Var.ParallelOptions = new ParallelOptions {MaxDegreeOfParallelism = PoolSize};
         Var.Log.Param("CONFIGURATION DE LA POOLSIZE : ", "OK");
     }
 }
