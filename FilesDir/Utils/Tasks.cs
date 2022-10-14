@@ -137,6 +137,8 @@ public static partial class Tasks
         rowHeader.CreateCell(4).SetCellValue("Nom complet du fichier");
         rowHeader.CreateCell(5).SetCellValue("Lien du fichier");
 
+        Var.Log.Separator("EXPORT EXCEL");
+        
         var idx = 1;
         foreach (var exp in Var.Exports)
         {
@@ -166,19 +168,18 @@ public static partial class Tasks
             cellPath.SetCellType(CellType.String);
             cellPath.SetCellValue(exp.Path);
             
+            Var.Log.Progress("Export Excel:", idx, Var.Exports.Count);
             idx++;
         }
         
-        sht.AutoSizeColumn(0);
-        sht.AutoSizeColumn(1);
-        sht.AutoSizeColumn(2);
-        sht.AutoSizeColumn(3);
-        sht.AutoSizeColumn(4);
-        sht.AutoSizeColumn(5);
+        Var.Log.Del();
 
-        sht.SetAutoFilter(new CellRangeAddress(0, Var.Exports.Count + 1, 1, 5));
+        Var.Log.Param("Ajout du filtre...");
+        sht.SetAutoFilter(new CellRangeAddress(0, Var.Exports.Count, 1, 5));
+        Var.Log.OkDel("Filtre ajouté !");
         
         wb.Write(fs);
+        Var.Log.Ok("Fichier Excel sauvegardé avec succes !");
     }
 
     #endregion
