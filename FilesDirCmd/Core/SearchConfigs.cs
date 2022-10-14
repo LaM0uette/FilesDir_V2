@@ -17,6 +17,9 @@ public static partial class Search
         
         Var.Log.Param("INITIALISATION DU FICHIER DUMP...");
         Var.Dump.String("Id;Fichier;Date creation;Date de modification;Lien du fichier;Lien du dossier");
+        
+        Var.Log.Param("CREATION DU DOSSIER D'EXPORT...");
+        Tasks.CreateDir(Path.Join(Var.DirTemp, "exports"));
     }
 
     public static void CheckPoolSize(this IFlags flags)

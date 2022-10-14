@@ -15,6 +15,11 @@ public static partial class Tasks
 {
     #region Windows
     
+    public static void CreateDir(string path)
+    {
+        Directory.CreateDirectory(path);
+    }
+    
     public static string GetCurrentDir()
     {
         return Directory.GetCurrentDirectory();
@@ -28,7 +33,7 @@ public static partial class Tasks
     
     public static string GetDirTemp()
     {
-        return $"C:\\Users\\{TskWindows.GetGuid()}\\FilesDIR_Temp";
+        return $"C:\\Users\\{TskWindows.GetGuid()}\\FilesDIR_V2_Temp";
     }
 
     #endregion
@@ -175,7 +180,9 @@ public static partial class Tasks
 
         Var.Log.ParamInLine("Ajout du filtre...");
         sht.SetAutoFilter(new CellRangeAddress(0, Var.Exports.Count, 1, 5));
-        Var.Log.OkDel("Filtre ajouté !");
+        
+        Var.Log.Del();
+        Var.Log.Ok("Filtre ajouté !");
         
         wb.Write(fs);
         Var.Log.Ok("Fichier Excel sauvegardé avec succes !");
