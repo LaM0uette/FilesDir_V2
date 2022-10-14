@@ -7,7 +7,7 @@ public interface IFlags
     #region Statements
 
     public  MyEnum.SearchMode SearchMode { get; set; }
-    public  string Regex { get; set; }
+    public  string Re { get; set; }
     public  string[] Words { get; set; }
     public  string[] Extensions { get; set; }
     public  string[] FoldersBlackList { get; set; }
@@ -36,6 +36,11 @@ public interface IFlags
     public bool FolderInFilter(string folder);
 
     public bool FileInFilter(FileInfo fi);
+    
+    public string CheckFileCasse(string fileName);
+    public string CheckFileEncoding(string fileName);
+    public bool CheckFileIsClosed(string fileName);
+    public bool CheckSearchMode(string fileName);
 
     #endregion
 }

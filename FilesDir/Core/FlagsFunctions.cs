@@ -10,7 +10,7 @@ public partial class Flags
             "=" => MyEnum.SearchMode.Equal,
             "^" => MyEnum.SearchMode.Begin,
             "$" => MyEnum.SearchMode.End,
-            "r" => MyEnum.SearchMode.Regex,
+            "r" => MyEnum.SearchMode.Re,
             _ => MyEnum.SearchMode.In
         };
     }

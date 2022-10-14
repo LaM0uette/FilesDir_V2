@@ -50,7 +50,7 @@ public static class Tasks
             MyEnum.SearchMode.Equal => "=",
             MyEnum.SearchMode.Begin => "^",
             MyEnum.SearchMode.End => "$",
-            MyEnum.SearchMode.Regex => "r",
+            MyEnum.SearchMode.Re => "r",
             _ => "%"
         };
     }

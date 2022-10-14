@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Text.RegularExpressions;
 using FilesDir.Interfaces;
 using FilesDir.Utils;
 using Logger;
@@ -13,7 +14,7 @@ public partial class Flags : IFlags
     public  MyEnum.SearchMode SearchMode { get; set; }
     
     /// Commande regex
-    public  string Regex { get; set; }
+    public  string Re { get; set; }
         
     /// Mot ou liste de mots à rechercher
     public string[] Words { get; set; }
@@ -45,7 +46,7 @@ public partial class Flags : IFlags
     public Flags()
     {
         SearchMode = GetFlagSearchMode();
-        Regex = GetFlagRegex();
+        Re = GetFlagRegex();
         Words = GetWords();
         Extensions = GetExtensions();
         FoldersBlackList = GetFoldersBlackList();
@@ -71,7 +72,7 @@ public partial class Flags : IFlags
 
         // TODO: REMETTRE LE BON DOSSIER !
         //await Api.DirSearchAsync(Var.CurrentDir);
-        await this.DirSearchAsync("T:\\- 4 Suivi Appuis\\18-Partage\\de VILLELE DORIAN");
+        await DirSearchAsync("T:\\- 4 Suivi Appuis\\18-Partage\\de VILLELE DORIAN");
 
         sw.Stop();
         Var.Results.SearchTimer = sw.Elapsed.TotalSeconds;
@@ -170,9 +171,43 @@ public partial class Flags : IFlags
 
         var fileShortName = fileName.Split(".")[0];
         
-        return fileName.CheckFileIsClosed() &&
+        return CheckFileIsClosed(fileName) &&
                this.CheckSearchMode(fileShortName) &&
                (this.Extensions.Any("*".Contains) || this.Extensions.Any(fi.Extension.ToLower().Contains));
+    }
+    
+    public string CheckFileCasse(string fileName)
+    {
+        if (Casse || SearchMode.Equals(MyEnum.SearchMode.Re)) return fileName;
+
+        Words = Array.ConvertAll(Words, word => word.ToLower());
+        return fileName.ToLower();
+    }
+    
+    public string CheckFileEncoding(string fileName)
+    {
+        if (Utf) return fileName;
+
+        Words = Array.ConvertAll(Words, word => word.RemoveAccent());
+        return fileName.RemoveAccent();
+    }
+    
+    public bool CheckFileIsClosed(string fileName)
+    {
+        return !fileName.Contains('~');
+    }
+    
+    public bool CheckSearchMode(string fileName)
+    {
+        return SearchMode switch
+        {
+            MyEnum.SearchMode.In => Words.Any(fileName.Contains),
+            MyEnum.SearchMode.Equal => Words.Any(fileName.Equals),
+            MyEnum.SearchMode.Begin => Words.Any(fileName.StartsWith),
+            MyEnum.SearchMode.End => Words.Any(fileName.EndsWith),
+            MyEnum.SearchMode.Re => Regex.Match(fileName, Re).Success,
+            _ => Words.Any(fileName.Contains)
+        };
     }
 
     #endregion

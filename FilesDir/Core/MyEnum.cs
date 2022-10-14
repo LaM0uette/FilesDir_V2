@@ -8,6 +8,6 @@ public static class MyEnum
         Equal,
         Begin,
         End,
-        Regex
+        Re
     }
 }
