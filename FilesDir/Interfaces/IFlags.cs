@@ -23,7 +23,7 @@ public interface IFlags
 
     #region Fonctions
 
-    public Task RunSearch();
+    public Task RunFilesDir();
 
     public string GetReqOfSearch();
 
