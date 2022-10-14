@@ -11,7 +11,7 @@
     <ItemGroup>
       <PackageReference Include="CommonTasks" Version="1.0.1" />
       <PackageReference Include="Flaggers" Version="1.0.0" />
-      <PackageReference Include="Logger" Version="1.2.20" />
+      <PackageReference Include="Logger" Version="1.2.21" />
     </ItemGroup>
 
 </Project>
