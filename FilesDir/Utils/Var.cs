@@ -18,10 +18,11 @@ public static class Var
     #region Configs
 
     public static Log Log { get; } = new(DirTemp);
-    
     public static Dump Dump { get; } = new(DirTemp);
+    public static string ExportsPath { get; } = Path.Join(DirTemp, "exports");
     
     public static Results Results = new();
+    public static List<Exports> Exports = new();
     
     public static ParallelOptions ParallelOptions = new(){MaxDegreeOfParallelism = 1000};
 

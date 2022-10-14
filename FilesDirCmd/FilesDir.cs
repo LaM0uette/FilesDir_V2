@@ -42,6 +42,8 @@ public static class FilesDir
 
         sw.Stop();
         Var.Results.TotalTimer = sw.Elapsed.TotalSeconds;
+
+        Tasks.ConvertCsvToXlsx();
         
         flags.Bilan();
     }

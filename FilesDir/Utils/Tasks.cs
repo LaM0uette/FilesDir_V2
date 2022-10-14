@@ -82,6 +82,16 @@ public static partial class Tasks
 
         Var.Log.OkDel($"N°{Var.Results.NbFiles} => {fi.Name}");
         Var.Dump.String($"{Var.Results.NbFiles};{fi.Name};{fi.CreationTime};{fi.LastWriteTime};{fi.FullName};{fi.Directory}");
+        
+        Var.Exports.Add(new Exports
+        {
+            Id = Var.Results.NbFiles,
+            Name = fi.Name,
+            CreaDate = fi.CreationTime,
+            ModifDate = fi.LastWriteTime,
+            FullName = fi.FullName,
+            Path = $"{fi.Directory}"
+        });
     }
     
     public static string RemoveAccent(this string txt)
@@ -99,6 +109,14 @@ public static partial class Tasks
         }
 
         return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
+    }
+
+    public static void ConvertCsvToXlsx()
+    {
+        var csv = @$"{Var.DirTemp}\dumps\{Var.Dump.FileName}.csv";
+        var xls = @$"{Var.DirTemp}\{Var.ExportsPath}\{Var.Dump.FileName.Replace("Dump", "Export")}.xlsx";
+        
+        
     }
 
     #endregion

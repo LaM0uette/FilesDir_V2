@@ -20,7 +20,7 @@
           "lib/net6.0/Flaggers.dll": {}
         }
       },
-      "Logger/1.2.21": {
+      "Logger/1.2.24": {
         "type": "package",
         "dependencies": {
           "CommonTasks": "1.0.1",
@@ -48,7 +48,7 @@
         "dependencies": {
           "CommonTasks": "1.0.1",
           "Flaggers": "1.0.0",
-          "Logger": "1.2.21"
+          "Logger": "1.2.24"
         },
         "compile": {
           "bin/placeholder/FilesDir.dll": {}
@@ -82,15 +82,15 @@
         "lib/net6.0/Flaggers.dll"
       ]
     },
-    "Logger/1.2.21": {
-      "sha512": "JwGoeTUG28iIDHl6bIo/ttHpP/sMefl9Ev4JJpeDoRK19CTPp/zjhvDbCXkg2n4WiVLv8/cXe1ihn4tq6Iytnw==",
+    "Logger/1.2.24": {
+      "sha512": "KkR2DWI202O+4tG/gDGI81qUGiaVcVvWFQQE2Te3VQbNN8DDPbKFfGVt1VMUoPEZVLbROVL+f788USd6eumLbQ==",
       "type": "package",
-      "path": "logger/1.2.21",
+      "path": "logger/1.2.24",
       "files": [
         ".nupkg.metadata",
         "docs/log.png",
         "lib/net6.0/Logger.dll",
-        "logger.1.2.21.nupkg.sha512",
+        "logger.1.2.24.nupkg.sha512",
         "logger.nuspec"
       ]
     },
