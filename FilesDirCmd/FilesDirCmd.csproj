@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>preview</LangVersion>
+        <ApplicationIcon>FilesDIR.ico</ApplicationIcon>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,6 +15,13 @@
 
     <ItemGroup>
       <PackageReference Include="CommonTasks" Version="1.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="FilesDIR.ico" />
+      <Resource Include="FilesDIR.ico">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
     </ItemGroup>
 
 </Project>
