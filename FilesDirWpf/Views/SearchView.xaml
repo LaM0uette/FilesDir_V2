@@ -42,11 +42,11 @@
                   Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3"
                   Style="{StaticResource ComboBoxPlainM2}"
                   SelectionChanged="ComboBoxSearchMode_OnSelectionChanged">
-            <ComboBoxItem Content="% - Contient"/>
-            <ComboBoxItem Content="= - Egale"/>
-            <ComboBoxItem Content="^ - Commence par"/>
-            <ComboBoxItem Content="$ - Termine par+"/>
-            <ComboBoxItem Content="r - Regex"/>
+            <ComboBoxItem Content=" Contient (%)"/>
+            <ComboBoxItem Content=" Est égal à (=)"/>
+            <ComboBoxItem Content=" Commence par (^)"/>
+            <ComboBoxItem Content=" Finit par ($)"/>
+            <ComboBoxItem Content=" Regex (r)"/>
         </ComboBox>
         
         

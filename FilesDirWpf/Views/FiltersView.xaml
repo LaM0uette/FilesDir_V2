@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     
-    <Grid Margin="10, 10">
+    <Grid Margin="10, 10" x:Name="GridLists">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -30,32 +30,18 @@
         
         <!-- Mots -->
         <Label Grid.Row="1" Grid.Column="0" Content="Mots :" Style="{StaticResource LabelTransparentM2}"/>
-        <ListBox Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Style="{StaticResource ListBoxPlainM2}"/>
         
         
         <!-- Extensions -->
         <Label Grid.Row="3" Grid.Column="0" Content="Extensions :" Style="{StaticResource LabelTransparentM2}"/>
-        <ListBox Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" Style="{StaticResource ListBoxPlainM2}"/>
         
         
         <!-- Dossier BlackList -->
         <Label Grid.Row="5" Grid.Column="0" Content="BlackList :" Style="{StaticResource LabelTransparentM2}"/>
-        <ListBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Style="{StaticResource ListBoxPlainM2}"/>
         
         
         <!-- Dossier WhiteList -->
         <Label Grid.Row="7" Grid.Column="0" Content="WhiteList :" Style="{StaticResource LabelTransparentM2}"/>
-        <ListBox Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="3" Style="{StaticResource ListBoxPlainM2}"/>
-        
-        
-        <!-- Performance -->
-        
-        
-        <!-- Casse -->
-        
-        
-        <!-- UTF-8 -->
-        
         
     </Grid>
 </UserControl>
