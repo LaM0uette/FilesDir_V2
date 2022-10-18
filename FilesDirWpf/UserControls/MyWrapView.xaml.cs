@@ -36,9 +36,9 @@ public partial class MyWrapView
             var bd = new Border
             {
                 Margin = new Thickness(5),
-                BorderBrush = (Brush)_converter.ConvertFrom("#FF8F8FA3")!,
+                BorderBrush = (Brush)_converter.ConvertFrom("#FF329BA8")!,
                 CornerRadius = new CornerRadius(3),
-                BorderThickness = new Thickness(1)
+                BorderThickness = new Thickness(2)
             };
             
             var lb = new Label
@@ -51,7 +51,7 @@ public partial class MyWrapView
             {
                 Width = 20,
                 Height = 20,
-                Name = (string)item
+                Tag = (string)item
             };
             var img = new Image
             {
@@ -82,7 +82,7 @@ public partial class MyWrapView
     {
         var btn = (Button) sender;
         
-        var index = Lst.IndexOf(btn.Name);
+        var index = Lst.IndexOf(btn.Tag);
         Lst.RemoveAt(index);
         
         RefreshList();
