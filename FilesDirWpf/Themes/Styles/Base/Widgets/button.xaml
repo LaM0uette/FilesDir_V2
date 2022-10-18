@@ -105,6 +105,11 @@
         <Setter Property="Tag" Value="{StaticResource RgbM3}" />
     </Style>
     
+    <Style x:Key="ButtonPlainOk" TargetType="{x:Type Button}" BasedOn="{StaticResource ButtonPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbOk}" />
+        <Setter Property="Tag" Value="{StaticResource RgbM3}" />
+    </Style>
+    
     
     <Style x:Key="ButtonPlainM2Left" TargetType="{x:Type Button}" BasedOn="{StaticResource ButtonPlain}">
         <Setter Property="Background" Value="{StaticResource RgbM2}" />

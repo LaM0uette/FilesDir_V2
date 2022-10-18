@@ -14,7 +14,7 @@
                  Title="FilesDir V2"
                  Icon="{StaticResource Main}"
                  Width="550"
-                 Height="750"
+                 Height="800"
                  GlowBrush="{StaticResource RgbM2}"
                  WindowTitleBrush="{StaticResource RgbM1}"
                  NonActiveWindowTitleBrush="{StaticResource RgbM1}"
@@ -48,17 +48,24 @@
     </mah:MetroWindow.IconTemplate>
     
     <Grid Background="{StaticResource RgbM1}">
-        <ScrollViewer x:Name="MonthDlgScrollViewer" 
-                      HorizontalScrollBarVisibility="Disabled" 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1000*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" 
                       VerticalScrollBarVisibility="Auto">
-            
             <StackPanel>
                 <views:SearchView/>
                 <views:FiltersView/>
                 <views:ParamView/>
             </StackPanel>
-            
         </ScrollViewer>
+        
+        <Button Grid.Row="1" VerticalAlignment="Bottom" Style="{StaticResource ButtonPlainOk}" 
+                Height="50" 
+                FontSize="30"
+                Content="Lancer la recherche"/>
     </Grid>
     
 </mah:MetroWindow>
