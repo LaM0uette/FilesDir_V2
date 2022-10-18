@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesDirCmd", "FilesDirCmd\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesDir", "FilesDir\FilesDir.csproj", "{A9DC1019-90F4-4EB8-AAE0-C830A48C4A8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileDirWpf", "FileDirWpf\FileDirWpf.csproj", "{34FE66B5-B9D1-4056-ADFA-9D5260E4C645}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesDirWpf", "FilesDirWpf\FilesDirWpf.csproj", "{34FE66B5-B9D1-4056-ADFA-9D5260E4C645}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
