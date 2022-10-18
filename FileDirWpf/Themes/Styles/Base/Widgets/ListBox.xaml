@@ -1,0 +1,66 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Base -->
+    <Style x:Key="ListBoxBase" TargetType="{x:Type ListBox}">
+        <Setter Property="Background" Value="{StaticResource RgbM1}"/>
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+        
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+    </Style>
+    <!-- /Base -->
+
+
+    <!-- Plain -->
+    <Style x:Key="ListBoxItemBasePlain" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        
+    </Style>
+    
+    <Style x:Key="ListBoxBasePlain" TargetType="ListBox" BasedOn="{StaticResource ListBoxBase}">
+        <Setter Property="Background" Value="{StaticResource RgbM1}"/>
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource ListBoxItemBasePlain}"/>
+        
+    </Style>
+    
+    <Style x:Key="ListBoxPlainM1" TargetType="{x:Type ListBox}" BasedOn="{StaticResource ListBoxBasePlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM1}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+        <Setter Property="ItemContainerStyle" Value="{StaticResource ListBoxItemBasePlain}"/>
+    </Style>
+
+    <Style x:Key="ListBoxPlainM2" TargetType="{x:Type ListBox}" BasedOn="{StaticResource ListBoxBasePlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM2}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+
+    <Style x:Key="ListBoxPlainM3" TargetType="{x:Type ListBox}" BasedOn="{StaticResource ListBoxBasePlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM3}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+    </Style>
+
+    <Style x:Key="ListBoxPlainB1" TargetType="{x:Type ListBox}" BasedOn="{StaticResource ListBoxBasePlain}">
+        <Setter Property="Background" Value="{StaticResource RgbB1}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+
+    <Style x:Key="ListBoxPlainB2" TargetType="{x:Type ListBox}" BasedOn="{StaticResource ListBoxBasePlain}">
+        <Setter Property="Background" Value="{StaticResource RgbB2}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+    <!-- /Plain -->
+    
+    <!-- INITIAL -->
+    <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource ListBoxPlainM1}" />
+    <!-- /INITIAL -->
+
+
+</ResourceDictionary>

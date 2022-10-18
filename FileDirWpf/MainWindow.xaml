@@ -1,0 +1,28 @@
+﻿<mah:MetroWindow x:Class="FileDirWpf.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                 mc:Ignorable="d"
+                 
+                 TitleAlignment="Center"
+                 ResizeMode="NoResize"
+                 WindowTransitionsEnabled="False"
+                 WindowStartupLocation="CenterScreen"
+                 Title="FilesDir V2"
+                 Icon="{StaticResource Main}"
+                 Width="550"
+                 Height="865"
+                 GlowBrush="{StaticResource RgbM2}"
+                 WindowTitleBrush="{StaticResource RgbM1}"
+                 NonActiveWindowTitleBrush="{StaticResource RgbM1}"
+                 FontFamily="Roboto"
+                 FontSize="15"
+                 FontWeight="Bold">
+    
+    <Grid>
+
+    </Grid>
+    
+</mah:MetroWindow>

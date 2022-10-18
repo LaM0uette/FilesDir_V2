@@ -1,0 +1,40 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Base -->
+    <Style
+        x:Key="MenuItemStyle" TargetType="{x:Type MenuItem}">
+        <Setter Property="Background" Value="{StaticResource RgbM1}"/>
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}"/>
+        
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        
+        <Style.Triggers>
+            <Trigger Property="IsHighlighted" Value="True">
+                <Setter Property="Background" Value="{StaticResource RgbM2}"/>
+                <Setter Property="Foreground" Value="{StaticResource RgbM3}"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style
+        x:Key="MenuItemRed" TargetType="{x:Type MenuItem}">
+        <Setter Property="Background" Value="{StaticResource RgbM1}"/>
+        <Setter Property="Foreground" Value="{StaticResource RgbNok}"/>
+        
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        
+        <Style.Triggers>
+            <Trigger Property="IsHighlighted" Value="True">
+                <Setter Property="Background" Value="{StaticResource RgbM2}"/>
+                <Setter Property="Foreground" Value="{StaticResource RgbM3}"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,1585 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- Geometry -->
+    <Geometry x:Key="GeoCheck">M64,15.5 28.9,50.6 28.9,50.6 22.9,56.6 0,33.8 8.2,25.6 22.9,40.3 55.8,7.4</Geometry>
+    <Geometry x:Key="GeoCheckIndeterminate">M54,0H10C4.5,0,0,4.5,0,10V54c0,5.5,4.5,10,10,10H54c5.5,0,10-4.5,10-10V10C64,4.5,59.5,0,54,0z</Geometry>
+    <Geometry x:Key="GeoHome">M498.2,222.7C498.2,222.7,498.2,222.7,498.2,222.7L289.3,13.8C280.4,4.9,268.6,0,256,0s-24.4,4.9-33.3,13.8
+        L13.9,222.6c-0.1,0.1-0.1,0.1-0.2,0.2c-18.3,18.4-18.2,48.2,0.1,66.6c8.4,8.4,19.4,13.2,31.3,13.7c0.5,0,1,0.1,1.5,0.1h8.3v153.7
+        c0,30.4,24.7,55.2,55.2,55.2h81.7c8.3,0,15-6.7,15-15V376.5c0-13.9,11.3-25.2,25.2-25.2h48.2c13.9,0,25.2,11.3,25.2,25.2V497
+        c0,8.3,6.7,15,15,15H402c30.4,0,55.2-24.7,55.2-55.2V303.1h7.7c12.6,0,24.4-4.9,33.3-13.8C516.5,271,516.5,241.1,498.2,222.7z</Geometry>
+    <Geometry x:Key="GeoUpArrow">M32,60.1H3.2c-2.5,0-4.1-2.7-2.8-4.9l14.4-24.9L29.2,5.5c1.2-2.2,4.4-2.2,5.6,0l14.4,24.9l14.4,24.9c1.2,2.2-0.3,4.9-2.8,4.9H32z</Geometry>
+    <Geometry x:Key="GeoDownArrow">M32,3.9h28.8c2.5,0,4.1,2.7,2.8,4.9L49.2,33.6L34.8,58.5c-1.2,2.2-4.4,2.2-5.6,0L14.8,33.6L0.4,8.7c-1.2-2.2,0.3-4.9,2.8-4.9H32z</Geometry>
+    <Geometry x:Key="GeoRightArrow">M3.9,32V3.2c0-2.5,2.7-4.1,4.9-2.8l24.9,14.4l24.9,14.4c2.2,1.2,2.2,4.4,0,5.6L33.6,49.2L8.7,63.6c-2.2,1.2-4.9-0.3-4.9-2.8V32z</Geometry>
+    <Geometry x:Key="GeoLeftArrow">M60.1,32v28.8c0,2.5-2.7,4.1-4.9,2.8L30.4,49.2L5.5,34.8c-2.2-1.2-2.2-4.4,0-5.6l24.9-14.4L55.3,0.4c2.2-1.2,4.9,0.3,4.9,2.8V32z</Geometry>
+    <Geometry x:Key="GeoCrossArrow">M58.5,51.6c1.6,1.6,1.6,4.3,0,5.9l-1,1c-1.6,1.6-4.3,1.6-5.9,0L32.9,39.8c-0.5-0.5-1.3-0.5-1.8,0L12.4,58.5c-1.6,1.6-4.3,1.6-5.9,0l-1-1c-1.6-1.6-1.6-4.3,0-5.9l18.7-18.7c0.5-0.5,0.5-1.3,0-1.8L5.5,12.4c-1.6-1.6-1.6-4.3,0-5.9l1-1c1.6-1.6,4.3-1.6,5.9,0l18.7,18.7c0.5,0.5,1.3,0.5,1.8,0L51.6,5.5c1.6-1.6,4.3-1.6,5.9,0l1,1c1.6,1.6,1.6,4.3,0,5.9L39.8,31.1c-0.5,0.5-0.5,1.3,0,1.8L58.5,51.6z</Geometry>
+    <Geometry x:Key="GeoPlus">M58.8,30.5v3.1c0,2.6-2.1,4.7-4.7,4.7H38.2v15.9c0,2.6-2.1,4.7-4.7,4.7h-3.1c-2.6,0-4.7-2.1-4.7-4.7V38.2H9.9c-2.6,0-4.7-2.1-4.7-4.7v-3.1c0-2.6,2.1-4.7,4.7-4.7h15.9V9.9c0-2.6,2.1-4.7,4.7-4.7h3.1c2.6,0,4.7,2.1,4.7,4.7v15.9h15.9C56.7,25.8,58.8,27.9,58.8,30.5z</Geometry>
+    <Geometry x:Key="GeoMinus">M54.1,38.2H9.9c-2.6,0-4.7-2.1-4.7-4.7v-3.1c0-2.6,2.1-4.7,4.7-4.7h44.2c2.6,0,4.7,2.1,4.7,4.7v3.1C58.8,36.1,56.7,38.2,54.1,38.2z</Geometry>
+    
+    
+    <!-- Ckeck -->
+    <Style x:Key="ImgCheckM1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="{StaticResource GeoCheck}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckM2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="{StaticResource GeoCheck}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckM3" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="{StaticResource GeoCheck}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckB1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB1}" Geometry="{StaticResource GeoCheck}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckB2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB2}" Geometry="{StaticResource GeoCheck}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckOk" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOk}" Geometry="{StaticResource GeoCheck}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckOkBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOkBis}" Geometry="{StaticResource GeoCheck}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckNok" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNok}" Geometry="{StaticResource GeoCheck}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckNokBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNokBis}" Geometry="{StaticResource GeoCheck}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Ckeck -->
+    
+    
+    <!-- Ckeck Indeterminate -->
+    <Style x:Key="ImgCheckIndeterminateM1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="{StaticResource GeoCheckIndeterminate}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckIndeterminateM2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="{StaticResource GeoCheckIndeterminate}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckIndeterminateM3" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="{StaticResource GeoCheckIndeterminate}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckIndeterminateB1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB1}" Geometry="{StaticResource GeoCheckIndeterminate}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckIndeterminateB2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB2}" Geometry="{StaticResource GeoCheckIndeterminate}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckIndeterminateOk" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOk}" Geometry="{StaticResource GeoCheckIndeterminate}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckIndeterminateOkBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOkBis}" Geometry="{StaticResource GeoCheckIndeterminate}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckIndeterminateNok" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNok}" Geometry="{StaticResource GeoCheckIndeterminate}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCheckIndeterminateNokBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNokBis}" Geometry="{StaticResource GeoCheckIndeterminate}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Ckeck Indeterminate -->
+    
+    
+    <!-- Home -->
+    <Style x:Key="ImgHomeM1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="{StaticResource GeoHome}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgHomeM2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="{StaticResource GeoHome}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgHomeM3" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="{StaticResource GeoHome}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgHomeB1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB1}" Geometry="{StaticResource GeoHome}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgHomeB2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB2}" Geometry="{StaticResource GeoHome}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgHomeOk" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOk}" Geometry="{StaticResource GeoHome}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgHomeOkBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOkBis}" Geometry="{StaticResource GeoHome}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgHomeNok" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNok}" Geometry="{StaticResource GeoHome}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgHomeNokBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNokBis}" Geometry="{StaticResource GeoHome}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Home -->
+    
+    
+    <!-- Up arrow -->
+    <Style x:Key="ImgUpArrowM1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="{StaticResource GeoUpArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgUpArrowM2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="{StaticResource GeoUpArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgUpArrowM3" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="{StaticResource GeoUpArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgUpArrowB1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB1}" Geometry="{StaticResource GeoUpArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgUpArrowB2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB2}" Geometry="{StaticResource GeoUpArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgUpArrowOk" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOk}" Geometry="{StaticResource GeoUpArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgUpArrowOkBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOkBis}" Geometry="{StaticResource GeoUpArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgUpArrowNok" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNok}" Geometry="{StaticResource GeoUpArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgUpArrowNokBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNokBis}" Geometry="{StaticResource GeoUpArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Up arrow -->
+    
+    
+    <!-- Down arrow -->
+    <Style x:Key="ImgDownArrowM1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="{StaticResource GeoDownArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgDownArrowM2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="{StaticResource GeoDownArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgDownArrowM3" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="{StaticResource GeoDownArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgDownArrowB1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB1}" Geometry="{StaticResource GeoDownArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgDownArrowB2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB2}" Geometry="{StaticResource GeoDownArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgDownArrowOk" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOk}" Geometry="{StaticResource GeoDownArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgDownArrowOkBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOkBis}" Geometry="{StaticResource GeoDownArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgDownArrowNok" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNok}" Geometry="{StaticResource GeoDownArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgDownArrowNokBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNokBis}" Geometry="{StaticResource GeoDownArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Down arrow -->
+    
+    
+    <!-- Right arrow -->
+    <Style x:Key="ImgRightArrowM1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="{StaticResource GeoRightArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgRightArrowM2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="{StaticResource GeoRightArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgRightArrowM3" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="{StaticResource GeoRightArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgRightArrowB1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB1}" Geometry="{StaticResource GeoRightArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgRightArrowB2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB2}" Geometry="{StaticResource GeoRightArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgRightArrowOk" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOk}" Geometry="{StaticResource GeoRightArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgRightArrowOkBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOkBis}" Geometry="{StaticResource GeoRightArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgRightArrowNok" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNok}" Geometry="{StaticResource GeoRightArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgRightArrowNokBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNokBis}" Geometry="{StaticResource GeoRightArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Right arrow -->
+    
+    
+    <!-- Left arrow -->
+    <Style x:Key="ImgLeftArrowM1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="{StaticResource GeoLeftArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgLeftArrowM2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="{StaticResource GeoLeftArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgLeftArrowM3" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="{StaticResource GeoLeftArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgLeftArrowB1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB1}" Geometry="{StaticResource GeoLeftArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgLeftArrowB2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB2}" Geometry="{StaticResource GeoLeftArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgLeftArrowOk" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOk}" Geometry="{StaticResource GeoLeftArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgLeftArrowOkBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOkBis}" Geometry="{StaticResource GeoLeftArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgLeftArrowNok" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNok}" Geometry="{StaticResource GeoLeftArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgLeftArrowNokBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNokBis}" Geometry="{StaticResource GeoLeftArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Left arrow -->
+    
+    
+    
+    <!-- Cross arrow -->
+    <Style x:Key="ImgCrossArrowM1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="{StaticResource GeoCrossArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCrossArrowM2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="{StaticResource GeoCrossArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCrossArrowM3" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="{StaticResource GeoCrossArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCrossArrowB1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB1}" Geometry="{StaticResource GeoCrossArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCrossArrowB2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB2}" Geometry="{StaticResource GeoCrossArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCrossArrowOk" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOk}" Geometry="{StaticResource GeoCrossArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCrossArrowOkBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOkBis}" Geometry="{StaticResource GeoCrossArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCrossArrowNok" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNok}" Geometry="{StaticResource GeoCrossArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgCrossArrowNokBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNokBis}" Geometry="{StaticResource GeoCrossArrow}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Cross arrow -->
+    
+    
+    <!-- Plus -->
+    <Style x:Key="ImgPlusM1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="{StaticResource GeoPlus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgPlusM2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="{StaticResource GeoPlus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgPlusM3" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="{StaticResource GeoPlus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgPlusB1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB1}" Geometry="{StaticResource GeoPlus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgPlusB2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB2}" Geometry="{StaticResource GeoPlus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgPlusOk" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOk}" Geometry="{StaticResource GeoPlus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgPlusOkBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOkBis}" Geometry="{StaticResource GeoPlus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgPlusNok" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNok}" Geometry="{StaticResource GeoPlus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgPlusNokBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNokBis}" Geometry="{StaticResource GeoPlus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Plus -->
+    
+    
+    <!-- Minus -->
+    <Style x:Key="ImgMinusM1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="{StaticResource GeoMinus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgMinusM2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="{StaticResource GeoMinus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgMinusM3" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="{StaticResource GeoMinus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgMinusB1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB1}" Geometry="{StaticResource GeoMinus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgMinusB2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB2}" Geometry="{StaticResource GeoMinus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgMinusOk" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOk}" Geometry="{StaticResource GeoMinus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgMinusOkBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOkBis}" Geometry="{StaticResource GeoMinus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgMinusNok" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNok}" Geometry="{StaticResource GeoMinus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgMinusNokBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNokBis}" Geometry="{StaticResource GeoMinus}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Minus -->
+    
+    
+    <!-- Edit -->
+    <Style x:Key="ImgEditM1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="M270.4,69l120.3,109.6L149.4,448c-16.7,18.5-39.3,30.6-64,34.1l-67.4,10.1c-8.7,1.2-16.8-4.9-18.1-13.6c-0.1-0.8-0.2-1.6-0.2-2.4c0-17,0-42.6,0-64c-0.1-26.3,9.5-51.6,27-71.2L270.4,69z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="M390.6,178.6l-120-109.4l51-57.1c12.8-14.2,34.5-15.7,49.1-3.4L441,68.2c14.9,12.7,16.7,35,4,49.9c-0.2,0.2-0.3,0.4-0.5,0.5L390.6,178.6z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="M512.1,494.2c0,9.8-7.9,17.7-17.7,17.7H211.8c-9.8,0-17.7-7.9-17.7-17.7c0-9.8,7.9-17.7,17.7-17.7h282.6C504.2,476.5,512.1,484.4,512.1,494.2z"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgEditM2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM2Bis}" Geometry="M270.4,69l120.3,109.6L149.4,448c-16.7,18.5-39.3,30.6-64,34.1l-67.4,10.1c-8.7,1.2-16.8-4.9-18.1-13.6c-0.1-0.8-0.2-1.6-0.2-2.4c0-17,0-42.6,0-64c-0.1-26.3,9.5-51.6,27-71.2L270.4,69z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M390.6,178.6l-120-109.4l51-57.1c12.8-14.2,34.5-15.7,49.1-3.4L441,68.2c14.9,12.7,16.7,35,4,49.9c-0.2,0.2-0.3,0.4-0.5,0.5L390.6,178.6z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M512.1,494.2c0,9.8-7.9,17.7-17.7,17.7H211.8c-9.8,0-17.7-7.9-17.7-17.7c0-9.8,7.9-17.7,17.7-17.7h282.6C504.2,476.5,512.1,484.4,512.1,494.2z"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgEditM3" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M270.4,69l120.3,109.6L149.4,448c-16.7,18.5-39.3,30.6-64,34.1l-67.4,10.1c-8.7,1.2-16.8-4.9-18.1-13.6c-0.1-0.8-0.2-1.6-0.2-2.4c0-17,0-42.6,0-64c-0.1-26.3,9.5-51.6,27-71.2L270.4,69z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="M390.6,178.6l-120-109.4l51-57.1c12.8-14.2,34.5-15.7,49.1-3.4L441,68.2c14.9,12.7,16.7,35,4,49.9c-0.2,0.2-0.3,0.4-0.5,0.5L390.6,178.6z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="M512.1,494.2c0,9.8-7.9,17.7-17.7,17.7H211.8c-9.8,0-17.7-7.9-17.7-17.7c0-9.8,7.9-17.7,17.7-17.7h282.6C504.2,476.5,512.1,484.4,512.1,494.2z"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgEditB1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB1}" Geometry="M270.4,69l120.3,109.6L149.4,448c-16.7,18.5-39.3,30.6-64,34.1l-67.4,10.1c-8.7,1.2-16.8-4.9-18.1-13.6c-0.1-0.8-0.2-1.6-0.2-2.4c0-17,0-42.6,0-64c-0.1-26.3,9.5-51.6,27-71.2L270.4,69z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M390.6,178.6l-120-109.4l51-57.1c12.8-14.2,34.5-15.7,49.1-3.4L441,68.2c14.9,12.7,16.7,35,4,49.9c-0.2,0.2-0.3,0.4-0.5,0.5L390.6,178.6z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M512.1,494.2c0,9.8-7.9,17.7-17.7,17.7H211.8c-9.8,0-17.7-7.9-17.7-17.7c0-9.8,7.9-17.7,17.7-17.7h282.6C504.2,476.5,512.1,484.4,512.1,494.2z"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgEditB2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB2}" Geometry="M270.4,69l120.3,109.6L149.4,448c-16.7,18.5-39.3,30.6-64,34.1l-67.4,10.1c-8.7,1.2-16.8-4.9-18.1-13.6c-0.1-0.8-0.2-1.6-0.2-2.4c0-17,0-42.6,0-64c-0.1-26.3,9.5-51.6,27-71.2L270.4,69z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M390.6,178.6l-120-109.4l51-57.1c12.8-14.2,34.5-15.7,49.1-3.4L441,68.2c14.9,12.7,16.7,35,4,49.9c-0.2,0.2-0.3,0.4-0.5,0.5L390.6,178.6z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M512.1,494.2c0,9.8-7.9,17.7-17.7,17.7H211.8c-9.8,0-17.7-7.9-17.7-17.7c0-9.8,7.9-17.7,17.7-17.7h282.6C504.2,476.5,512.1,484.4,512.1,494.2z"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgEditOk" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOk}" Geometry="M270.4,69l120.3,109.6L149.4,448c-16.7,18.5-39.3,30.6-64,34.1l-67.4,10.1c-8.7,1.2-16.8-4.9-18.1-13.6c-0.1-0.8-0.2-1.6-0.2-2.4c0-17,0-42.6,0-64c-0.1-26.3,9.5-51.6,27-71.2L270.4,69z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M390.6,178.6l-120-109.4l51-57.1c12.8-14.2,34.5-15.7,49.1-3.4L441,68.2c14.9,12.7,16.7,35,4,49.9c-0.2,0.2-0.3,0.4-0.5,0.5L390.6,178.6z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M512.1,494.2c0,9.8-7.9,17.7-17.7,17.7H211.8c-9.8,0-17.7-7.9-17.7-17.7c0-9.8,7.9-17.7,17.7-17.7h282.6C504.2,476.5,512.1,484.4,512.1,494.2z"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgEditOkBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOkBis}" Geometry="M270.4,69l120.3,109.6L149.4,448c-16.7,18.5-39.3,30.6-64,34.1l-67.4,10.1c-8.7,1.2-16.8-4.9-18.1-13.6c-0.1-0.8-0.2-1.6-0.2-2.4c0-17,0-42.6,0-64c-0.1-26.3,9.5-51.6,27-71.2L270.4,69z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M390.6,178.6l-120-109.4l51-57.1c12.8-14.2,34.5-15.7,49.1-3.4L441,68.2c14.9,12.7,16.7,35,4,49.9c-0.2,0.2-0.3,0.4-0.5,0.5L390.6,178.6z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M512.1,494.2c0,9.8-7.9,17.7-17.7,17.7H211.8c-9.8,0-17.7-7.9-17.7-17.7c0-9.8,7.9-17.7,17.7-17.7h282.6C504.2,476.5,512.1,484.4,512.1,494.2z"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgEditNok" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNok}" Geometry="M270.4,69l120.3,109.6L149.4,448c-16.7,18.5-39.3,30.6-64,34.1l-67.4,10.1c-8.7,1.2-16.8-4.9-18.1-13.6c-0.1-0.8-0.2-1.6-0.2-2.4c0-17,0-42.6,0-64c-0.1-26.3,9.5-51.6,27-71.2L270.4,69z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M390.6,178.6l-120-109.4l51-57.1c12.8-14.2,34.5-15.7,49.1-3.4L441,68.2c14.9,12.7,16.7,35,4,49.9c-0.2,0.2-0.3,0.4-0.5,0.5L390.6,178.6z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M512.1,494.2c0,9.8-7.9,17.7-17.7,17.7H211.8c-9.8,0-17.7-7.9-17.7-17.7c0-9.8,7.9-17.7,17.7-17.7h282.6C504.2,476.5,512.1,484.4,512.1,494.2z"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgEditNokBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNokBis}" Geometry="M270.4,69l120.3,109.6L149.4,448c-16.7,18.5-39.3,30.6-64,34.1l-67.4,10.1c-8.7,1.2-16.8-4.9-18.1-13.6c-0.1-0.8-0.2-1.6-0.2-2.4c0-17,0-42.6,0-64c-0.1-26.3,9.5-51.6,27-71.2L270.4,69z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M390.6,178.6l-120-109.4l51-57.1c12.8-14.2,34.5-15.7,49.1-3.4L441,68.2c14.9,12.7,16.7,35,4,49.9c-0.2,0.2-0.3,0.4-0.5,0.5L390.6,178.6z"/>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="M512.1,494.2c0,9.8-7.9,17.7-17.7,17.7H211.8c-9.8,0-17.7-7.9-17.7-17.7c0-9.8,7.9-17.7,17.7-17.7h282.6C504.2,476.5,512.1,484.4,512.1,494.2z"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Edit -->
+    
+    <!-- Clear -->
+    <Style x:Key="ImgClear" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="#FFFFE352" Geometry="M50.1,284l49.6,180.2L372.2,307v0l-131.3-133L216,176L64,264L50.1,28"/>
+                            <GeometryDrawing Brush="#FFFFB236" Geometry="M134.7,203.7l56,88l-13.5,8.6l-56-88L134.7,203.7z"/>
+                            <GeometryDrawing Brush="#FFFFB236" Geometry="M174.8,171.8l40,64l-13.6,8.5l-40-64L174.8,171.8z"/>
+                            <GeometryDrawing Brush="#FFFFB236" Geometry="M86.8,227.8l40,64l-13.6,8.5l-40-64L86.8,227.8z"/>
+                            <GeometryDrawing Brush="#FF6E83B7" Geometry="M218.9,147.3c-4.9-5.9-13.3-7.4-20-3.6l-36.1,20.8c-7.5,4.4-17.2,1.8-21.5-5.7l-82.6-143C50,0.7,30.8-4.5,15.8,4.2C5.7,10,0,20.6,0,31.5c0,5.4,1.4,10.7,4.2,15.7l82.6,143c4.3,7.5,1.8,17.1-5.8,21.4l-36.2,20.9c-6.6,3.8-9.5,11.9-6.9,19.1L50.2,284l190.7-110.1L218.9,147.3z M32,48c-8.8,0-16-7.2-16-16s7.2-16,16-16s16,7.2,16,16S40.8,48,32,48z"/>
+                            <GeometryDrawing Brush="#FFFFB0AA" Geometry="M480,88c0-6.6-2.7-12.6-7-17c0-6.1-2.3-12.3-7-17c-4.7-4.7-10.8-7-17-7c-4.3-4.3-10.3-7-17-7s-12.6,2.7-17,7c-6.1,0-12.3,2.3-17,7s-7,10.8-7,17c-4.3,4.3-7,10.3-7,17s2.7,12.6,7,17c0,6.1,2.3,12.3,7,17c4.7,4.7,10.8,7,17,7c4.3,4.3,10.3,7,17,7s12.6-2.7,17-7c6.1,0,12.3-2.3,17-7c4.7-4.7,7-10.8,7-17C477.3,100.6,480,94.6,480,88z"/>
+                            <GeometryDrawing Brush="#FFFFE352" Geometry="M448,88c0,8.8-7.2,16-16,16s-16-7.2-16-16s7.2-16,16-16S448,79.2,448,88z"/>
+                            <GeometryDrawing Brush="#FFFFB0AA" Geometry="M448,272c0-3.3-1.3-6.3-3.5-8.5c0-3.1-1.2-6.1-3.5-8.5s-5.4-3.5-8.5-3.5c-2.2-2.2-5.2-3.5-8.5-3.5s-6.3,1.3-8.5,3.5c-3.1,0-6.1,1.2-8.5,3.5s-3.5,5.4-3.5,8.5c-2.2,2.2-3.5,5.2-3.5,8.5s1.3,6.3,3.5,8.5c0,3.1,1.2,6.1,3.5,8.5s5.4,3.5,8.5,3.5c2.2,2.2,5.2,3.5,8.5,3.5s6.3-1.3,8.5-3.5c3.1,0,6.1-1.2,8.5-3.5s3.5-5.4,3.5-8.5C446.7,278.3,448,275.3,448,272z"/>
+                            <GeometryDrawing Brush="#FFFFE352" Geometry="M432,272c0,4.4-3.6,8-8,8s-8-3.6-8-8s3.6-8,8-8S432,267.6,432,272z"/>
+                            <GeometryDrawing Brush="#FFFFB0AA" Geometry="M376,184c0-4.4-1.8-8.4-4.7-11.3c0-4.1-1.6-8.2-4.7-11.3c-3.1-3.1-7.2-4.7-11.3-4.7c-2.9-2.9-6.9-4.7-11.3-4.7s-8.4,1.8-11.3,4.7c-4.1,0-8.2,1.6-11.3,4.7c-3.1,3.1-4.7,7.2-4.7,11.3c-2.9,2.9-4.7,6.9-4.7,11.3c0,4.4,1.8,8.4,4.7,11.3c0,4.1,1.6,8.2,4.7,11.3c3.1,3.1,7.2,4.7,11.3,4.7c2.9,2.9,6.9,4.7,11.3,4.7s8.4-1.8,11.3-4.7c4.1,0,8.2-1.6,11.3-4.7c3.1-3.1,4.7-7.2,4.7-11.3C374.2,192.4,376,188.4,376,184z"/>
+                            <GeometryDrawing Brush="#FFFFE352" Geometry="M352,184c0,4.4-3.6,8-8,8s-8-3.6-8-8s3.6-8,8-8S352,179.6,352,184z"/>
+                            <GeometryDrawing Brush="#FFEDEFF1" Geometry="M175.9,480c0,0,147-21.7,176-40c0-26.5,21.5-48,48-48c0-17.7,14.3-32,32-32s32,14.3,32,32c0,0,7.6,88-111.9,88C232.5,480,175.9,480,175.9,480z"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Clear -->
+    
+</ResourceDictionary>
+

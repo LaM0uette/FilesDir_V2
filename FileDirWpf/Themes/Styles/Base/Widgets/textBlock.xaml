@@ -1,0 +1,98 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Base -->
+    <Style x:Key="TextBlockBase" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+    
+    <Style x:Key="TextBlockBaseRounded" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="{DynamicResource RscRound}"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+    <!-- /Base -->
+
+
+    <!-- Plain -->
+    <Style x:Key="TextBlockBasePlain" TargetType="TextBlock" BasedOn="{StaticResource TextBlockBase}">
+        <Setter Property="Background" Value="{StaticResource RgbM1}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+    </Style>
+    
+    <Style x:Key="TextBlockPlainM1" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockBasePlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM1}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+    </Style>
+    
+    <Style x:Key="TextBlockPlainM1M3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockBasePlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM1}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+
+    <Style x:Key="TextBlockPlainM2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockBasePlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM2}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+
+    <Style x:Key="TextBlockPlainM3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockBasePlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM3}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+    </Style>
+
+    <Style x:Key="TextBlockPlainB1" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockBasePlain}">
+        <Setter Property="Background" Value="{StaticResource RgbB1}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+
+    <Style x:Key="TextBlockPlainB2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockBasePlain}">
+        <Setter Property="Background" Value="{StaticResource RgbB2}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+    <!-- /Plain -->
+    <!-- Plain Rounded -->
+    <Style x:Key="TextBlockBaseRoundedPlain" TargetType="TextBlock" BasedOn="{StaticResource TextBlockBaseRounded}">
+        <Setter Property="Background" Value="{StaticResource RgbM1}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+    </Style>
+    
+    <Style x:Key="TextBlockPlainRoundedM1" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockBaseRoundedPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM1}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+    </Style>
+
+    <Style x:Key="TextBlockPlainRoundedM2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockBaseRoundedPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM2}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+
+    <Style x:Key="TextBlockPlainRoundedM3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockBaseRoundedPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM3}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+    </Style>
+
+    <Style x:Key="TextBlockPlainRoundedB1" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockBaseRoundedPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbB1}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+
+    <Style x:Key="TextBlockPlainRoundedB2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockBaseRoundedPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbB2}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+    <!-- /Plain Rounded -->
+
+
+    <!-- INITIAL
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockPlainRoundedM1}" />
+    /INITIAL -->
+
+
+</ResourceDictionary>

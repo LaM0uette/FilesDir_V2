@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "GwxrnJ1DWRHeicO7L+Z2emWFu7GxNWZVrQsM/bLmt+EU57ULQUFilpsdth025R61IgLk6zIBe8LV8upYt0cR9A==",
+  "success": true,
+  "projectFilePath": "C:\\Prog\\C#\\FilesDir_V2\\FileDirWpf\\FileDirWpf.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\XD5965\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\mahapps.metro\\2.4.9\\mahapps.metro.2.4.9.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}

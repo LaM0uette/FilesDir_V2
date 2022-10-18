@@ -1,0 +1,87 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Base -->
+    <Style x:Key="ProgressBarBase" TargetType="{x:Type ProgressBar}">
+        <Setter Property="IsIndeterminate" Value="False"/>
+        <Setter Property="Height" Value="5"/>
+        <Setter Property="Minimum" Value="0"/>
+        <Setter Property="Maximum" Value="100"/>
+        
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="{DynamicResource RscRound}"></Setter>
+            </Style>
+        </Style.Resources>
+    </Style>
+    <!-- /Base -->
+
+
+    <!-- Plain -->
+    <Style x:Key="ProgressBarPlain" TargetType="ProgressBar" BasedOn="{StaticResource ProgressBarBase}">
+        <Setter Property="Background" Value="{StaticResource RgbM1}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+    </Style>
+    
+    <Style x:Key="ProgressBarPlainM1" TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM1}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+    </Style>
+
+    <Style x:Key="ProgressBarPlainM2" TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM2}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+
+    <Style x:Key="ProgressBarPlainM3" TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM3}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+    </Style>
+
+    <Style x:Key="ProgressBarPlainB1" TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbB1}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+
+    <Style x:Key="ProgressBarPlainB2" TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbB2}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+    <!-- /Plain -->
+
+
+    <!-- Transparent -->
+    <Style x:Key="ProgressBarTransparent" TargetType="ProgressBar" BasedOn="{StaticResource ProgressBarBase}">
+        <Setter Property="BorderThickness" Value="0"/>
+        
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+    </Style>
+    
+    <Style x:Key="ProgressBarTransparentM1" TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarTransparent}">
+        <Setter Property="Foreground" Value="{StaticResource RgbM1}" />
+    </Style>
+
+    <Style x:Key="ProgressBarTransparentM2" TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarTransparent}">
+        <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+    </Style>
+
+    <Style x:Key="ProgressBarTransparentM3" TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarTransparent}">
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+    </Style>
+
+    <Style x:Key="ProgressBarTransparentB1" TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarTransparent}">
+        <Setter Property="Foreground" Value="{StaticResource RgbB1}" />
+    </Style>
+
+    <Style x:Key="ProgressBarTransparentB2" TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarTransparent}">
+        <Setter Property="Foreground" Value="{StaticResource RgbB2}" />
+    </Style>
+    <!-- /Transparent -->
+
+
+    <!-- INITIAL -->
+    <Style TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarPlainM1}" />
+    <!-- /INITIAL -->
+
+
+</ResourceDictionary>
