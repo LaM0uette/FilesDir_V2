@@ -50,6 +50,8 @@
     <Grid Background="{StaticResource RgbM1}">
         <StackPanel>
             <views:SearchView/>
+            <views:FiltersView/>
+            <views:ParamView/>
         </StackPanel>
     </Grid>
     

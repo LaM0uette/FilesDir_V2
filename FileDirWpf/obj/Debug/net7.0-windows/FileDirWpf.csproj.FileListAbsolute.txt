@@ -56,3 +56,7 @@ C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\FileDirWpf_MarkupComp
 C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\Views\SearchView.baml
 C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\Themes\Img\Base\Ui\folder.baml
+C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\Views\FiltersView.baml
+C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\Views\FiltersView.g.cs
+C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\Views\ParamView.baml
+C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\Views\ParamView.g.cs
