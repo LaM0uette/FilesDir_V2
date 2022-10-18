@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -104,8 +105,8 @@ public partial class MyWrapView
         var txt = new TextBoxDlg();
         txt.ShowDialog();
         
-        if (txt.Msg.Equals("")) return;
-        
+        if (txt.Msg.Equals("") || Lst.Any(txt.Msg.Equals)) return;
+
         Lst.Add(txt.Msg);
         RefreshList();
     }
