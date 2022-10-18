@@ -35,7 +35,7 @@ public partial class MyWrapView
         {
             var bd = new Border
             {
-                Margin = new Thickness(10, 0, 0, 0),
+                Margin = new Thickness(5),
                 BorderBrush = (Brush)_converter.ConvertFrom("#FF8F8FA3")!,
                 CornerRadius = new CornerRadius(3),
                 BorderThickness = new Thickness(1)
@@ -51,6 +51,7 @@ public partial class MyWrapView
             {
                 Width = 20,
                 Height = 20,
+                Name = (string)item
             };
             var img = new Image
             {
@@ -60,11 +61,12 @@ public partial class MyWrapView
             };
 
             btn.Content = img;
+            btn.Click += BtnTag_OnClick;
 
             var stk = new StackPanel
             {
                 Orientation = Orientation.Horizontal, 
-                Margin = new Thickness(1, 0, 1, 0)
+                Margin = new Thickness(1, 0, 2, 0)
             };
             
             stk.Children.Add(lb);
@@ -74,6 +76,16 @@ public partial class MyWrapView
 
             WrapLst.Children.Add(bd);
         }
+    }
+
+    private void BtnTag_OnClick(object sender, RoutedEventArgs e)
+    {
+        var btn = (Button) sender;
+        
+        var index = Lst.IndexOf(btn.Name);
+        Lst.RemoveAt(index);
+        
+        RefreshList();
     }
     
     private void Clear()
