@@ -4,6 +4,7 @@
     <Style x:Key="ListBoxBase" TargetType="{x:Type ListBox}">
         <Setter Property="Background" Value="{StaticResource RgbM1}"/>
         <Setter Property="Foreground" Value="{StaticResource RgbM2}" />
+        <Setter Property="Height" Value="75" />
         
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
@@ -11,6 +12,12 @@
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
         <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+        
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="{DynamicResource RscRound}"></Setter>
+            </Style>
+        </Style.Resources>
     </Style>
     <!-- /Base -->
 
@@ -28,6 +35,7 @@
         <Setter Property="Background" Value="{StaticResource RgbM1}"/>
         <Setter Property="Foreground" Value="{StaticResource RgbM2}"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource ListBoxItemBasePlain}"/>
+        
         
     </Style>
     

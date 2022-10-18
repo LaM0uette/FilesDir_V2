@@ -51,3 +51,8 @@ C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\refint\FileDirWpf.dll
 C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\FileDirWpf.pdb
 C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\FileDirWpf.genruntimeconfig.cache
 C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\ref\FileDirWpf.dll
+C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\Views\SearchView.g.cs
+C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\FileDirWpf_MarkupCompile.lref
+C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\Views\SearchView.baml
+C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Prog\C#\FilesDir_V2\FileDirWpf\obj\Debug\net7.0-windows\Themes\Img\Base\Ui\folder.baml

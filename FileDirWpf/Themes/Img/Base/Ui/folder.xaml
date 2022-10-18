@@ -1,0 +1,161 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- Geometry -->
+    <Geometry x:Key="Folder">m32 10.784v14.557c0 1.645-1.354 3-3 3h-26c-1.646 0-3-1.355-3-3v-18.682c0-1.646 1.354-3 3-3h9.125c.323 0 .627.156.814.42l2.639 3.705h13.422c1.646 0 3 1.355 3 3z</Geometry>
+    
+    
+    <!-- Ckeck -->
+    <Style x:Key="ImgfolderM1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM1}" Geometry="{StaticResource Folder}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgfolderM2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM2}" Geometry="{StaticResource Folder}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgfolderM3" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbM3}" Geometry="{StaticResource Folder}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgfolderB1" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB1}" Geometry="{StaticResource Folder}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgfolderB2" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbB2}" Geometry="{StaticResource Folder}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgfolderOk" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOk}" Geometry="{StaticResource Folder}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgfolderOkBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbOkBis}" Geometry="{StaticResource Folder}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgfolderNok" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNok}" Geometry="{StaticResource Folder}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgfolderNokBis" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="{StaticResource RgbNokBis}" Geometry="{StaticResource Folder}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ImgfolderOrigin" TargetType="Image">
+        <Setter Property="Margin" Value="2"></Setter>
+        <Setter Property="Source">
+            <Setter.Value>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="#FFf1a846" Geometry="{StaticResource Folder}"/>
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /Ckeck -->
+    
+</ResourceDictionary>
+

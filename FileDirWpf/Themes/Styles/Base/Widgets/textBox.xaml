@@ -71,6 +71,27 @@
         <Setter Property="Background" Value="{StaticResource RgbM2}" />
         <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
     </Style>
+    
+    <Style x:Key="TextBoxPlainRoundedM2Left" TargetType="{x:Type TextBox}" BasedOn="{StaticResource TextBoxBaseRoundedPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM2}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+        
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="{DynamicResource RscRoundLeft}"></Setter>
+            </Style>
+        </Style.Resources>
+    </Style>
+    <Style x:Key="TextBoxPlainRoundedM2Right" TargetType="{x:Type TextBox}" BasedOn="{StaticResource TextBoxBaseRoundedPlain}">
+        <Setter Property="Background" Value="{StaticResource RgbM2}" />
+        <Setter Property="Foreground" Value="{StaticResource RgbM3}" />
+        
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="{DynamicResource RscRoundRight}"></Setter>
+            </Style>
+        </Style.Resources>
+    </Style>
 
     <Style x:Key="TextBoxPlainRoundedM3" TargetType="{x:Type TextBox}" BasedOn="{StaticResource TextBoxBaseRoundedPlain}">
         <Setter Property="Background" Value="{StaticResource RgbM3}" />

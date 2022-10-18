@@ -9,6 +9,7 @@
         <!-- Ui -->
         <ResourceDictionary Source="/Themes/Img/Base/Ui/check.xaml"/>
         <ResourceDictionary Source="/Themes/Img/Base/Ui/dialog.xaml"/>
+        <ResourceDictionary Source="/Themes/Img/Base/Ui/folder.xaml"/>
         <ResourceDictionary Source="/Themes/Img/Base/Ui/home.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 

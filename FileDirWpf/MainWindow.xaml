@@ -4,6 +4,7 @@
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                  xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                 xmlns:views="clr-namespace:FileDirWpf.Views"
                  mc:Ignorable="d"
                  
                  TitleAlignment="Center"
@@ -30,8 +31,7 @@
                                   LightCloseButtonStyle="{StaticResource CloseButtonStyle}"
                                   DarkCloseButtonStyle="{StaticResource CloseButtonStyle}" />
     </mah:MetroWindow.WindowButtonCommands>
-
-
+    
     <!-- Header Icon -->
     <mah:MetroWindow.IconTemplate>
         <DataTemplate>
@@ -47,8 +47,10 @@
         </DataTemplate>
     </mah:MetroWindow.IconTemplate>
     
-    <Grid>
-
+    <Grid Background="{StaticResource RgbM1}">
+        <StackPanel>
+            <views:SearchView/>
+        </StackPanel>
     </Grid>
     
 </mah:MetroWindow>
