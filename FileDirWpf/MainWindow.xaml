@@ -7,7 +7,7 @@
                  mc:Ignorable="d"
                  
                  TitleAlignment="Center"
-                 ResizeMode="NoResize"
+                 ResizeMode="CanMinimize"
                  WindowTransitionsEnabled="False"
                  WindowStartupLocation="CenterScreen"
                  Title="FilesDir V2"
@@ -20,6 +20,32 @@
                  FontFamily="Roboto"
                  FontSize="15"
                  FontWeight="Bold">
+    
+    <!-- Header -->
+    <mah:MetroWindow.WindowButtonCommands>
+        <mah:WindowButtonCommands Minimize="Réduire"
+                                  Close="Quitter"
+                                  LightMinButtonStyle="{StaticResource MinButtonStyle}"
+                                  DarkMinButtonStyle="{StaticResource MinButtonStyle}"
+                                  LightCloseButtonStyle="{StaticResource CloseButtonStyle}"
+                                  DarkCloseButtonStyle="{StaticResource CloseButtonStyle}" />
+    </mah:MetroWindow.WindowButtonCommands>
+
+
+    <!-- Header Icon -->
+    <mah:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <Grid Width="20"
+                  Height="20"
+                  Margin="5"
+                  Background="Transparent"
+                  RenderOptions.EdgeMode="Unspecified"
+                  RenderOptions.BitmapScalingMode="HighQuality">
+
+                <Image Source="{StaticResource Main}" />
+            </Grid>
+        </DataTemplate>
+    </mah:MetroWindow.IconTemplate>
     
     <Grid>
 

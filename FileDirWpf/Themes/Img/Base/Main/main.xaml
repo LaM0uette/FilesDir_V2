@@ -1,42 +1,31 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	
-	<SolidColorBrush x:Key="St0" Color="#FFF2F0F0"/>
-	<SolidColorBrush x:Key="St1" Color="#FFF96464"/>
-	<SolidColorBrush x:Key="St2" Color="#FFE5E3E5"/>
-	<SolidColorBrush x:Key="St3" Color="#FFFF0000"/>
-	<SolidColorBrush x:Key="St4" Color="#FF13BD79"/>
-	<SolidColorBrush x:Key="St5" Color="#FFFFCE29"/>
-	<SolidColorBrush x:Key="St6" Color="#FF5B5B5B"/>
-	<SolidColorBrush x:Key="St7" Color="#FF66D5F2"/>
+	<SolidColorBrush x:Key="St0" Color="#FF00BBD3"/>
+	<SolidColorBrush x:Key="St1" Color="#FFD4E1F4"/>
+	<SolidColorBrush x:Key="St2" Color="#FF4DCFE0"/>
+	<SolidColorBrush x:Key="St3" Color="#FF8D9CA8"/>
+	<SolidColorBrush x:Key="St4" Color="#FFFE646F"/>
+	<SolidColorBrush x:Key="St5" Color="#FF9FACBA"/>
+	<SolidColorBrush x:Key="St6" Color="#FFFD4755"/>
+	<SolidColorBrush x:Key="St7" Color="#FFBFE3F4"/>
 
 	<DrawingImage x:Key="Main">
 		<DrawingImage.Drawing>
 			<DrawingGroup>
-				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M471.8,124.5v278.1c0,11.7-9.5,21.3-21.3,21.3H27.9c-11.8,0-21.3-9.6-21.3-21.3V124.5H471.8z"/>
-				<GeometryDrawing Brush="{StaticResource St1}" Geometry="M471.8,55.9v68.6H6.7V55.9c0-11.8,9.5-21.3,21.3-21.3h422.6c4,0,7.8,1.1,11,3.1c2.1,1.2,3.9,2.8,5.4,4.7C470,46.1,471.8,50.8,471.8,55.9z"/>
-				<GeometryDrawing Brush="{StaticResource St2}" Geometry="M31.4,103.7c-4.8,0-8.7-3.9-8.7-8.7l0-22.9c0-4.6,3.5-8.7,8.1-9c5.1-0.3,9.3,3.7,9.3,8.7V95C40.1,99.8,36.2,103.7,31.4,103.7z"/>
-				<GeometryDrawing Brush="{StaticResource St2}" Geometry="M450.5,154.7v239.1c0,4.9-4,8.8-8.8,8.8H36.8c-4.9,0-8.8-4-8.8-8.8V154.7c0-4.9,4-8.8,8.8-8.8h404.9C446.5,145.8,450.5,149.8,450.5,154.7z"/>
-				<GeometryDrawing Brush="{StaticResource St3}" Geometry="M471.8,55.9v68.6h-33.5v0h33.5L471.8,55.9c0-5.1-1.8-9.8-4.9-13.5C470,46.1,471.8,50.8,471.8,55.9z"/>
-				<GeometryDrawing Brush="{StaticResource St4}" Geometry="M343,256.4V292c0,2.9-2.4,5.3-5.3,5.3h-37.1c-2.9,0-5.3-2.4-5.3-5.3v-35.6c0-2.9,2.4-5.3,5.3-5.3h37.1C340.7,251.1,343,253.5,343,256.4z"/>
-				<GeometryDrawing Brush="{StaticResource St4}" Geometry="M343,178.3v35.6c0,2.9-2.4,5.3-5.3,5.3h-37.1c-2.9,0-5.3-2.4-5.3-5.3v-35.6c0-2.9,2.4-5.3,5.3-5.3h37.1C340.7,173,343,175.4,343,178.3z"/>
-				<GeometryDrawing Brush="{StaticResource St5}" Geometry="M183.2,334.5v35.6c0,2.9-2.4,5.3-5.3,5.3h-37.2c-2.9,0-5.3-2.4-5.3-5.3v-35.6c0-2.9,2.4-5.3,5.3-5.3h37.2C180.8,329.2,183.2,331.6,183.2,334.5z"/>
-				<GeometryDrawing Brush="{StaticResource St6}" Geometry="M106.9,79.5c0,13.4-10.8,24.2-24.2,24.2c-13.3,0-24.1-10.8-24.1-24.2c0-13.3,10.8-24.1,24.1-24.1C96.1,55.5,106.9,66.2,106.9,79.5z"/>
-				<GeometryDrawing Brush="{StaticResource St6}" Geometry="M371.6,79.5c0-13.3,10.8-24.1,24.1-24.1c13.4,0,24.1,10.8,24.1,24.1c0,13.4-10.8,24.2-24.1,24.2C382.4,103.7,371.6,92.9,371.6,79.5z"/>
-				<GeometryDrawing Brush="{StaticResource St6}" Geometry="M498.1,451.7c-20.7,50-78,73.7-128,53c-50-20.7-73.7-78-53-128c20.7-50,78-73.7,128-53C495.1,344.4,518.8,401.7,498.1,451.7z"/>
-				<GeometryDrawing Brush="{StaticResource St7}" Geometry="M479.8,444.1c-16.5,39.8-62.2,58.8-102,42.2c-39.8-16.5-58.8-62.2-42.2-102c16.5-39.8,62.2-58.8,102-42.2C477.4,358.5,496.3,404.2,479.8,444.1z"/>
-				<GeometryDrawing Brush="{StaticResource St7}" Geometry="M103.2,256.4V292c0,2.9-2.4,5.3-5.3,5.3H60.8c-2.9,0-5.3-2.4-5.3-5.3v-35.6c0-2.9,2.4-5.3,5.3-5.3h37.1C100.8,251.1,103.2,253.5,103.2,256.4z"/>
-				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M103.2,334.5v35.6c0,2.9-2.4,5.3-5.3,5.3H60.8c-2.9,0-5.3-2.4-5.3-5.3v-35.6c0-2.9,2.4-5.3,5.3-5.3h37.1C100.8,329.2,103.2,331.6,103.2,334.5z"/>
-				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M183.2,178.3v35.6c0,2.9-2.4,5.3-5.3,5.3h-37.1c-2.9,0-5.3-2.4-5.3-5.3v-35.6c0-2.9,2.4-5.3,5.3-5.3h37.1C180.8,173,183.2,175.4,183.2,178.3z"/>
-				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M71,74.4V11.8C71,5.3,76.2,0,82.8,0s11.8,5.3,11.8,11.8v62.6c0,6.5-5.3,11.8-11.8,11.8S71,80.9,71,74.4z"/>
-				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M183.2,256.4V292c0,2.9-2.4,5.3-5.3,5.3h-37.1c-2.9,0-5.3-2.4-5.3-5.3v-35.6c0-2.9,2.4-5.3,5.3-5.3h37.1C180.8,251.1,183.2,253.5,183.2,256.4z"/>
-				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M263.1,178.3v35.6c0,2.9-2.4,5.3-5.3,5.3h-37.1c-2.9,0-5.3-2.4-5.3-5.3v-35.6c0-2.9,2.4-5.3,5.3-5.3h37.1C260.7,173,263.1,175.4,263.1,178.3z"/>
-				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M263.1,256.4V292c0,2.9-2.4,5.3-5.3,5.3h-37.1c-2.9,0-5.3-2.4-5.3-5.3v-35.6c0-2.9,2.4-5.3,5.3-5.3h37.1C260.7,251.1,263.1,253.5,263.1,256.4z"/>
-				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M263.1,334.5v35.6c0,2.9-2.4,5.3-5.3,5.3h-37.1c-2.9,0-5.3-2.4-5.3-5.3v-35.6c0-2.9,2.4-5.3,5.3-5.3h37.1C260.7,329.2,263.1,331.6,263.1,334.5z"/>
-				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M423,256.4V292c0,2.9-2.4,5.3-5.3,5.3h-37.1c-2.9,0-5.3-2.4-5.3-5.3v-35.6c0-2.9,2.4-5.3,5.3-5.3h37.1C420.6,251.1,423,253.5,423,256.4z"/>
-				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M423,178.3v35.6c0,2.9-2.4,5.3-5.3,5.3h-37.1c-2.9,0-5.3-2.4-5.3-5.3v-35.6c0-2.9,2.4-5.3,5.3-5.3h37.1C420.6,173,423,175.4,423,178.3z"/>
-				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M411.4,361.4v52.7c0,1.1-0.4,2.1-1.2,2.8l-18.7,18.7c-1.5,1.6-4.1,1.6-5.6,0s-1.6-4.1,0-5.6l17.5-17.5v-51.1c0-2.2,1.8-4,4-4C409.7,357.4,411.4,359.2,411.4,361.4z"/>
-				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M383.9,74.4V11.8c0-6.5,5.3-11.8,11.8-11.8s11.8,5.3,11.8,11.8v62.6c0,6.5-5.3,11.8-11.8,11.8S383.9,80.9,383.9,74.4z"/>
+				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M111.8,161.9l140.5-66.3h-39.7l-60.1-51.2c-2.6-2.6-6.3-3.7-9.9-3.7H43.9c-8.9,0-15.7,6.8-15.7,15.7v105.5H111.8z"/>
+				<GeometryDrawing Brush="{StaticResource St0}" Geometry="M441,161.9h42.8v-50.7c0-8.9-6.8-15.7-15.7-15.7h-58.5L441,161.9z"/>
+				<GeometryDrawing Brush="{StaticResource St1}" Geometry="M390.3,48c-4.2-8.9-15.1-13.1-24.5-8.4L100.4,165h344.8L390.3,48z"/>
+				<GeometryDrawing Brush="{StaticResource St2}" Geometry="M500.6,164c-3.1-3.1-7.3-4.7-11.5-4.7h-5.2H441H111.8H28.3H23c-4.2,0-8.4,1.6-11.5,4.7s-4.7,7.3-4.2,11.5L23,459.7c0.5,8.4,7.3,14.6,15.7,14.6h434.7c8.4,0,15.1-6.3,15.7-14.6l15.7-284.2C504.7,171.3,503.2,167.1,500.6,164z"/>
+				<GeometryDrawing Brush="{StaticResource St3}" Geometry="M159.1,392.7l-19,9.4L113,347.4l19-9.4L159.1,392.7z"/>
+				<GeometryDrawing Brush="{StaticResource St4}" Geometry="M152.6,444.2l-30.3-61.3c-1.7-3.4-0.3-7.4,3-9l20.3-10c3.4-1.7,7.4-0.3,9,3l30.3,61.3c4.4,9,0.8,19.8-8.2,24.3C167.9,456.8,156.9,453.1,152.6,444.2z"/>
+				<GeometryDrawing Brush="{StaticResource St5}" Geometry="M94.8,213.9c33.1,0,54.5,24.6,56.1,26.6c15.8,19.2,16.5,40.5,16.5,46c0,31.2-20.3,50.6-23.4,53.4c-3.3,3-22.3,19.9-49.2,19.2c-33.7-0.9-72.6-29.2-72.6-72.6C22.2,246.4,54.7,213.9,94.8,213.9z"/>
+				<GeometryDrawing Brush="{StaticResource St1}" Geometry="M94.8,234.5c19.2,0,36.6,11.3,45.3,26.4c5.9,10.2,6.7,20.2,6.7,25.6c-0.1,22.9-15.6,37.2-17.5,38.9c-2.6,2.3-15.9,13.6-34.5,13.1c-24-0.7-52-20.8-52-52C42.8,257.8,66.1,234.5,94.8,234.5z"/>
+				<GeometryDrawing Brush="{StaticResource St3}" Geometry="M62.5,221.4c-35.9,17.8-50.7,61.4-32.9,97.4S91,369.5,127,351.7c2.1-1,4.3-2.2,6.2-3.5c-34.5,13.1-74.1-2-90.8-35.8s-4.7-74.4,26.7-93.9C66.8,219.4,64.7,220.4,62.5,221.4L62.5,221.4z"/>
+				<GeometryDrawing Brush="{StaticResource St6}" Geometry="M125.2,373.8c-3.4,1.7-4.7,5.7-3,9l30.3,61.3c4.4,9,15.3,12.6,24.3,8.2c2.2-1.1,4.2-2.6,5.7-4.5c-7,0.4-13.9-3.4-17.2-10L135,376.4c-1.7-3.4-0.3-7.4,3-9L125.2,373.8L125.2,373.8z"/>
+				<GeometryDrawing Brush="{StaticResource St7}" Geometry="M71.6,239.9c-25.7,12.7-36.3,44-23.6,69.8c12.7,25.7,44,36.3,69.8,23.6c1.8-0.9,3.4-1.8,5-2.9c-24.6,8.9-52.6-1.8-64.4-25.8c-11.9-24-3.5-52.8,18.6-66.9C75.2,238.3,73.4,239,71.6,239.9L71.6,239.9z"/>
+				<GeometryDrawing Brush="{StaticResource St1}" Geometry="M446.7,371v54H337.6c-17.1,0-29.6-4.1-37.7-12.3c-8.1-8.2-12.1-20.8-12.1-37.8v-30.6c0-19.2,4.2-33.1,12.6-41.8c8.4-8.6,21-13,37.8-13H382c1.9,0,3.6-0.5,5-1.6s2.1-2.8,2.1-5.2v-13.5c0-2.4-0.8-4.1-2.3-5.2s-3.3-1.6-5.2-1.6H295v-54h102.3c32.9,0,49.4,16.8,49.4,50.5v30.6c0,17.1-4.1,30.3-12.3,39.8c-8.2,9.5-20.7,14.2-37.5,14.2h-43c-3.1,0-5.3,0.7-6.6,2c-1.3,1.3-2,3.6-2,6.9v9.6c0,3.3,0.7,5.6,2.1,6.9s3.4,2,6,2h93.3V371z"/>
+				<GeometryDrawing Brush="{StaticResource St1}" Geometry="M233.9,385.1c1.7-1.9,3.3-3.8,5-5.7c1.7-1.9,3.3-3.8,5-5.7c0.6-0.6,1-1.4,1.3-2.4c0.3-1.1,0.5-2.1,0.5-3.1v-51.4h27v52.9c0,2.9-0.4,5.4-1.1,7.4c-0.7,2.1-2,4.2-3.9,6.4l-33.9,37.4l-33.7-37.4c-1.9-2-3.2-4.1-3.9-6.3c-0.7-2.2-1.1-4.6-1.1-7.4v-53.1h27v51.6c0,1,0.1,2,0.4,3c0.3,1,0.7,1.8,1.3,2.3L233.9,385.1z"/>
 			</DrawingGroup>
 		</DrawingImage.Drawing>
 	</DrawingImage>
