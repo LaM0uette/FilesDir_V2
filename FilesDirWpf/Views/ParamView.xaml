@@ -12,6 +12,10 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
         <Grid.ColumnDefinitions>
@@ -25,12 +29,24 @@
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Content="Paramètres" Style="{StaticResource LabelTransparentM2Title}"/>
         
         <!-- Performance -->
+        <Label Grid.Row="3" Grid.Column="0" Content="Performances :" Style="{StaticResource LabelTransparentM2}"/>
+        <ComboBox Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3"
+                  Style="{StaticResource ComboBoxPlainM2}"
+                  SelectedIndex="1">
+            <ComboBoxItem Content="Lent - Demande peu de ressources"/>
+            <ComboBoxItem Content="Normal - Demande de la ressources"/>
+            <ComboBoxItem Content="Rapide - Demande beaucoup de ressources"/>
+        </ComboBox>
         
         
         <!-- Casse -->
+        <Label Grid.Row="5" Grid.Column="0" Content="Sensible aux Majuscules ? :" Style="{StaticResource LabelTransparentM2}"/>
+        <CheckBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3"/>
         
         
         <!-- UTF-8 -->
+        <Label Grid.Row="7" Grid.Column="0" Content="Sensible aux accents ? :" Style="{StaticResource LabelTransparentM2}"/>
+        <CheckBox Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="3"/>
         
         
     </Grid>
