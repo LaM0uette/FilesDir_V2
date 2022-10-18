@@ -8,44 +8,35 @@
     <Border Margin="0, 0, 5, 0"
             CornerRadius="3"
             BorderBrush="{StaticResource RgbM2}"
-            BorderThickness="2">
+            BorderThickness="2"
+            Height="55">
     <Grid Margin="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         
         <ListBox Grid.Column="0" x:Name="LstBx" 
                  Margin="0, 0, 5, 0"
+                 Height="55"
                  SelectionMode="Extended"/>
         
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="25"/>
-                <RowDefinition Height="25"/>
-                <RowDefinition Height="25"/>
-                <RowDefinition Height="25"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
             
-            <Button Grid.Row="0" x:Name="BtnPlus" Height="25" Click="BtnPlus_OnClick">
+            <Button Grid.Row="0" x:Name="BtnPlus" Height="20" Click="BtnPlus_OnClick">
                 <Image Style="{StaticResource ImgPlusOk}"
-                       Width="16"
-                       Height="16" />
+                       Width="14"
+                       Height="14" />
             </Button>
-            <Button Grid.Row="1" x:Name="BtnMinus" Height="25" Click="BtnMinus_OnClick">
+            
+            <Button Grid.Row="1" x:Name="BtnMinus" Height="20" Click="BtnMinus_OnClick">
                 <Image Style="{StaticResource ImgMinusNok}"
-                       Width="16"
-                       Height="16" />
-            </Button>
-            <Button Grid.Row="2" x:Name="BtnEdit" Height="25" Click="BtnEdit_OnClick">
-                <Image Style="{StaticResource ImgEditM2}"
-                       Width="16"
-                       Height="16" />
-            </Button>
-            <Button Grid.Row="3" x:Name="BtnCleen" Height="25" Click="BtnCleen_OnClick">
-                <Image Style="{StaticResource ImgClear}"
-                       Width="16"
-                       Height="16" />
+                       Width="14"
+                       Height="14" />
             </Button>
         </Grid>
         

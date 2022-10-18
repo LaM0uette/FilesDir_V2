@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="FilesDirWpf.UserControls.MyWrapView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    
+    <Border Margin="0, 0, 5, 0"
+            CornerRadius="3"
+            BorderBrush="{StaticResource RgbM2}"
+            BorderThickness="2">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+        
+        <WrapPanel Grid.Column="0" x:Name="WrapLst" 
+                   Margin="0, 0, 5, 0"/>
+        
+        <Button Grid.Column="1" x:Name="BtnPlus" Height="25" Click="BtnPlus_OnClick">
+            <Image Style="{StaticResource ImgPlusOk}"
+                   Width="18"
+                   Height="18" />
+        </Button>
+        
+    </Grid>
+    </Border>
+    
+</UserControl>

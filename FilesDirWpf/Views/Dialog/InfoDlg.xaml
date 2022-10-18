@@ -1,0 +1,78 @@
+﻿<mah:MetroWindow x:Class="FilesDirWpf.Views.Dialog.InfoDlg"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                 
+                 TitleAlignment="Center"
+                 ResizeMode="NoResize"
+                 WindowTransitionsEnabled="False"
+                 WindowStartupLocation="CenterScreen"
+                 Title="Info"
+                 Icon="{StaticResource Main}"
+                 Width="450"
+                 Height="200"
+                 GlowBrush="{StaticResource RgbM2}"
+                 WindowTitleBrush="{StaticResource RgbM1}"
+                 NonActiveWindowTitleBrush="{StaticResource RgbM1}"
+                 FontFamily="Roboto"
+                 FontSize="15"
+                 FontWeight="Bold"
+                 mc:Ignorable="d">
+    
+    <!-- Header -->
+    <mah:MetroWindow.WindowButtonCommands>
+        <mah:WindowButtonCommands Close="Quitter"
+                                  LightCloseButtonStyle="{StaticResource CloseButtonStyle}"
+                                  DarkCloseButtonStyle="{StaticResource CloseButtonStyle}" />
+
+    </mah:MetroWindow.WindowButtonCommands>
+    
+    <!-- Header Icon -->
+    <mah:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <Grid Width="20"
+                  Height="20"
+                  Margin="5"
+                  Background="Transparent"
+                  RenderOptions.EdgeMode="Unspecified"
+                  RenderOptions.BitmapScalingMode="HighQuality">
+            
+                <Image x:Name="ImgMain" Style="{StaticResource ImgGeoInfoB1}"/>
+            </Grid>
+        </DataTemplate>
+    </mah:MetroWindow.IconTemplate>
+    
+    
+    <!-- Body -->
+    <Grid Background="{StaticResource RgbM1}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+            
+            
+            <!-- msg -->
+            <TextBlock x:Name="LblMsg" Grid.Row="0" Style="{StaticResource TextBlockPlainM1}" Margin="25, 0"/>
+            
+            
+            <!-- Valider / Annuler -->
+            <StackPanel Grid.Row="1" 
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center">
+                
+                <Button x:Name="ButtonValider" 
+                        VerticalAlignment="Top"
+                        Style="{StaticResource ButtonDlgOk}"
+                        Content="Ok"
+                        Click="ButtonOk_OnClick"
+                        Width="100"
+                        Margin="0, 5, 5, 5">
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</mah:MetroWindow>

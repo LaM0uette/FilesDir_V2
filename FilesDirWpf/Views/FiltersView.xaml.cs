@@ -8,10 +8,10 @@ public partial class FiltersView
 {
     #region Statements
     
-    private MyListView _mlvWords = new();
-    private MyListView _mlvExtensions = new();
-    private MyListView _mlvBlackList = new();
-    private MyListView _mlvWhiteList = new();
+    private MyWrapView _mlvWords = new();
+    private MyWrapView _mlvExtensions = new();
+    private MyWrapView _mlvBlackList = new();
+    private MyWrapView _mlvWhiteList = new();
 
     public FiltersView()
     {
