@@ -20,14 +20,12 @@ namespace FilesDirWpf
 
         private void ButtonRunSearch_OnClick(object sender, RoutedEventArgs e)
         {
-            Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", "-w=NPOI");
-
-            // var flag = new Flags
-            // {
-            //
-            // };
-            //
-            // await flag.RunFilesDir();
+            var arg = $"""
+            -p="{"C:\\"}"
+            -w=NPOI
+            """;
+            
+            Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", arg);
         }
 
         #endregion

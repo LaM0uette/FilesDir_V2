@@ -9,6 +9,7 @@ public partial class Flags
     {
         Var.Log.Separator("PARAMETRES");
         Var.Log.DrawParam("INITIALISATION DE LA RECHERCHE EN COURS...");
+        Var.Log.DrawParam("DOSSIER DE RECHERCHE : ", DirPath);
 
         Var.Log.DrawParam("CREATION DE LA REQUETE EN COURS...");
         Var.Results.Req = GetReqOfSearch();

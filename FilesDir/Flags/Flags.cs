@@ -95,7 +95,7 @@ public partial class Flags : IFlags
         req += $"m={GetSearchModeReq(SearchMode)} ";
         req += $"w={string.Join(":", Words)} ";
         req += $"e={string.Join(":", Extensions)} ";
-        req += $"p={PoolSize} ";
+        req += $"pool={PoolSize} ";
         
         if (!FoldersBlackList[0].Equals("")) req += $"bl={string.Join(":", FoldersBlackList)} ";
         if (!FoldersWhiteList[0].Equals("")) req += $"wl={string.Join(":", FoldersWhiteList)} ";
