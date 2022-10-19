@@ -27,6 +27,10 @@ public partial class Flags
             {
                 await DirSearchAsync(dir);
             }
+            catch (Exception)
+            {
+                Var.Log.NokDel($"Impossible d'accéder au dossier : {sDir}");
+            }
             finally
             {
                 Interlocked.Add(ref Var.Results.NbFolders, 1);
@@ -48,6 +52,10 @@ public partial class Flags
                 {
                     CheckFile(new FileInfo(file));
                 }, _);
+            }
+            catch (Exception)
+            {
+                Var.Log.NokDel($"Impossible d'accéder au fichier : {file}");
             }
             finally
             {
