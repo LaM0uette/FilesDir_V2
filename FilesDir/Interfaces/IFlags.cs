@@ -27,6 +27,8 @@ public interface IFlags
     public Task RunFilesDir();
 
     public string GetReqOfSearch();
+    
+    public string GetFullReqOfSearch();
 
     #endregion
 }

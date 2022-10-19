@@ -7,6 +7,8 @@ namespace FilesDirWpf.Views;
 public partial class FiltersView
 {
     #region Statements
+
+    public static FiltersView Instance { get; private set; } = new();
     
     private MyWrapView _mlvWords = new();
     private MyWrapView _mlvExtensions = new();
@@ -15,6 +17,7 @@ public partial class FiltersView
 
     public FiltersView()
     {
+        Instance = this;
         InitializeComponent();
 
         CreateUiList();
@@ -43,11 +46,10 @@ public partial class FiltersView
         AddInGrid(_mlvWhiteList, 7);
     }
 
-    #endregion
-
-    //
-
-    #region Actions
+    public (string h, string) GetFilters()
+    {
+        return ("test", "test2");
+    }
 
     #endregion
 }

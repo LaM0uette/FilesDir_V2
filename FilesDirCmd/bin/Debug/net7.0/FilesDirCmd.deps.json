@@ -9,7 +9,7 @@
       "FilesDirCmd/1.0.0": {
         "dependencies": {
           "CommonTasks": "1.0.1",
-          "FilesDir": "2.0.0"
+          "FilesDir": "2.0.3"
         },
         "runtime": {
           "FilesDirCmd.dll": {}
@@ -160,7 +160,7 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.0"
         }
       },
-      "FilesDir/2.0.0": {
+      "FilesDir/2.0.3": {
         "dependencies": {
           "CommonTasks": "1.0.1",
           "DotNetCore.NPOI": "1.2.3",
@@ -277,7 +277,7 @@
       "path": "system.text.encoding.codepages/4.5.0",
       "hashPath": "system.text.encoding.codepages.4.5.0.nupkg.sha512"
     },
-    "FilesDir/2.0.0": {
+    "FilesDir/2.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

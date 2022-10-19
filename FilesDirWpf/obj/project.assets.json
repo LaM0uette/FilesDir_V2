@@ -245,7 +245,7 @@
           "lib/netcoreapp3.0/System.Text.Json.dll": {}
         }
       },
-      "FilesDir/2.0.3": {
+      "FilesDir/2.0.5": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -633,7 +633,7 @@
         "version.txt"
       ]
     },
-    "FilesDir/2.0.3": {
+    "FilesDir/2.0.5": {
       "type": "project",
       "path": "../FilesDir/FilesDir.csproj",
       "msbuildProject": "../FilesDir/FilesDir.csproj"
@@ -641,7 +641,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
-      "FilesDir >= 2.0.3",
+      "FilesDir >= 2.0.5",
       "MahApps.Metro >= 2.4.9"
     ]
   },

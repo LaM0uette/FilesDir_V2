@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "FilesDirWpf/1.0.0": {
         "dependencies": {
-          "FilesDir": "2.0.3",
+          "FilesDir": "2.0.5",
           "MahApps.Metro": "2.4.9"
         },
         "runtime": {
@@ -163,7 +163,7 @@
         }
       },
       "System.Text.Json/4.7.2": {},
-      "FilesDir/2.0.3": {
+      "FilesDir/2.0.5": {
         "dependencies": {
           "CommonTasks": "1.0.1",
           "DotNetCore.NPOI": "1.2.3",
@@ -308,7 +308,7 @@
       "path": "system.text.json/4.7.2",
       "hashPath": "system.text.json.4.7.2.nupkg.sha512"
     },
-    "FilesDir/2.0.3": {
+    "FilesDir/2.0.5": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
