@@ -1,8 +1,6 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO;
 using System.Windows;
-using System.Windows.Documents;
 using FilesDir.Flags;
 using FilesDirWpf.Views;
 using FilesDirWpf.Views.Dialog;
@@ -52,7 +50,6 @@ namespace FilesDirWpf
             }
 
             var arg = "/K " + flags.GetFullReqOfSearch();
-            Console.WriteLine(arg);
 
             Process.Start(@$"T:\- 11 Outils\FilesDir\FD.exe", $"""{arg}""");
         }
