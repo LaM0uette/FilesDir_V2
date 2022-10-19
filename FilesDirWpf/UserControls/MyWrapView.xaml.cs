@@ -13,7 +13,7 @@ public partial class MyWrapView
 {
     #region Statements
 
-    public List<object> Lst = new();
+    public List<string> Lst = new();
     
     private BrushConverter _converter = new ();
     
@@ -52,7 +52,7 @@ public partial class MyWrapView
             {
                 Width = 20,
                 Height = 20,
-                Tag = (string)item
+                Tag = item
             };
             var img = new Image
             {
@@ -82,10 +82,10 @@ public partial class MyWrapView
     private void BtnTag_OnClick(object sender, RoutedEventArgs e)
     {
         var btn = (Button) sender;
-        
-        var index = Lst.IndexOf(btn.Tag);
+
+        var index = Lst.IndexOf(btn.Tag as string ?? string.Empty);
         Lst.RemoveAt(index);
-        
+
         RefreshList();
     }
     

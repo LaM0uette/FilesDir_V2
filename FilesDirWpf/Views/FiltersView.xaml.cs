@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using FilesDirWpf.UserControls;
 
@@ -46,9 +47,19 @@ public partial class FiltersView
         AddInGrid(_mlvWhiteList, 7);
     }
 
-    public (string h, string) GetFilters()
+    public (string[] words, string[] extensions, string[] blackList, string[] whiteList) GetFilters()
     {
-        return ("test", "test2");
+        var words = _mlvWords.Lst.ToArray();
+        var extensions = _mlvExtensions.Lst.ToArray();
+        var blackList = _mlvBlackList.Lst.ToArray();
+        var whiteList = _mlvWhiteList.Lst.ToArray();
+
+        return (
+            words.Length <= 0 ? new []{""} : words,
+            extensions.Length <= 0 ? new []{""} : extensions,
+            blackList.Length <= 0 ? new []{""} : blackList,
+            whiteList.Length <= 0 ? new []{""} : whiteList
+            );
     }
 
     #endregion

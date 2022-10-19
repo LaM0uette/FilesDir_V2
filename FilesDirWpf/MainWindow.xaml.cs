@@ -1,5 +1,7 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using FilesDir.Flags;
 using FilesDirWpf.Views;
@@ -25,16 +27,17 @@ namespace FilesDirWpf
         private void ButtonRunSearch_OnClick(object sender, RoutedEventArgs e)
         {
             var searchs = SearchView.Instance.GetSearchs();
+            var filters = FiltersView.Instance.GetFilters();
 
             var flags = new Flags
             {
                 SearchMode = searchs.mode,
                 Re = searchs.regex,
                 DirPath = searchs.folder,
-                Words = new []{""},
-                Extensions =  new []{""},
-                FoldersBlackList =  new []{""},
-                FoldersWhiteList =  new []{""},
+                Words = filters.words,
+                Extensions =  filters.extensions,
+                FoldersBlackList =  filters.blackList,
+                FoldersWhiteList =  filters.whiteList,
                 PoolSize = 10,
                 Casse = false,
                 Utf = false,
@@ -50,8 +53,8 @@ namespace FilesDirWpf
             }
 
             var arg = "/K " + flags.GetFullReqOfSearch();
-
-            Process.Start(@$"T:\- 11 Outils\FilesDir\FD.exe", $"""{arg}""");
+            
+            Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", $"""{arg}""");
         }
 
         #endregion
