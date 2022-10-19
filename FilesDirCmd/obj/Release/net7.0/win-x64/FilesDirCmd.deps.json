@@ -10,7 +10,7 @@
       "FilesDirCmd/1.0.0": {
         "dependencies": {
           "CommonTasks": "1.0.1",
-          "FilesDir": "2.0.9",
+          "FilesDir": "2.0.16",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "7.0.0-preview.6.22324.4"
         },
         "runtime": {
@@ -745,11 +745,11 @@
           }
         }
       },
-      "Flaggers/1.0.0": {
+      "Flaggers/1.0.2": {
         "runtime": {
           "lib/net6.0/Flaggers.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
           }
         }
       },
@@ -812,11 +812,11 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.0"
         }
       },
-      "FilesDir/2.0.9": {
+      "FilesDir/2.0.16": {
         "dependencies": {
           "CommonTasks": "1.0.1",
           "DotNetCore.NPOI": "1.2.3",
-          "Flaggers": "1.0.0",
+          "Flaggers": "1.0.2",
           "Logger": "1.2.27"
         },
         "runtime": {
@@ -871,12 +871,12 @@
       "path": "dotnetcore.npoi.openxmlformats/1.2.3",
       "hashPath": "dotnetcore.npoi.openxmlformats.1.2.3.nupkg.sha512"
     },
-    "Flaggers/1.0.0": {
+    "Flaggers/1.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ISnmh15WlptSezAp2/eEDa5R0+4Sf2qB9b2z3nh0siZJZjyhOv10wifH33XbUrRPULdRYRPMOaOPF449aE06Gg==",
-      "path": "flaggers/1.0.0",
-      "hashPath": "flaggers.1.0.0.nupkg.sha512"
+      "sha512": "sha512-PRcKrEKsWEt1mKUbdFcVDupgvWlNxuPErGX/AQCeFX8HUvs1eTYyDsB7xldT6JEvD8n9Cmy0QmGQerhmSIS2qA==",
+      "path": "flaggers/1.0.2",
+      "hashPath": "flaggers.1.0.2.nupkg.sha512"
     },
     "Logger/1.2.27": {
       "type": "package",
@@ -934,7 +934,7 @@
       "path": "system.text.encoding.codepages/4.5.0",
       "hashPath": "system.text.encoding.codepages.4.5.0.nupkg.sha512"
     },
-    "FilesDir/2.0.9": {
+    "FilesDir/2.0.16": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

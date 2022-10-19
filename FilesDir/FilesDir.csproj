@@ -5,13 +5,13 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>preview</LangVersion>
-        <Version>2.0.9</Version>
+        <Version>2.0.16</Version>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="CommonTasks" Version="1.0.1" />
       <PackageReference Include="DotNetCore.NPOI" Version="1.2.3" />
-      <PackageReference Include="Flaggers" Version="1.0.0" />
+      <PackageReference Include="Flaggers" Version="1.0.2" />
       <PackageReference Include="Logger" Version="1.2.27" />
     </ItemGroup>
 

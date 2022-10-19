@@ -90,7 +90,7 @@ public partial class Flags : IFlags
 
     public string GetReqOfSearch()
     {
-        var req = "FilesDir ";
+        var req = @"T:\- 11 Outils\FilesDir\FD ";
 
         req += $"-m={GetSearchModeReq(SearchMode)} ";
         

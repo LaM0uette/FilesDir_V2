@@ -52,11 +52,12 @@ namespace FilesDirWpf
                 return;
             }
 
-            var arg = "/K " + flags.GetFullReqOfSearch();
-            
-            Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", $"""{arg}""");
+            var arg = flags.GetReqOfSearch();
+            Console.WriteLine(arg);
         }
 
         #endregion
     }
 }
+
+

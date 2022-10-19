@@ -25,7 +25,7 @@ public static class Args
     
     public static string GetDirPath()
     {
-        return Flaggers.Flags.String("p", Var.CurrentDir);
+        return Flaggers.Flags.Path("p", Var.CurrentDir);
     }
     
     public static string[] GetWords()

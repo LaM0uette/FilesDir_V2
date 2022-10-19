@@ -70,7 +70,7 @@
           "lib/netstandard2.0/NPOI.OpenXmlFormats.dll": {}
         }
       },
-      "Flaggers/1.0.0": {
+      "Flaggers/1.0.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/Flaggers.dll": {}
@@ -188,13 +188,13 @@
           }
         }
       },
-      "FilesDir/2.0.9": {
+      "FilesDir/2.0.16": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "CommonTasks": "1.0.1",
           "DotNetCore.NPOI": "1.2.3",
-          "Flaggers": "1.0.0",
+          "Flaggers": "1.0.2",
           "Logger": "1.2.27"
         },
         "compile": {
@@ -273,13 +273,13 @@
         "lib/netstandard2.0/NPOI.OpenXmlFormats.dll"
       ]
     },
-    "Flaggers/1.0.0": {
-      "sha512": "ISnmh15WlptSezAp2/eEDa5R0+4Sf2qB9b2z3nh0siZJZjyhOv10wifH33XbUrRPULdRYRPMOaOPF449aE06Gg==",
+    "Flaggers/1.0.2": {
+      "sha512": "PRcKrEKsWEt1mKUbdFcVDupgvWlNxuPErGX/AQCeFX8HUvs1eTYyDsB7xldT6JEvD8n9Cmy0QmGQerhmSIS2qA==",
       "type": "package",
-      "path": "flaggers/1.0.0",
+      "path": "flaggers/1.0.2",
       "files": [
         ".nupkg.metadata",
-        "flaggers.1.0.0.nupkg.sha512",
+        "flaggers.1.0.2.nupkg.sha512",
         "flaggers.nuspec",
         "lib/net6.0/Flaggers.dll"
       ]
@@ -475,7 +475,7 @@
         "version.txt"
       ]
     },
-    "FilesDir/2.0.9": {
+    "FilesDir/2.0.16": {
       "type": "project",
       "path": "../FilesDir/FilesDir.csproj",
       "msbuildProject": "../FilesDir/FilesDir.csproj"
@@ -484,7 +484,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "CommonTasks >= 1.0.1",
-      "FilesDir >= 2.0.9"
+      "FilesDir >= 2.0.16"
     ]
   },
   "packageFolders": {
