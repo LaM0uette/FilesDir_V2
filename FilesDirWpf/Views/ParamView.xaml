@@ -30,7 +30,7 @@
         
         <!-- Performance -->
         <Label Grid.Row="3" Grid.Column="0" Content="Performances :" Style="{StaticResource LabelTransparentM2}"/>
-        <ComboBox Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3"
+        <ComboBox x:Name="ComboBoxPool" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3"
                   Style="{StaticResource ComboBoxPlainM2}"
                   SelectedIndex="1">
             <ComboBoxItem Content="Lent - Demande peu de ressources"/>
@@ -41,12 +41,12 @@
         
         <!-- Casse -->
         <Label Grid.Row="5" Grid.Column="0" Content="Sensible aux Majuscules ? :" Style="{StaticResource LabelTransparentM2}"/>
-        <CheckBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3"/>
+        <CheckBox x:Name="CheckBoxCasse" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3"/>
         
         
         <!-- UTF-8 -->
         <Label Grid.Row="7" Grid.Column="0" Content="Sensible aux accents ? :" Style="{StaticResource LabelTransparentM2}"/>
-        <CheckBox Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="3"/>
+        <CheckBox x:Name="CheckBoxUtf" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="3"/>
         
         
     </Grid>

@@ -28,6 +28,7 @@ namespace FilesDirWpf
         {
             var searchs = SearchView.Instance.GetSearchs();
             var filters = FiltersView.Instance.GetFilters();
+            var parameters = ParamView.Instance.GetParameters();
 
             var flags = new Flags
             {
@@ -38,10 +39,10 @@ namespace FilesDirWpf
                 Extensions =  filters.extensions,
                 FoldersBlackList =  filters.blackList,
                 FoldersWhiteList =  filters.whiteList,
-                PoolSize = 10,
-                Casse = false,
-                Utf = false,
-                Silent = false,
+                PoolSize = parameters.pool,
+                Casse = parameters.casse,
+                Utf = parameters.utf,
+                Silent = parameters.silent,
             };
 
             if (!Directory.Exists(flags.DirPath) || flags.DirPath.Contains(@"\\"))
