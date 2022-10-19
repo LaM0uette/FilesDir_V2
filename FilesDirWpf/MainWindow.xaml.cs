@@ -1,11 +1,9 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Windows;
 using FilesDir.Flags;
 using FilesDirWpf.Views;
 using FilesDirWpf.Views.Dialog;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace FilesDirWpf
 {
@@ -54,7 +52,14 @@ namespace FilesDirWpf
             }
 
             var arg = flags.GetReqOfSearch();
-            Console.WriteLine(arg);
+            
+            Clipboard.SetText(arg);
+            
+            new ToastContentBuilder()
+                .AddText("Copié dans le presse papier !")
+                .AddText(arg)
+                .SetToastDuration(ToastDuration.Short)
+                .Show();
         }
 
         #endregion

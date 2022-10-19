@@ -65,7 +65,7 @@
         <Button x:Name="ButtonRunSearch" Grid.Row="1" VerticalAlignment="Bottom" Style="{StaticResource ButtonPlainOk}" 
                 Height="50" 
                 FontSize="30"
-                Content="Lancer la recherche"
+                Content="Copier la requête"
                 Click="ButtonRunSearch_OnClick"/>
     </Grid>
     
