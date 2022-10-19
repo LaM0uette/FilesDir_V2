@@ -188,7 +188,7 @@
           }
         }
       },
-      "FilesDir/2.0.5": {
+      "FilesDir/2.0.8": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -475,7 +475,7 @@
         "version.txt"
       ]
     },
-    "FilesDir/2.0.5": {
+    "FilesDir/2.0.8": {
       "type": "project",
       "path": "../FilesDir/FilesDir.csproj",
       "msbuildProject": "../FilesDir/FilesDir.csproj"
@@ -484,7 +484,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "CommonTasks >= 1.0.1",
-      "FilesDir >= 2.0.5"
+      "FilesDir >= 2.0.8"
     ]
   },
   "packageFolders": {

@@ -1,6 +1,8 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
+using System.Windows.Documents;
 using FilesDir.Flags;
 using FilesDirWpf.Views;
 using FilesDirWpf.Views.Dialog;
@@ -31,16 +33,16 @@ namespace FilesDirWpf
                 SearchMode = searchs.mode,
                 Re = searchs.regex,
                 DirPath = searchs.folder,
-                // Words = 
-                // Extensions = 
-                // FoldersBlackList = 
-                // FoldersWhiteList = 
-                // PoolSize = 
-                // Casse = 
-                // Utf = 
-                // Silent = 
+                Words = new []{""},
+                Extensions =  new []{""},
+                FoldersBlackList =  new []{""},
+                FoldersWhiteList =  new []{""},
+                PoolSize = 10,
+                Casse = false,
+                Utf = false,
+                Silent = false,
             };
-            
+
             if (!Directory.Exists(flags.DirPath) || flags.DirPath.Contains(@"\\"))
             {
                 var err = new AlerteDlg("ERREUR", "Le chemin est incorrect !");
@@ -48,10 +50,11 @@ namespace FilesDirWpf
                 
                 return;
             }
-            
-            var arg = "/k" + flags.GetFullReqOfSearch();
-            
-            Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", arg);
+
+            var arg = "/K " + flags.GetFullReqOfSearch();
+            Console.WriteLine(arg);
+
+            Process.Start(@$"T:\- 11 Outils\FilesDir\FD.exe", $"""{arg}""");
         }
 
         #endregion

@@ -92,14 +92,15 @@ public partial class Flags : IFlags
     {
         var req = "FilesDir ";
 
-        req += $"m={GetSearchModeReq(SearchMode)} ";
-        req += $"w={string.Join(":", Words)} ";
-        req += $"e={string.Join(":", Extensions)} ";
-        req += $"pool={PoolSize} ";
+        req += $"-m={GetSearchModeReq(SearchMode)} ";
         
-        if (!FoldersBlackList[0].Equals("")) req += $"bl={string.Join(":", FoldersBlackList)} ";
-        if (!FoldersWhiteList[0].Equals("")) req += $"wl={string.Join(":", FoldersWhiteList)} ";
+        if (!Words[0].Equals("")) req += $"-w={string.Join(":", Words)} ";
+        if (!Extensions[0].Equals("")) req += $"-e={string.Join(":", Extensions)} ";
+        if (!FoldersBlackList[0].Equals("")) req += $"-bl={string.Join(":", FoldersBlackList)} ";
+        if (!FoldersWhiteList[0].Equals("")) req += $"-wl={string.Join(":", FoldersWhiteList)} ";
         
+        req += $"-pool={PoolSize} ";
+
         if (Casse) req += "-c ";
         if (Utf) req += "-utf ";
         if (Silent) req += "-s ";
@@ -111,15 +112,16 @@ public partial class Flags : IFlags
     {
         var req = "FilesDir ";
 
-        req += $"m={GetSearchModeReq(SearchMode)} ";
-        req += $"p=\"{DirPath}\" ";
-        req += $"w={string.Join(":", Words)} ";
-        req += $"e={string.Join(":", Extensions)} ";
-        req += $"pool={PoolSize} ";
+        req += $"-m={GetSearchModeReq(SearchMode)} ";
+        req += $"-p=\"{DirPath}\" ";
+
+        if (!Words[0].Equals("")) req += $"-w={string.Join(":", Words)} ";
+        if (!Extensions[0].Equals("")) req += $"-e={string.Join(":", Extensions)} ";
+        if (!FoldersBlackList[0].Equals("")) req += $"-bl={string.Join(":", FoldersBlackList)} ";
+        if (!FoldersWhiteList[0].Equals("")) req += $"-wl={string.Join(":", FoldersWhiteList)} ";
         
-        if (!FoldersBlackList[0].Equals("")) req += $"bl={string.Join(":", FoldersBlackList)} ";
-        if (!FoldersWhiteList[0].Equals("")) req += $"wl={string.Join(":", FoldersWhiteList)} ";
-        
+        req += $"-pool={PoolSize} ";
+
         if (Casse) req += "-c ";
         if (Utf) req += "-utf ";
         if (Silent) req += "-s ";
