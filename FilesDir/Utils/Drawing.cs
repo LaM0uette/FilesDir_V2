@@ -19,7 +19,7 @@ public static class Drawing
         Var.Log.Separator("BILAN");
         
         Var.Log.Category("INFOS GENERALES");
-        Var.Log.SubCategory("Dossier de recherche", Var.CurrentDir);
+        Var.Log.SubCategory("Dossier de recherche", flags.DirPath);
         Var.Log.SubCategory("Requête utilisée", flags.GetReqOfSearch());
         Var.Log.Space();
         

@@ -6,6 +6,7 @@
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
         <RootNamespace>FilesDirWpf</RootNamespace>
+        <LangVersion>preview</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -40,6 +41,10 @@
       <Resource Include="Themes\Img\Base\Ui\croix.png">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Resource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\FilesDir\FilesDir.csproj" />
     </ItemGroup>
 
 </Project>

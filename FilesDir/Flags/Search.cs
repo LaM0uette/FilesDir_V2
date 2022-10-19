@@ -13,9 +13,7 @@ public partial class Flags
         
         Var.Log.Separator("RECHERCHE", Log.TypeLog.Cmd);
 
-        // TODO: REMETTRE LE BON DOSSIER !
-        await DirSearchAsync(Var.CurrentDir);
-        //await DirSearchAsync("T:\\- 4 Suivi Appuis\\18-Partage\\de VILLELE DORIAN");
+        await DirSearchAsync(DirPath);
 
         sw.Stop();
         Var.Results.SearchTimer = sw.Elapsed.TotalSeconds;

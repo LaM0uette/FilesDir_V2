@@ -72,3 +72,15 @@ C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows\Views\Dialog\questio
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows\Views\Dialog\textBoxDlg.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows\UserControls\MyWrapView.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows\UserControls\MyWrapView.g.cs
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Debug\net7.0-windows\NOTICE.TXT
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Debug\net7.0-windows\CommonTasks.dll
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Debug\net7.0-windows\NPOI.OOXML.dll
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Debug\net7.0-windows\NPOI.dll
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Debug\net7.0-windows\NPOI.OpenXml4Net.dll
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Debug\net7.0-windows\NPOI.OpenXmlFormats.dll
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Debug\net7.0-windows\Flaggers.dll
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Debug\net7.0-windows\Logger.dll
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Debug\net7.0-windows\Pastel.dll
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Debug\net7.0-windows\ICSharpCode.SharpZipLib.dll
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Debug\net7.0-windows\FilesDir.dll
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Debug\net7.0-windows\FilesDir.pdb

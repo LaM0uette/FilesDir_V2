@@ -15,6 +15,9 @@ public partial class Flags : IFlags
     
     /// Commande regex
     public  string Re { get; set; }
+    
+    /// Chemin de la recherche
+    public  string DirPath { get; set; }
         
     /// Mot ou liste de mots à rechercher
     public string[] Words { get; set; }
@@ -47,6 +50,7 @@ public partial class Flags : IFlags
     {
         SearchMode = Args.GetSearchMode();
         Re = Args.GetRegex();
+        DirPath = Args.GetDirPath();
         Words = Args.GetWords();
         Extensions = Args.GetExtensions();
         FoldersBlackList = Args.GetFoldersBlackList();

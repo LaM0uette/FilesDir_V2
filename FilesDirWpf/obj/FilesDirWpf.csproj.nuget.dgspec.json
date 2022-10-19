@@ -28,7 +28,11 @@
         "frameworks": {
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Prog\\C#\\FilesDir_V2\\FilesDir\\FilesDir.csproj": {
+                "projectPath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDir\\FilesDir.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -63,6 +67,80 @@
             },
             "Microsoft.WindowsDesktop.App.WPF": {
               "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-preview.6.22352.1\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Prog\\C#\\FilesDir_V2\\FilesDir\\FilesDir.csproj": {
+      "version": "2.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Prog\\C#\\FilesDir_V2\\FilesDir\\FilesDir.csproj",
+        "projectName": "FilesDir",
+        "projectPath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDir\\FilesDir.csproj",
+        "packagesPath": "C:\\Users\\XD5965\\.nuget\\packages\\",
+        "outputPath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDir\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\XD5965\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "\\\\BORDEAUX04\\NuGet": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "CommonTasks": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "DotNetCore.NPOI": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "Flaggers": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Logger": {
+              "target": "Package",
+              "version": "[1.2.27, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-preview.6.22352.1\\RuntimeIdentifierGraph.json"

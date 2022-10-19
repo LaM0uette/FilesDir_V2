@@ -8,6 +8,7 @@ public interface IFlags
 
     public  MyEnum.SearchMode SearchMode { get; set; }
     public  string Re { get; set; }
+    public  string DirPath { get; set; }
     public  string[] Words { get; set; }
     public  string[] Extensions { get; set; }
     public  string[] FoldersBlackList { get; set; }

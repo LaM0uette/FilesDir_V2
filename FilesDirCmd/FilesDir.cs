@@ -12,10 +12,5 @@ public static class FilesDir
         await new Flags().RunFilesDir();
     }
 
-    public static async Task WpfMain(this IFlags flags)
-    {
-        await flags.RunFilesDir();
-    }
-
     #endregion
 }

@@ -1,12 +1,26 @@
 {
   "version": 2,
-  "dgSpecHash": "8ao/LCT/TEcRw71B66UUfBjGe0pArZwReFGDPPp0+IPFQYyPlqBzgbytdX2KK2TBZiNNlx6JanYU8j/b4/Bw3w==",
+  "dgSpecHash": "VX2TjLHSoRw/Qyj8GW6bcjWbIKi+obPzcq4oYTyU1QOjGOC1+GqKPmLAIbBrv3D2+beIwPyZ9UXutZKgjb3yEw==",
   "success": true,
   "projectFilePath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDirWpf\\FilesDirWpf.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\XD5965\\.nuget\\packages\\commontasks\\1.0.1\\commontasks.1.0.1.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\dotnetcore.npoi\\1.2.3\\dotnetcore.npoi.1.2.3.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\dotnetcore.npoi.core\\1.2.3\\dotnetcore.npoi.core.1.2.3.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\dotnetcore.npoi.openxml4net\\1.2.3\\dotnetcore.npoi.openxml4net.1.2.3.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\dotnetcore.npoi.openxmlformats\\1.2.3\\dotnetcore.npoi.openxmlformats.1.2.3.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\flaggers\\1.0.0\\flaggers.1.0.0.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\logger\\1.2.27\\logger.1.2.27.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\mahapps.metro\\2.4.9\\mahapps.metro.2.4.9.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\pastel\\3.0.1\\pastel.3.0.1.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\system.drawing.common\\4.5.0\\system.drawing.common.4.5.0.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
   ],
   "logs": []

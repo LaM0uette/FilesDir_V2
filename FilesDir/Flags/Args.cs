@@ -1,4 +1,5 @@
 ﻿using FilesDir.Core;
+using FilesDir.Utils;
 
 namespace FilesDir.Flags;
 
@@ -20,6 +21,11 @@ public static class Args
     public static string GetRegex()
     {
         return Flaggers.Flags.String("re", "");
+    }
+    
+    public static string GetDirPath()
+    {
+        return Flaggers.Flags.String("p", Var.CurrentDir);
     }
     
     public static string[] GetWords()
@@ -44,7 +50,7 @@ public static class Args
 
     public static int GetPoolSize()
     {
-        return Flaggers.Flags.Int("p", 1000);
+        return Flaggers.Flags.Int("pool", 1000);
     }
     
     public static bool GetCasse()
