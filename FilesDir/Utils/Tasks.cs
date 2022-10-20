@@ -61,6 +61,8 @@ public static class Tasks
 
     public static void GenerateExcel()
     {
+        if (Var.Results.NbFiles.Equals(0)) return;
+        
         var xls = @$"{Var.ExportsPath}\Export_{Func.GetTimestamp()}.xlsx";
 
         using var fs = new FileStream(xls, FileMode.Create, FileAccess.Write);
