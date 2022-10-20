@@ -2,7 +2,6 @@
 using FilesDir.Core;
 using FilesDir.Interfaces;
 using FilesDir.Utils;
-using FilesDirCmd.Utils;
 
 namespace FilesDir.Flags;
 

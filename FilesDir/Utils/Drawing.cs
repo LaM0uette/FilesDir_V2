@@ -1,9 +1,8 @@
 ﻿using System.Globalization;
 using FilesDir.Interfaces;
-using FilesDir.Utils;
 using Logger;
 
-namespace FilesDirCmd.Utils;
+namespace FilesDir.Utils;
 
 public static class Drawing
 {
