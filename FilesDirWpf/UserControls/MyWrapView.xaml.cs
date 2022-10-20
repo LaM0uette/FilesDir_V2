@@ -16,10 +16,17 @@ public partial class MyWrapView
     public List<string> Lst = new();
     
     private BrushConverter _converter = new ();
+    public string PhTitle;
+    public string PhMsg;
     
-    public MyWrapView()
+    public MyWrapView(string phTitle = "", string phMsg = "")
     {
         InitializeComponent();
+
+        PhTitle = phTitle;
+        PhMsg = phMsg;
+
+        RefreshList();
     }
 
     #endregion
@@ -28,9 +35,15 @@ public partial class MyWrapView
 
     #region Fonctions
 
-    private void RefreshList()
+    public void RefreshList()
     {
         Clear();
+
+        if (Lst.Count <= 0)
+        {
+            WrapLst.Children.Add(new Label{Foreground = (Brush)_converter.ConvertFrom("#FF656573")!, Content = PhTitle, FontSize = 13});
+            WrapLst.Children.Add(new Label{Foreground = (Brush)_converter.ConvertFrom("#FF656573")!, Content = PhMsg, FontSize = 11, FontStyle = FontStyles.Italic});
+        }
 
         foreach (var item in Lst)
         {
@@ -45,7 +58,7 @@ public partial class MyWrapView
             var lb = new Label
             {
                 Content = item, 
-                Foreground = Brushes.White, 
+                Foreground = (Brush)_converter.ConvertFrom("#FFFFFAFF")!,
                 FontSize = 12
             };
             var btn = new Button

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using FilesDir.Core;
 using FilesDir.Utils;
@@ -71,6 +70,18 @@ public partial class SearchView
             LabelPaterneRegex.Visibility = Visibility.Hidden;
             TextBoxPaterneRegex.Visibility = Visibility.Hidden;
         }
+        
+        FiltersView.Instance.MlvWords.PhTitle = ComboBoxSearchMode.SelectedIndex switch
+        {
+            0 => "Intègre les fichiers dont le nom contient le(s) terme(s) saisis.",
+            1 => "Intègre les fichiers dont le nom est égal au(x) terme(s) saisis.",
+            2 => "Intègre les fichiers dont le nom commence par le(s) terme(s) saisis.",
+            3 => "Intègre les fichiers dont le nom se termine par le(s) terme(s) saisis.",
+            4 => "Intègre les fichiers dont le nom match avec le(s) terme(s) saisis.",
+            _ => "Intègre les fichiers dont le nom contient le(s) terme(s) saisis.",
+        };
+
+        FiltersView.Instance.MlvWords.RefreshList();
     }
 
     #endregion

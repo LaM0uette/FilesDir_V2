@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using FilesDir.Flags;
@@ -55,17 +54,20 @@ namespace FilesDirWpf
 
             var arg = flags.GetFullReqOfSearch();
             
-            //Clipboard.SetText(arg);
+            Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", arg);
             
+            new ToastContentBuilder()
+                .AddText("Recherche lancée !")
+                .AddText(arg)
+                .SetToastDuration(ToastDuration.Short)
+                .Show();
+
+            //Clipboard.SetText(arg);
             // new ToastContentBuilder()
             //     .AddText("Copié dans le presse papier !")
             //     .AddText(arg)
             //     .SetToastDuration(ToastDuration.Short)
             //     .Show();
-            
-            Console.WriteLine(arg);
-
-            Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", arg);
         }
 
         #endregion
