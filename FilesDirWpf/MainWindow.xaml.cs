@@ -1,7 +1,9 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using FilesDir.Flags;
+using FilesDirWpf.Utils;
 using FilesDirWpf.Views;
 using FilesDirWpf.Views.Dialog;
 using Microsoft.Toolkit.Uwp.Notifications;
@@ -15,6 +17,19 @@ namespace FilesDirWpf
         public MainWindow()
         {
             InitializeComponent();
+            
+            MyEvent.OnParamChanged += ParamChanged;
+        }
+
+        #endregion
+
+        //
+
+        #region Fonctions
+
+        private static void ParamChanged()
+        {
+            Console.WriteLine("test");
         }
 
         #endregion
@@ -27,7 +42,6 @@ namespace FilesDirWpf
         {
             var searchs = SearchView.Instance.GetSearchs();
             var filters = FiltersView.Instance.GetFilters();
-            var parameters = ParamView.Instance.GetParameters();
 
             var flags = new Flags
             {
@@ -38,10 +52,10 @@ namespace FilesDirWpf
                 Extensions =  filters.extensions,
                 FoldersBlackList =  filters.blackList,
                 FoldersWhiteList =  filters.whiteList,
-                PoolSize = parameters.pool,
-                Casse = parameters.casse,
-                Utf = parameters.utf,
-                Silent = parameters.silent,
+                PoolSize = 666,
+                Casse = filters.casse,
+                Utf = filters.utf,
+                Silent = false,
             };
 
             if (!Directory.Exists(flags.DirPath) || flags.DirPath.Contains(@"\\"))
@@ -61,13 +75,6 @@ namespace FilesDirWpf
                 .AddText(arg)
                 .SetToastDuration(ToastDuration.Short)
                 .Show();
-
-            //Clipboard.SetText(arg);
-            // new ToastContentBuilder()
-            //     .AddText("Copié dans le presse papier !")
-            //     .AddText(arg)
-            //     .SetToastDuration(ToastDuration.Short)
-            //     .Show();
         }
 
         #endregion

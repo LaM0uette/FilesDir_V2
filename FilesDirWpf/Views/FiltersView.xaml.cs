@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using FilesDirWpf.UserControls;
+using FilesDirWpf.Utils;
 
 namespace FilesDirWpf.Views;
 
@@ -41,12 +42,12 @@ public partial class FiltersView
         }
 
         AddInGrid(MlvWords, 1);
-        AddInGrid(_mlvExtensions, 3);
-        AddInGrid(_mlvBlackList, 5);
-        AddInGrid(_mlvWhiteList, 7);
+        AddInGrid(_mlvExtensions, 5);
+        AddInGrid(_mlvBlackList, 7);
+        AddInGrid(_mlvWhiteList, 9);
     }
 
-    public (string[] words, string[] extensions, string[] blackList, string[] whiteList) GetFilters()
+    public (string[] words, bool casse, bool utf, string[] extensions, string[] blackList, string[] whiteList) GetFilters()
     {
         var words = MlvWords.Lst.ToArray();
         var extensions = _mlvExtensions.Lst.ToArray();
@@ -55,10 +56,28 @@ public partial class FiltersView
 
         return (
             words.Length <= 0 ? new []{""} : words,
+            CheckBoxCasse.IsChecked!.Value, 
+            CheckBoxUtf.IsChecked!.Value,
             extensions.Length <= 0 ? new []{""} : extensions,
             blackList.Length <= 0 ? new []{""} : blackList,
             whiteList.Length <= 0 ? new []{""} : whiteList
             );
+    }
+
+    #endregion
+
+    //
+    
+    #region Actions
+
+    private void CheckBoxCasse_OnClick(object sender, RoutedEventArgs e)
+    {
+        MyEvent.InvokeParamChanged();
+    }
+
+    private void CheckBoxUtf_OnClick(object sender, RoutedEventArgs e)
+    {
+        MyEvent.InvokeParamChanged();
     }
 
     #endregion

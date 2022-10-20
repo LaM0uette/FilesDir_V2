@@ -58,7 +58,6 @@ C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\Di
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\Dialog\questionDlg.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\Dialog\textBoxDlg.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\FiltersView.baml
-C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\ParamView.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\SearchView.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\App.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\MainWindow.g.cs
@@ -69,7 +68,6 @@ C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\Di
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\Dialog\questionDlg.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\Dialog\textBoxDlg.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\FiltersView.g.cs
-C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\ParamView.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\SearchView.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\App.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\GeneratedInternalTypeHelper.g.cs

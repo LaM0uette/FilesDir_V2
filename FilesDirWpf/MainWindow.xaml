@@ -49,7 +49,8 @@
     
     <Grid Background="{StaticResource RgbM1}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1000*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         
@@ -58,11 +59,15 @@
             <StackPanel>
                 <views:SearchView/>
                 <views:FiltersView/>
-                <views:ParamView/>
             </StackPanel>
         </ScrollViewer>
         
-        <Button x:Name="ButtonRunSearch" Grid.Row="1" VerticalAlignment="Bottom" Style="{StaticResource ButtonPlainOk}" 
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Exemple :" FontSize="22"/>
+            <Label x:Name="LabelExemple" Content="" FontSize="22"/>
+        </StackPanel>
+        
+        <Button x:Name="ButtonRunSearch" Grid.Row="2" VerticalAlignment="Bottom" Style="{StaticResource ButtonPlainOk}" 
                 Height="50" 
                 FontSize="30"
                 Content="Lancer la recherche"

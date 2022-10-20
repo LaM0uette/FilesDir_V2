@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using FilesDir.Core;
 using FilesDir.Utils;
+using FilesDirWpf.Utils;
 
 namespace FilesDirWpf.Views;
 

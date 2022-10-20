@@ -16,6 +16,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
         <Grid.ColumnDefinitions>
@@ -31,17 +33,30 @@
         <!-- Mots -->
         <Label Grid.Row="1" Grid.Column="0" Content="Mots :" Style="{StaticResource LabelTransparentM2}"/>
         
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Right"
+                    Margin="0, 0, 0, 20">
+            
+            <!-- Casse -->
+            <CheckBox x:Name="CheckBoxCasse" Content="Sensible aux Majuscules ?" Click="CheckBoxCasse_OnClick"/>
+        
+        
+            <!-- UTF-8 -->
+            <CheckBox x:Name="CheckBoxUtf" Content="Sensible aux accents ?" Margin="15, 0, 45, 0" Click="CheckBoxUtf_OnClick"/>
+        </StackPanel>
+        
         
         <!-- Extensions -->
-        <Label Grid.Row="3" Grid.Column="0" Content="Extensions :" Style="{StaticResource LabelTransparentM2}"/>
+        <Label Grid.Row="5" Grid.Column="0" Content="Extensions :" Style="{StaticResource LabelTransparentM2}"/>
         
         
         <!-- Dossier BlackList -->
-        <Label Grid.Row="5" Grid.Column="0" Content="BlackList :" Style="{StaticResource LabelTransparentM2}"/>
+        <Label Grid.Row="7" Grid.Column="0" Content="BlackList :" Style="{StaticResource LabelTransparentM2}"/>
         
         
         <!-- Dossier WhiteList -->
-        <Label Grid.Row="7" Grid.Column="0" Content="WhiteList :" Style="{StaticResource LabelTransparentM2}"/>
+        <Label Grid.Row="9" Grid.Column="0" Content="WhiteList :" Style="{StaticResource LabelTransparentM2}"/>
         
     </Grid>
 </UserControl>

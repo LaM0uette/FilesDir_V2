@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using FilesDirWpf.Utils;
 using FilesDirWpf.Views.Dialog;
 
 namespace FilesDirWpf.UserControls;
@@ -41,8 +42,8 @@ public partial class MyWrapView
 
         if (Lst.Count <= 0)
         {
-            WrapLst.Children.Add(new Label{Foreground = (Brush)_converter.ConvertFrom("#FF656573")!, Content = PhTitle, FontSize = 13});
-            WrapLst.Children.Add(new Label{Foreground = (Brush)_converter.ConvertFrom("#FF656573")!, Content = PhMsg, FontSize = 11, FontStyle = FontStyles.Italic});
+            WrapLst.Children.Add(new Label{Content = PhTitle, FontSize = 14});
+            WrapLst.Children.Add(new Label{Content = PhMsg, FontSize = 12, FontStyle = FontStyles.Italic});
         }
 
         foreach (var item in Lst)
@@ -90,6 +91,8 @@ public partial class MyWrapView
 
             WrapLst.Children.Add(bd);
         }
+        
+        MyEvent.InvokeParamChanged();
     }
 
     private void BtnTag_OnClick(object sender, RoutedEventArgs e)
