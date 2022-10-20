@@ -2,7 +2,9 @@
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
+using System.Windows.Controls;
 using FilesDir.Flags;
+using FilesDir.Utils;
 using FilesDirWpf.Utils;
 using FilesDirWpf.Views;
 using FilesDirWpf.Views.Dialog;
@@ -19,6 +21,7 @@ namespace FilesDirWpf
             InitializeComponent();
             
             MyEvent.OnParamChanged += ParamChanged;
+            ParamChanged();
         }
 
         #endregion
@@ -27,9 +30,43 @@ namespace FilesDirWpf
 
         #region Fonctions
 
-        private static void ParamChanged()
+        private void ParamChanged()
         {
-            Console.WriteLine("test");
+            var filters = FiltersView.Instance.GetFilters();
+            var ext = filters.extensions[0].Equals("") || filters.extensions.Length <= 0 ? "*" : filters.extensions[0];
+            
+            WrapPanelExemples.Children.Clear();
+            
+            if (filters.words[0].Equals("") || filters.words.Length <= 0)
+            {
+                WrapPanelExemples.Children.Add(new Label {Content = $"*.{ext}"});
+                return;
+            }
+
+            var i = 0;
+            foreach (var word in filters.words)
+            {
+                var nWord = word;
+                
+                if (filters.extensions.Length > 0 && !filters.extensions[0].Equals(""))
+                {
+                    ext = filters.extensions[i];
+                    i++;
+
+                    if (i >= filters.extensions.Length) i = 0;
+                }
+                else
+                {
+                    ext = "*";
+                }
+
+                if (!filters.casse) nWord = nWord.ToLower();
+                if (!filters.utf) nWord = nWord.RemoveAccent();
+                
+                WrapPanelExemples.Children.Add(new Label {Content = $" `{nWord}.{ext}` ", FontSize = 14});
+                
+                if (WrapPanelExemples.Children.Count >= 8) return;
+            }
         }
 
         #endregion
