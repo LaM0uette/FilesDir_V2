@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Text;
 using CommonTasks;
 using Logger;
+using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.SS.Util;
 using NPOI.XSSF.UserModel;
@@ -114,7 +115,6 @@ public static class Tasks
             var cellPath = row.CreateCell(6);
             cellPath.SetCellType(CellType.String);
             cellPath.SetCellValue(exp.Path);
-            cellPath.Hyperlink = new XSSFHyperlink(HyperlinkType.Document) {Address = exp.Path};
 
             Var.Log.Progress("Export Excel:", idx, Var.Exports.Count);
             idx++;
