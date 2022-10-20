@@ -6,11 +6,11 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "FilesDir/2.0.22": {
+      "FilesDir/2.0.36": {
         "dependencies": {
           "CommonTasks": "1.0.1",
           "DotNetCore.NPOI": "1.2.3",
-          "Flaggers": "1.0.2",
+          "Flaggers": "1.0.7",
           "Logger": "1.2.27"
         },
         "runtime": {
@@ -73,11 +73,11 @@
           }
         }
       },
-      "Flaggers/1.0.2": {
+      "Flaggers/1.0.7": {
         "runtime": {
-          "lib/net6.0/Flaggers.dll": {
-            "assemblyVersion": "1.0.2.0",
-            "fileVersion": "1.0.2.0"
+          "lib/net7.0/Flaggers.dll": {
+            "assemblyVersion": "1.0.7.0",
+            "fileVersion": "1.0.7.0"
           }
         }
       },
@@ -165,7 +165,7 @@
     }
   },
   "libraries": {
-    "FilesDir/2.0.22": {
+    "FilesDir/2.0.36": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -205,12 +205,12 @@
       "path": "dotnetcore.npoi.openxmlformats/1.2.3",
       "hashPath": "dotnetcore.npoi.openxmlformats.1.2.3.nupkg.sha512"
     },
-    "Flaggers/1.0.2": {
+    "Flaggers/1.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PRcKrEKsWEt1mKUbdFcVDupgvWlNxuPErGX/AQCeFX8HUvs1eTYyDsB7xldT6JEvD8n9Cmy0QmGQerhmSIS2qA==",
-      "path": "flaggers/1.0.2",
-      "hashPath": "flaggers.1.0.2.nupkg.sha512"
+      "sha512": "sha512-BGChcmQVc2VIeYaGdDHfOupxGNwKjf/T5u9cu36EcDpACyTqNiE60XanhukdzfK3dNFQXmkv6Haa/DtINjnq2A==",
+      "path": "flaggers/1.0.7",
+      "hashPath": "flaggers.1.0.7.nupkg.sha512"
     },
     "Logger/1.2.27": {
       "type": "package",

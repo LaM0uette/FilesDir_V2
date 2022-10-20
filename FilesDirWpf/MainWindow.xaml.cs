@@ -62,7 +62,7 @@ namespace FilesDirWpf
                 .SetToastDuration(ToastDuration.Short)
                 .Show();
 
-            Process.Start(@"Explorer.exe", @"T:\- 11 Outils\FilesDir\FD.exe");
+            Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", @"-p='T:\- 4 Suivi Appuis\18-Partage\de VILLELE DORIAN' -w=cem");
         }
 
         #endregion
