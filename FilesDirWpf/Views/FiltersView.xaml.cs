@@ -11,10 +11,10 @@ public partial class FiltersView
 
     public static FiltersView Instance { get; private set; } = new();
 
-    public MyWrapView MlvWords = new("Intègre les fichiers dont le nom contient le(s) terme(s) saisis.", """Ex : "appui", "C3A", "fiche appui", "etudes", "retour travaux", ...""");
-    private MyWrapView _mlvExtensions = new("Restreint la recherche à des extensions de fichiers spécifiques.", """Ex : "jpg", "jpeg", "png", "xlsx", "pdf", ...""");
-    private MyWrapView _mlvBlackList = new("Exclut des dossiers/sous dossiers spécifiques à la recherche.       ", """Ex : "Old", "Archives", ...              """);
-    private MyWrapView _mlvWhiteList = new("Restreint la recherche à des dossiers/sous dossiers spécifiques.     ", """Ex : "retour", "retour terrain", ...              """);
+    public MyWrapView MlvWords = new("Mots", "Intègre les fichiers dont le nom contient le(s) terme(s) saisis.", """Ex : "appui", "C3A", "fiche appui", "etudes", "retour travaux", ...""");
+    private MyWrapView _mlvExtensions = new("Extensions", "Restreint la recherche à des extensions de fichiers spécifiques.", """Ex : "jpg", "jpeg", "png", "xlsx", "pdf", ...""");
+    private MyWrapView _mlvBlackList = new("BlackList", "Exclut des dossiers/sous dossiers spécifiques à la recherche.       ", """Ex : "Old", "Archives", ...              """);
+    private MyWrapView _mlvWhiteList = new("WhiteList", "Restreint la recherche à des dossiers/sous dossiers spécifiques.     ", """Ex : "retour", "retour terrain", ...              """);
 
     public FiltersView()
     {

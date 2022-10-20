@@ -17,13 +17,15 @@ public partial class MyWrapView
     public List<string> Lst = new();
     
     private BrushConverter _converter = new ();
+    public string Title;
     public string PhTitle;
     public string PhMsg;
     
-    public MyWrapView(string phTitle = "", string phMsg = "")
+    public MyWrapView(string title, string phTitle = "", string phMsg = "")
     {
         InitializeComponent();
 
+        Title = title;
         PhTitle = phTitle;
         PhMsg = phMsg;
 
@@ -118,7 +120,7 @@ public partial class MyWrapView
 
     private void BtnPlus_OnClick(object sender, RoutedEventArgs e)
     {
-        var txt = new TextBoxDlg();
+        var txt = new TextBoxDlg(Title);
         txt.ShowDialog();
         
         if (txt.Msg.Equals("") || Lst.Any(txt.Msg.Equals)) return;
