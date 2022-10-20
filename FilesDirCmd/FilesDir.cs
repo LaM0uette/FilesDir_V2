@@ -1,5 +1,7 @@
 ﻿using FilesDir.Flags;
 using FilesDir.Interfaces;
+using FilesDir.Utils;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace FilesDirCmd;
 
@@ -10,6 +12,16 @@ public static class FilesDir
     public static async Task Main()
     {
         await new Flags().RunFilesDir();
+        
+        Console.WriteLine("test");
+        
+        new ToastContentBuilder()
+            .AddText("Recherche terminées !")
+            .AddText($"{Var.Results.NbFiles} fichiers trouvés en {Var.Results.SearchTimer}s")
+            .SetToastDuration(ToastDuration.Short)
+            .Show();
+        
+        Drawing.End();
     }
 
     #endregion

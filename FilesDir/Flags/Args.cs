@@ -42,7 +42,7 @@ public static class Args
     
     public static string[] GetWords()
     {
-        return Flaggers.Flags.String("w", "").Split(":");
+        return Flaggers.Flags.String("wd", "").Split(":");
     }
     
     public static string[] GetExtensions()

@@ -93,7 +93,7 @@ public partial class Flags : IFlags
 
         req += $"-m={GetSearchModeReq(SearchMode)} ";
         
-        if (Words.Length > 0 && !Words[0].Equals("")) req += $"-w={string.Join(":", Words)} ";
+        if (Words.Length > 0 && !Words[0].Equals("")) req += $"-wd={string.Join(":", Words)} ";
         if (Extensions.Length > 0 && !Extensions[0].Equals("")) req += $"-e={string.Join(":", Extensions)} ";
         if (FoldersBlackList.Length > 0 && !FoldersBlackList[0].Equals("")) req += $"-bl={string.Join(":", FoldersBlackList)} ";
         if (FoldersWhiteList.Length > 0 && !FoldersWhiteList[0].Equals("")) req += $"-wl={string.Join(":", FoldersWhiteList)} ";
@@ -114,7 +114,7 @@ public partial class Flags : IFlags
         req += $"-m={GetSearchModeReq(SearchMode)} ";
         req += $"-p='{DirPath}' ";
         
-        if (Words.Length > 0 && !Words[0].Equals("")) req += $"-w={string.Join(":", Words)} ";
+        if (Words.Length > 0 && !Words[0].Equals("")) req += $"-wd={string.Join(":", Words)} ";
         if (Extensions.Length > 0 && !Extensions[0].Equals("")) req += $"-e={string.Join(":", Extensions)} ";
         if (FoldersBlackList.Length > 0 && !FoldersBlackList[0].Equals("")) req += $"-bl={string.Join(":", FoldersBlackList)} ";
         if (FoldersWhiteList.Length > 0 && !FoldersWhiteList[0].Equals("")) req += $"-wl={string.Join(":", FoldersWhiteList)} ";

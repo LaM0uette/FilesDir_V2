@@ -39,11 +39,16 @@
                     Margin="0, 0, 0, 20">
             
             <!-- Casse -->
-            <CheckBox x:Name="CheckBoxCasse" Content="Sensible aux Majuscules ?" Click="CheckBoxCasse_OnClick"/>
+            <CheckBox x:Name="CheckBoxCasse" Content="Sensible aux Majuscules ?" 
+                      ToolTip="Les Majuscules n'ont pas d'impact pour la recherche."
+                      Click="CheckBoxCasse_OnClick"/>
         
         
             <!-- UTF-8 -->
-            <CheckBox x:Name="CheckBoxUtf" Content="Sensible aux accents ?" Margin="15, 0, 45, 0" Click="CheckBoxUtf_OnClick"/>
+            <CheckBox x:Name="CheckBoxUtf" Content="Sensible aux accents ?" 
+                      Margin="15, 0, 45, 0" 
+                      ToolTip="Les accents n'ont pas d'impact pour la recherche."
+                      Click="CheckBoxUtf_OnClick"/>
         </StackPanel>
         
         

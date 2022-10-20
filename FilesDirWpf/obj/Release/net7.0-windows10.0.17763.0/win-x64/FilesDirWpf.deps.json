@@ -9,7 +9,7 @@
     ".NETCoreApp,Version=v7.0/win-x64": {
       "FilesDirWpf/1.0.0": {
         "dependencies": {
-          "FilesDir": "2.0.38",
+          "FilesDir": "2.0.42",
           "MahApps.Metro": "2.4.9",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.2",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "7.0.0-preview.6.22324.4",
@@ -1102,7 +1102,7 @@
       },
       "System.Text.Json/4.7.2": {},
       "System.ValueTuple/4.5.0": {},
-      "FilesDir/2.0.38": {
+      "FilesDir/2.0.42": {
         "dependencies": {
           "CommonTasks": "1.0.1",
           "DotNetCore.NPOI": "1.2.3",
@@ -1304,7 +1304,7 @@
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
-    "FilesDir/2.0.38": {
+    "FilesDir/2.0.42": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

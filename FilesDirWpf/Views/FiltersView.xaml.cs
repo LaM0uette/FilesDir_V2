@@ -13,8 +13,8 @@ public partial class FiltersView
 
     public MyWrapView MlvWords = new("Intègre les fichiers dont le nom contient le(s) terme(s) saisis.", """Ex : "appui", "C3A", "fiche appui", "etudes", "retour travaux", ...""");
     private MyWrapView _mlvExtensions = new("Restreint la recherche à des extensions de fichiers spécifiques.", """Ex : "jpg", "jpeg", "png", "xlsx", "pdf", ...""");
-    private MyWrapView _mlvBlackList = new("Exclut des dossiers spécifiques à la recherche.                  ", """Ex : "Old", "Archives", ...              """);
-    private MyWrapView _mlvWhiteList = new("Restreint des dossiers spécifiques à la recherche.               ", """Ex : "retour", "retour terrain", ...              """);
+    private MyWrapView _mlvBlackList = new("Exclut des dossiers/sous dossiers spécifiques à la recherche.       ", """Ex : "Old", "Archives", ...              """);
+    private MyWrapView _mlvWhiteList = new("Restreint la recherche à des dossiers/sous dossiers spécifiques.     ", """Ex : "retour", "retour terrain", ...              """);
 
     public FiltersView()
     {
@@ -23,6 +23,8 @@ public partial class FiltersView
 
         CreateUiList();
     }
+    
+    
 
     #endregion
 
@@ -73,11 +75,21 @@ public partial class FiltersView
     private void CheckBoxCasse_OnClick(object sender, RoutedEventArgs e)
     {
         MyEvent.InvokeParamChanged();
+
+        if (CheckBoxCasse.IsChecked.Equals(true))
+            CheckBoxCasse.ToolTip = "Les mots clés doivents respecter les Majuscules des fichiers (Ex: 'Fiche Appuis' ne match pas avec 'fiche appui')";
+        else
+            CheckBoxCasse.ToolTip = "Les Majuscules n'ont pas d'impact pour la recherche.";
     }
 
     private void CheckBoxUtf_OnClick(object sender, RoutedEventArgs e)
     {
         MyEvent.InvokeParamChanged();
+        
+        if (CheckBoxUtf.IsChecked.Equals(true))
+            CheckBoxUtf.ToolTip = "Les mots clés doivents respecter les accents des fichiers (Ex: 'études' ne match pas avec 'etudes')";
+        else
+            CheckBoxUtf.ToolTip = "Les accents n'ont pas d'impact pour la recherche.";
     }
 
     #endregion

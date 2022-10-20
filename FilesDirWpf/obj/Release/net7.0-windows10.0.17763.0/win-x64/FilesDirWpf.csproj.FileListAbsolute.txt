@@ -514,7 +514,6 @@ C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x6
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\Dialog\questionDlg.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\Dialog\textBoxDlg.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\FiltersView.baml
-C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\ParamView.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\SearchView.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\App.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\MainWindow.g.cs
@@ -525,7 +524,6 @@ C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x6
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\Dialog\questionDlg.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\Dialog\textBoxDlg.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\FiltersView.g.cs
-C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\ParamView.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\SearchView.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\App.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\GeneratedInternalTypeHelper.g.cs

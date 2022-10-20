@@ -37,8 +37,6 @@ public static class Drawing
         Var.Log.SubCategory("Logs", $"{Var.DirTemp}\\logs");
         Var.Log.SubCategory("Dumps", $"{Var.DirTemp}\\dumps");
         Var.Log.SubCategory("Exports Excel", $"{Var.DirTemp}\\exports");
-        
-        End();
     }
 
     public static void End()
