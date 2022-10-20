@@ -112,8 +112,8 @@ public partial class Flags : IFlags
         var req = "FilesDir ";
 
         req += $"-m={GetSearchModeReq(SearchMode)} ";
-        req += $"-p=\"{DirPath}\" ";
-
+        req += $"-p='{DirPath}' ";
+        
         if (Words.Length > 0 && !Words[0].Equals("")) req += $"-w={string.Join(":", Words)} ";
         if (Extensions.Length > 0 && !Extensions[0].Equals("")) req += $"-e={string.Join(":", Extensions)} ";
         if (FoldersBlackList.Length > 0 && !FoldersBlackList[0].Equals("")) req += $"-bl={string.Join(":", FoldersBlackList)} ";

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YewrxPOWkVkOYlmkWrhpyO/P7G5B5EKPnZT09zJyncxYM0xVQTi2AyKQOQbBvyKIMh6Fkde7HwAPKUxiczD43A==",
+  "dgSpecHash": "R+R1MrziH61D7hjihnNWpYoUQwQJpReIQZQ0vKfTNbqTTRoz/dc/VURCwH6eKDqcKl4Vwci+HhNo8KWyq15GjQ==",
   "success": true,
   "projectFilePath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDirCmd\\FilesDirCmd.csproj",
   "expectedPackageFiles": [
@@ -17,10 +17,7 @@
     "C:\\Users\\XD5965\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\system.drawing.common\\4.5.0\\system.drawing.common.4.5.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
-    "C:\\Users\\XD5965\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512",
-    "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\7.0.0-preview.6.22324.4\\microsoft.netcore.app.runtime.win-x64.7.0.0-preview.6.22324.4.nupkg.sha512",
-    "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.0-preview.6.22351.3\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.0-preview.6.22351.3.nupkg.sha512",
-    "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.0-preview.6.22330.3\\microsoft.aspnetcore.app.runtime.win-x64.7.0.0-preview.6.22330.3.nupkg.sha512"
+    "C:\\Users\\XD5965\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

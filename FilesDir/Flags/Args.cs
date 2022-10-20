@@ -7,15 +7,27 @@ public static class Args
 {
     public static MyEnum.SearchMode GetSearchMode()
     {
-        return Flaggers.Flags.String("m", "%") switch
-        {
-            "%" => MyEnum.SearchMode.In,
-            "=" => MyEnum.SearchMode.Equal,
-            "^" => MyEnum.SearchMode.Begin,
-            "$" => MyEnum.SearchMode.End,
-            "r" => MyEnum.SearchMode.Re,
-            _ => MyEnum.SearchMode.In
-        };
+        var str = Flaggers.Flags.String("m", "%");
+        
+        Console.WriteLine(str);
+
+        if (str.Contains('%')) return MyEnum.SearchMode.In;
+        if (str.Contains('=')) return MyEnum.SearchMode.Equal;
+        if (str.Contains('^')) return MyEnum.SearchMode.Begin;
+        if (str.Contains('$')) return MyEnum.SearchMode.End;
+        if (str.Contains('r')) return MyEnum.SearchMode.Re;
+        
+        return MyEnum.SearchMode.In;
+
+        // return Flaggers.Flags.String("m", "%") switch
+        // {
+        //     "%" => MyEnum.SearchMode.In,
+        //     "=" => MyEnum.SearchMode.Equal,
+        //     "^" => MyEnum.SearchMode.Begin,
+        //     "$" => MyEnum.SearchMode.End,
+        //     "r" => MyEnum.SearchMode.Re,
+        //     _ => MyEnum.SearchMode.In
+        // };
     }
     
     public static string GetRegex()

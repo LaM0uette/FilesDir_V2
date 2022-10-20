@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using FilesDir.Flags;
@@ -52,17 +53,19 @@ namespace FilesDirWpf
                 return;
             }
 
-            var arg = flags.GetReqOfSearch();
+            var arg = flags.GetFullReqOfSearch();
             
-            Clipboard.SetText(arg);
+            //Clipboard.SetText(arg);
             
-            new ToastContentBuilder()
-                .AddText("Copié dans le presse papier !")
-                .AddText(arg)
-                .SetToastDuration(ToastDuration.Short)
-                .Show();
+            // new ToastContentBuilder()
+            //     .AddText("Copié dans le presse papier !")
+            //     .AddText(arg)
+            //     .SetToastDuration(ToastDuration.Short)
+            //     .Show();
+            
+            Console.WriteLine(arg);
 
-            Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", @"-p='T:\- 4 Suivi Appuis\18-Partage\de VILLELE DORIAN' -w=cem");
+            Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", arg);
         }
 
         #endregion
