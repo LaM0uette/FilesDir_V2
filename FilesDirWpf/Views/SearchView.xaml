@@ -45,7 +45,7 @@
             <ComboBoxItem Content=" Contient (%)"/>
             <ComboBoxItem Content=" Est égal à (=)"/>
             <ComboBoxItem Content=" Commence par (^)"/>
-            <ComboBoxItem Content=" Finit par ($)"/>
+            <ComboBoxItem Content=" Se termine par ($)"/>
             <ComboBoxItem Content=" Regex (r)"/>
         </ComboBox>
         

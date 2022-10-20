@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Diagnostics;
+using System.IO;
 using System.Windows;
 using FilesDir.Flags;
 using FilesDirWpf.Views;
@@ -60,6 +61,8 @@ namespace FilesDirWpf
                 .AddText(arg)
                 .SetToastDuration(ToastDuration.Short)
                 .Show();
+
+            Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", """ -m== -w=rip:cem -pool=500 -p="T:\- 4 Suivi Appuis\18-Partage\de VILLELE DORIAN" """);
         }
 
         #endregion

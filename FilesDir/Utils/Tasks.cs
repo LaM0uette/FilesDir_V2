@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Diagnostics;
+using System.Globalization;
 using System.Reflection;
 using System.Text;
 using CommonTasks;
@@ -75,8 +76,9 @@ public static class Tasks
         rowHeader.CreateCell(1).SetCellValue("Nom du fichier");
         rowHeader.CreateCell(2).SetCellValue("Date de création");
         rowHeader.CreateCell(3).SetCellValue("Date de modification");
-        rowHeader.CreateCell(4).SetCellValue("Nom complet du fichier");
-        rowHeader.CreateCell(5).SetCellValue("Lien du fichier");
+        rowHeader.CreateCell(4).SetCellValue("Date d'accès");
+        rowHeader.CreateCell(5).SetCellValue("Nom complet du fichier");
+        rowHeader.CreateCell(6).SetCellValue("Lien du fichier");
 
         Var.Log.Separator("EXPORT EXCEL");
         
@@ -101,14 +103,19 @@ public static class Tasks
             cellDateModif.SetCellValue(exp.ModifDate);
             cellDateModif.CellStyle = styleDate;
             
-            var cellFullName = row.CreateCell(4);
+            var cellDateAcces = row.CreateCell(4);
+            cellDateAcces.SetCellValue(exp.AccesDate);
+            cellDateAcces.CellStyle = styleDate;
+            
+            var cellFullName = row.CreateCell(5);
             cellFullName.SetCellType(CellType.String);
             cellFullName.SetCellValue(exp.FullName);
             
-            var cellPath = row.CreateCell(5);
+            var cellPath = row.CreateCell(6);
             cellPath.SetCellType(CellType.String);
             cellPath.SetCellValue(exp.Path);
-            
+            cellPath.Hyperlink = new XSSFHyperlink(HyperlinkType.Document) {Address = exp.Path};
+
             Var.Log.Progress("Export Excel:", idx, Var.Exports.Count);
             idx++;
         }
@@ -116,14 +123,19 @@ public static class Tasks
         Var.Log.Del();
 
         Var.Log.ParamInLine("Ajout du filtre...");
-        sht.SetAutoFilter(new CellRangeAddress(0, Var.Exports.Count, 1, 5));
-        
+        sht.SetAutoFilter(new CellRangeAddress(0, Var.Exports.Count, 1, 6));
+
         Var.Log.Del();
         Var.Log.Ok("Filtre ajouté !");
         
         wb.Write(fs);
         Var.Log.Ok("Fichier Excel sauvegardé avec succes !");
         Thread.Sleep(200);
+        
+        Var.Log.ParamInLine("Ouverture du fichier en cours...");
+        Thread.Sleep(600);
+        Process.Start("explorer.exe" , xls);
+        Var.Log.OkDel("Fichier ouvert !");
     }
 
     #endregion

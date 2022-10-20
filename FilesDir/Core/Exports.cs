@@ -6,6 +6,7 @@ public struct Exports
     public string Name;
     public DateTime CreaDate;
     public DateTime ModifDate;
+    public DateTime AccesDate;
     public string FullName;
     public string Path;
 }

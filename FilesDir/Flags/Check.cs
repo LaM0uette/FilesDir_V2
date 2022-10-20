@@ -22,7 +22,7 @@ public partial class Flags
         Interlocked.Add(ref Var.Results.NbFiles, 1);
 
         Var.Log.OkDel($"N°{Var.Results.NbFiles} => {fi.Name}");
-        Var.Dump.String($"{Var.Results.NbFiles};{fi.Name};{fi.CreationTime};{fi.LastWriteTime};{fi.FullName};{fi.Directory}");
+        Var.Dump.String($"{Var.Results.NbFiles};{fi.Name};{fi.CreationTime};{fi.LastWriteTime};{fi.LastAccessTime};{fi.FullName};{fi.Directory}");
         
         Var.Exports.Add(new Exports
         {
@@ -30,6 +30,7 @@ public partial class Flags
             Name = fi.Name,
             CreaDate = fi.CreationTime,
             ModifDate = fi.LastWriteTime,
+            AccesDate = fi.LastAccessTime,
             FullName = fi.FullName,
             Path = $"{fi.Directory}"
         });
