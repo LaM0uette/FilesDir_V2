@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using FilesDir.Flags;
 using FilesDir.Utils;
 using FilesDirWpf.Utils;
@@ -15,6 +16,8 @@ namespace FilesDirWpf
     public partial class MainWindow
     {
         #region Statements
+        
+        private BrushConverter _converter = new ();
 
         public MainWindow()
         {
@@ -62,8 +65,15 @@ namespace FilesDirWpf
 
                 if (!filters.casse) nWord = nWord.ToLower();
                 if (!filters.utf) nWord = nWord.RemoveAccent();
+
+                var lb = new Label {Content = $" `{nWord}.{ext}` ", FontSize = 14};
                 
-                WrapPanelExemples.Children.Add(new Label {Content = $" `{nWord}.{ext}` ", FontSize = 14});
+                if (!word.Equals(nWord) && (filters.casse || filters.utf))
+                {
+                    lb.Foreground = (Brush) _converter.ConvertFrom("#FF329BA8")!;
+                }
+                
+                WrapPanelExemples.Children.Add(lb);
                 
                 if (WrapPanelExemples.Children.Count >= 8) return;
             }
