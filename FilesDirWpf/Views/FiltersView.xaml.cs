@@ -10,8 +10,9 @@ public partial class FiltersView
     #region Statements
 
     public static FiltersView Instance { get; private set; } = new();
+    public record Filters(string[] Words, bool Casse, bool Utf, string[] Extensions, string[] BlackList, string[] WhiteList);
 
-    public MyWrapView MlvWords = new("Intègre les fichiers dont le nom contient le(s) terme(s) saisis.", """Ex : "appui", "C3A", "fiche appui", "etudes", "retour travaux", ...""");
+    public readonly MyWrapView MlvWords = new("Intègre les fichiers dont le nom contient le(s) terme(s) saisis.", """Ex : "appui", "C3A", "fiche appui", "etudes", "retour travaux", ...""");
     private MyWrapView _mlvExtensions = new("Restreint la recherche à des extensions de fichiers spécifiques.", """Ex : "jpg", "jpeg", "png", "xlsx", "pdf", ...""");
     private MyWrapView _mlvBlackList = new("Exclut des dossiers/sous dossiers spécifiques à la recherche.       ", """Ex : "Old", "Archives", ...              """);
     private MyWrapView _mlvWhiteList = new("Restreint la recherche à des dossiers/sous dossiers spécifiques.     ", """Ex : "retour", "retour terrain", ...              """);
@@ -19,13 +20,12 @@ public partial class FiltersView
     public FiltersView()
     {
         Instance = this;
+        
         InitializeComponent();
 
         CreateUiList();
     }
     
-    
-
     #endregion
 
     //
@@ -48,15 +48,15 @@ public partial class FiltersView
         AddInGrid(_mlvBlackList, 7);
         AddInGrid(_mlvWhiteList, 9);
     }
-
-    public (string[] words, bool casse, bool utf, string[] extensions, string[] blackList, string[] whiteList) GetFilters()
+    
+    public Filters GetFilters()
     {
         var words = MlvWords.Lst.ToArray();
         var extensions = _mlvExtensions.Lst.ToArray();
         var blackList = _mlvBlackList.Lst.ToArray();
         var whiteList = _mlvWhiteList.Lst.ToArray();
 
-        return (
+        return new Filters(
             words.Length <= 0 ? new []{""} : words,
             CheckBoxCasse.IsChecked!.Value, 
             CheckBoxUtf.IsChecked!.Value,

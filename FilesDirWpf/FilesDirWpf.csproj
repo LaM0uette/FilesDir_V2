@@ -12,7 +12,6 @@
 
     <ItemGroup>
       <PackageReference Include="MahApps.Metro" Version="2.4.9" />
-      <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.2" />
       <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
     </ItemGroup>
 
@@ -42,6 +41,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\FilesDirCmd\FilesDirCmd.csproj" />
       <ProjectReference Include="..\FilesDir\FilesDir.csproj" />
     </ItemGroup>
 

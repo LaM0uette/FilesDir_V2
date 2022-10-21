@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+ZRNEcm/zjQ4dSJfqismt/6F3fIbP2JBWZIw63HMIkAvfNFeC5/nVAWZuiU/P2iOQ3skvf5lErTXQqCmxJB1BA==",
+  "dgSpecHash": "J84v3koLT/myrV86zVyx6cpkiWyC6bz6v8UBlUCZs/x35aMvT1w2y6jpbqoPSnQg3jkLcvF94ewB0SYhyUqaOg==",
   "success": true,
   "projectFilePath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDirCmd\\FilesDirCmd.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,7 @@
     "C:\\Users\\XD5965\\.nuget\\packages\\flaggers\\1.0.9\\flaggers.1.0.9.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\logger\\1.2.27\\logger.1.2.27.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.toolkit.uwp.notifications\\7.1.2\\microsoft.toolkit.uwp.notifications.7.1.2.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.toolkit.uwp.notifications\\7.1.3-rc\\microsoft.toolkit.uwp.notifications.7.1.3-rc.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\pastel\\3.0.1\\pastel.3.0.1.nupkg.sha512",

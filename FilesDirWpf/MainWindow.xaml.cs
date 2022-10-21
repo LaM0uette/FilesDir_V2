@@ -9,15 +9,12 @@ using FilesDir.Utils;
 using FilesDirWpf.Utils;
 using FilesDirWpf.Views;
 using FilesDirWpf.Views.Dialog;
-using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace FilesDirWpf
 {
     public partial class MainWindow
     {
         #region Statements
-        
-        private BrushConverter _converter = new ();
 
         public MainWindow()
         {
@@ -36,57 +33,67 @@ namespace FilesDirWpf
         private void ParamChanged()
         {
             var filters = FiltersView.Instance.GetFilters();
-            var ext = filters.extensions[0].Equals("") || filters.extensions.Length <= 0 ? "*" : filters.extensions[0];
+            var ext = filters.Extensions[0].Equals("") || filters.Extensions.Length <= 0 ? "*" : filters.Extensions[0];
             
-            WrapPanelExemples.Children.Clear();
+            Clear();
             
-            if (filters.words[0].Equals("") || filters.words.Length <= 0)
+            if (filters.Words[0].Equals("") || filters.Words.Length <= 0)
             {
                 WrapPanelExemples.Children.Add(new Label {Content = $"*.{ext}"});
                 return;
             }
 
+            GenerateExemplesWords(filters);
+        }
+
+        private void Clear()
+        {
+            WrapPanelExemples.Children.Clear();
+        }
+
+        private void GenerateExemplesWords(FiltersView.Filters filters)
+        {
             var i = 0;
-            foreach (var word in filters.words)
+            foreach (var word in filters.Words)
             {
-                var nWord = word;
+                var newWord = word;
+                string ext;
                 
-                if (filters.extensions.Length > 0 && !filters.extensions[0].Equals(""))
+                if (filters.Extensions.Length > 0 && !filters.Extensions[0].Equals(""))
                 {
-                    ext = filters.extensions[i];
+                    ext = filters.Extensions[i];
                     i++;
 
-                    if (i >= filters.extensions.Length) i = 0;
+                    if (i >= filters.Extensions.Length) i = 0;
                 }
                 else
                 {
                     ext = "*";
                 }
 
-                if (!filters.casse) nWord = nWord.ToLower();
-                if (!filters.utf) nWord = nWord.RemoveAccent();
+                if (!filters.Casse) newWord = newWord.ToLower();
+                if (!filters.Utf) newWord = newWord.RemoveAccent();
 
-                var lb = new Label {Content = $" `{nWord}.{ext}` ", FontSize = 14};
+                var lb = new Label {Content = $" `{newWord}.{ext}` ", FontSize = 14};
                 
-                if (filters.casse)
+                if (filters.Casse)
                 {
                     var w = word.RemoveAccent();
-                    var wb = nWord.RemoveAccent();
+                    var wb = newWord.RemoveAccent();
                     
                     if (!w.ToLower().Equals(wb))
                     {
-                        lb.Foreground = (Brush) _converter.ConvertFrom("#FF329BA8")!;
+                        lb.Foreground = (Brush)Utils.Tasks.Converter.ConvertFrom("#FF329BA8")!;
                     }
                 }
-                
-                if (filters.utf)
+                if (filters.Utf)
                 {
                     var w = word.ToLower();
-                    var wb = nWord.ToLower();
+                    var wb = newWord.ToLower();
                     
                     if (!w.RemoveAccent().Equals(wb))
                     {
-                        lb.Foreground = (Brush) _converter.ConvertFrom("#FF329BA8")!;
+                        lb.Foreground = (Brush)Utils.Tasks.Converter.ConvertFrom("#FF329BA8")!;
                     }
                 }
 
@@ -94,6 +101,27 @@ namespace FilesDirWpf
                 
                 if (WrapPanelExemples.Children.Count >= 8) return;
             }
+        }
+
+        private static Flags GetFlags()
+        {
+            var searchs = SearchView.Instance.GetSearchs();
+            var filters = FiltersView.Instance.GetFilters();
+
+            return new Flags
+            {
+                SearchMode = searchs.Mode,
+                Re = searchs.Regex,
+                DirPath = searchs.Folder,
+                Words = filters.Words,
+                Extensions =  filters.Extensions,
+                FoldersBlackList =  filters.BlackList,
+                FoldersWhiteList =  filters.WhiteList,
+                PoolSize = 500,
+                Casse = filters.Casse,
+                Utf = filters.Utf,
+                Silent = false,
+            };
         }
 
         #endregion
@@ -105,24 +133,8 @@ namespace FilesDirWpf
         private void ButtonRunSearch_OnClick(object sender, RoutedEventArgs e)
         {
             Mouse.OverrideCursor = Cursors.Wait;
-            
-            var searchs = SearchView.Instance.GetSearchs();
-            var filters = FiltersView.Instance.GetFilters();
 
-            var flags = new Flags
-            {
-                SearchMode = searchs.mode,
-                Re = searchs.regex,
-                DirPath = searchs.folder,
-                Words = filters.words,
-                Extensions =  filters.extensions,
-                FoldersBlackList =  filters.blackList,
-                FoldersWhiteList =  filters.whiteList,
-                PoolSize = 500,
-                Casse = filters.casse,
-                Utf = filters.utf,
-                Silent = false,
-            };
+            var flags = GetFlags();
 
             if (!Directory.Exists(flags.DirPath) || flags.DirPath.Contains(@"\\"))
             {
@@ -136,14 +148,10 @@ namespace FilesDirWpf
 
             var arg = flags.GetFullReqOfSearch();
             
+            FilesDirCmd.Utils.Tasks.SendNotif("Recherche lancée !", arg);
+            
             Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", arg);
-            
-            new ToastContentBuilder()
-                .AddText("Recherche lancée !")
-                .AddText(arg)
-                .SetToastDuration(ToastDuration.Short)
-                .Show();
-            
+
             Mouse.OverrideCursor = null;
         }
 

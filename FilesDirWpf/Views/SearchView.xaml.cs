@@ -1,7 +1,5 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using FilesDir.Core;
 using FilesDir.Utils;
 
@@ -12,10 +10,12 @@ public partial class SearchView
     #region Statements
     
     public static SearchView Instance { get; private set; } = new();
+    public record Searchs(string Folder, MyEnum.SearchMode Mode, string Regex);
 
     public SearchView()
     {
         Instance = this;
+        
         InitializeComponent();
 
         SetInitialValues();
@@ -30,11 +30,10 @@ public partial class SearchView
     private void SetInitialValues()
     {
         TextBoxFolder.Text = Var.CurrentDir;
-        
         ComboBoxSearchMode.SelectedIndex = 0;
     }
 
-    public (string folder, MyEnum.SearchMode mode, string regex) GetSearchs()
+    public Searchs GetSearchs()
     {
         var folder = TextBoxFolder.Text.ToLower().Replace(@"\\BORDEAUX14\Agence".ToLower(), "G:".ToLower());
         var regex = TextBoxPaterneRegex.Text;
@@ -48,8 +47,12 @@ public partial class SearchView
             4 => MyEnum.SearchMode.Re,
             _ => MyEnum.SearchMode.In
         };
-        
-        return (folder, mode, regex);
+
+        return new Searchs(
+            folder, 
+            mode, 
+            regex
+        );
     }
 
     #endregion
@@ -86,14 +89,12 @@ public partial class SearchView
         FiltersView.Instance.MlvWords.RefreshList();
     }
 
-    #endregion
-
     private void ButtonOpenFolder_OnClick(object sender, RoutedEventArgs e)
     {
         var dialog = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
-        if (dialog.ShowDialog().GetValueOrDefault())
-        {
-            TextBoxFolder.Text = dialog.SelectedPath;
-        }
+        
+        if (dialog.ShowDialog().GetValueOrDefault()) TextBoxFolder.Text = dialog.SelectedPath;
     }
+
+    #endregion
 }
