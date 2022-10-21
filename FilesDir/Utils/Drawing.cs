@@ -19,7 +19,7 @@ public static class Drawing
         
         Var.Log.Category("INFOS GENERALES");
         Var.Log.SubCategory("Dossier de recherche", flags.DirPath);
-        Var.Log.SubCategory("Requête utilisée", flags.GetReqOfSearch());
+        Var.Log.SubCategory("Requête utilisée", flags.GetReqOfSearch(false));
         Var.Log.Space();
         
         Var.Log.Category("RESULTATS DE LA RECHERCHE");

@@ -26,9 +26,9 @@ public interface IFlags
 
     public Task RunFilesDir();
 
-    public string GetReqOfSearch();
+    public string GetReqOfSearch(bool full);
     
-    public string GetFullReqOfSearch();
+    public string GetSearchModeReq(MyEnum.SearchMode searchMode);
 
     #endregion
 }

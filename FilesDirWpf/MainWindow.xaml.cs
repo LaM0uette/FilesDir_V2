@@ -146,7 +146,7 @@ namespace FilesDirWpf
                 return;
             }
 
-            var arg = flags.GetFullReqOfSearch();
+            var arg = flags.GetReqOfSearch(true);
             
             FilesDirCmd.Utils.Tasks.SendNotif("Recherche lancée !", arg);
             
