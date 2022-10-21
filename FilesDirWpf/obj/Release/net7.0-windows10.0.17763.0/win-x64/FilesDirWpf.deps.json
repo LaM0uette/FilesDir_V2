@@ -9,9 +9,10 @@
     ".NETCoreApp,Version=v7.0/win-x64": {
       "FilesDirWpf/1.0.0": {
         "dependencies": {
-          "FilesDir": "2.0.42",
+          "FilesDir": "2.0.45",
           "MahApps.Metro": "2.4.9",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.2",
+          "Ookii.Dialogs.Wpf": "5.0.1",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "7.0.0-preview.6.22324.4",
           "runtimepack.Microsoft.WindowsDesktop.App.Runtime.win-x64": "7.0.0-preview.6.22351.3",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.17763.26"
@@ -993,11 +994,11 @@
           }
         }
       },
-      "Flaggers/1.0.7": {
+      "Flaggers/1.0.8": {
         "runtime": {
           "lib/net7.0/Flaggers.dll": {
-            "assemblyVersion": "1.0.7.0",
-            "fileVersion": "1.0.7.0"
+            "assemblyVersion": "1.0.8.0",
+            "fileVersion": "1.0.8.0"
           }
         }
       },
@@ -1063,6 +1064,14 @@
           }
         }
       },
+      "Ookii.Dialogs.Wpf/5.0.1": {
+        "runtime": {
+          "lib/net6.0-windows7.0/Ookii.Dialogs.Wpf.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.1.0"
+          }
+        }
+      },
       "Pastel/3.0.1": {
         "runtime": {
           "lib/net6.0/Pastel.dll": {
@@ -1102,11 +1111,11 @@
       },
       "System.Text.Json/4.7.2": {},
       "System.ValueTuple/4.5.0": {},
-      "FilesDir/2.0.42": {
+      "FilesDir/2.0.45": {
         "dependencies": {
           "CommonTasks": "1.0.1",
           "DotNetCore.NPOI": "1.2.3",
-          "Flaggers": "1.0.7",
+          "Flaggers": "1.0.8",
           "Logger": "1.2.27"
         },
         "runtime": {
@@ -1178,12 +1187,12 @@
       "path": "dotnetcore.npoi.openxmlformats/1.2.3",
       "hashPath": "dotnetcore.npoi.openxmlformats.1.2.3.nupkg.sha512"
     },
-    "Flaggers/1.0.7": {
+    "Flaggers/1.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BGChcmQVc2VIeYaGdDHfOupxGNwKjf/T5u9cu36EcDpACyTqNiE60XanhukdzfK3dNFQXmkv6Haa/DtINjnq2A==",
-      "path": "flaggers/1.0.7",
-      "hashPath": "flaggers.1.0.7.nupkg.sha512"
+      "sha512": "sha512-SUF+bmTUCu3S2lxy4kbX1zpCruanY4HzhQTgJp65HXVzs5aUnvqd5o1YzQ2Lt7mIrSWDRLzY3pOuS1n4G3iT+A==",
+      "path": "flaggers/1.0.8",
+      "hashPath": "flaggers.1.0.8.nupkg.sha512"
     },
     "Logger/1.2.27": {
       "type": "package",
@@ -1233,6 +1242,13 @@
       "sha512": "sha512-5sPWkbqImc2t1aQwIfJcKsUo7tOg1Tr8+6xVzZJB56Nzt4u9NlpcLofgdX/aRYpPKdWDA3U23Akw1KQzU5e82g==",
       "path": "microsoft.xaml.behaviors.wpf/1.1.19",
       "hashPath": "microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512"
+    },
+    "Ookii.Dialogs.Wpf/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iZNnZwqTpK0cfR0vkotncP1c025/PHlIdzc7iEKBYwhVv1V0zXp9/RT/O0kMhsmlwXqRxxbE4pdhfinbJXtjPg==",
+      "path": "ookii.dialogs.wpf/5.0.1",
+      "hashPath": "ookii.dialogs.wpf.5.0.1.nupkg.sha512"
     },
     "Pastel/3.0.1": {
       "type": "package",
@@ -1304,7 +1320,7 @@
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
-    "FilesDir/2.0.42": {
+    "FilesDir/2.0.45": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

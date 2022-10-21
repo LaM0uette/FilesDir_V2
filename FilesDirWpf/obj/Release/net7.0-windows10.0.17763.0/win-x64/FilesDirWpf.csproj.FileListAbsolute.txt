@@ -541,3 +541,4 @@ C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x6
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\FilesDirWpf.pdb
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\FilesDirWpf.genruntimeconfig.cache
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\ref\FilesDirWpf.dll
+C:\Prog\C#\FilesDir_V2\FilesDirWpf\bin\Release\net7.0-windows10.0.17763.0\win-x64\Ookii.Dialogs.Wpf.dll

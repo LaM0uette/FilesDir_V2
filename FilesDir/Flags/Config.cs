@@ -17,7 +17,7 @@ public partial class Flags
         Var.Log.DrawParam("REQUETE UTILISEE : ", Var.Results.Req);
         
         Var.Log.DrawParam("INITIALISATION DU FICHIER DUMP...");
-        Var.Dump.String("Id;Fichier;Date creation;Date de modification;Date d'accès;Lien du fichier;Lien du dossier");
+        Var.Dump.String("Id;Fichier;Extensions;Date creation;Date de modification;Date d'accès;Lien du fichier;Lien du dossier;Propriétaire");
         
         Var.Log.DrawParam("CREATION DU DOSSIER D'EXPORT...");
         Tasks.CreateDir(Path.Join(Var.DirTemp, "exports"));

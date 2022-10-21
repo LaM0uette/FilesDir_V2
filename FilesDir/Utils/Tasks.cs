@@ -77,11 +77,13 @@ public static class Tasks
         var rowHeader = sht.CreateRow(0);
         rowHeader.CreateCell(0).SetCellValue("Id");
         rowHeader.CreateCell(1).SetCellValue("Nom du fichier");
+        rowHeader.CreateCell(1).SetCellValue("Extensions");
         rowHeader.CreateCell(2).SetCellValue("Date de création");
         rowHeader.CreateCell(3).SetCellValue("Date de modification");
         rowHeader.CreateCell(4).SetCellValue("Date d'accès");
         rowHeader.CreateCell(5).SetCellValue("Nom complet du fichier");
         rowHeader.CreateCell(6).SetCellValue("Lien du fichier");
+        rowHeader.CreateCell(6).SetCellValue("Propriétaire");
 
         Var.Log.Separator("EXPORT EXCEL");
         
@@ -98,25 +100,33 @@ public static class Tasks
             cellName.SetCellType(CellType.String);
             cellName.SetCellValue(exp.Name);
             
-            var cellDateCrea = row.CreateCell(2);
+            var cellExt = row.CreateCell(2);
+            cellExt.SetCellType(CellType.String);
+            cellExt.SetCellValue(exp.Extension);
+            
+            var cellDateCrea = row.CreateCell(3);
             cellDateCrea.SetCellValue(exp.CreaDate);
             cellDateCrea.CellStyle = styleDate;
             
-            var cellDateModif = row.CreateCell(3);
+            var cellDateModif = row.CreateCell(4);
             cellDateModif.SetCellValue(exp.ModifDate);
             cellDateModif.CellStyle = styleDate;
             
-            var cellDateAcces = row.CreateCell(4);
+            var cellDateAcces = row.CreateCell(5);
             cellDateAcces.SetCellValue(exp.AccesDate);
             cellDateAcces.CellStyle = styleDate;
             
-            var cellFullName = row.CreateCell(5);
+            var cellFullName = row.CreateCell(6);
             cellFullName.SetCellType(CellType.String);
             cellFullName.SetCellValue(exp.FullName);
             
-            var cellPath = row.CreateCell(6);
+            var cellPath = row.CreateCell(7);
             cellPath.SetCellType(CellType.String);
             cellPath.SetCellValue(exp.Path);
+            
+            var cellPropio = row.CreateCell(8);
+            cellPropio.SetCellType(CellType.String);
+            cellPropio.SetCellValue(exp.Proprietaire);
 
             Var.Log.Progress("Export Excel:", idx, Var.Exports.Count);
             idx++;
@@ -125,7 +135,7 @@ public static class Tasks
         Var.Log.Del();
 
         Var.Log.ParamInLine("Ajout du filtre...");
-        sht.SetAutoFilter(new CellRangeAddress(0, Var.Exports.Count, 1, 6));
+        sht.SetAutoFilter(new CellRangeAddress(0, Var.Exports.Count, 1, 8));
 
         Var.Log.Del();
         Var.Log.Ok("Filtre ajouté !");

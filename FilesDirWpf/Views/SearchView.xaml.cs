@@ -35,9 +35,9 @@ public partial class SearchView
 
     public (string folder, MyEnum.SearchMode mode, string regex) GetSearchs()
     {
-        var folder = TextBoxFolder.Text;
+        var folder = TextBoxFolder.Text.ToLower().Replace(@"\\BORDEAUX14\Agence".ToLower(), "G:".ToLower());
         var regex = TextBoxPaterneRegex.Text;
-
+            
         var mode = ComboBoxSearchMode.SelectedIndex switch
         {
             0 => MyEnum.SearchMode.In,

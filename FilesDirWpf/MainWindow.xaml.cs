@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using FilesDir.Flags;
 using FilesDir.Utils;
@@ -103,6 +104,8 @@ namespace FilesDirWpf
 
         private void ButtonRunSearch_OnClick(object sender, RoutedEventArgs e)
         {
+            Mouse.OverrideCursor = Cursors.Wait;
+            
             var searchs = SearchView.Instance.GetSearchs();
             var filters = FiltersView.Instance.GetFilters();
 
@@ -123,6 +126,8 @@ namespace FilesDirWpf
 
             if (!Directory.Exists(flags.DirPath) || flags.DirPath.Contains(@"\\"))
             {
+                Mouse.OverrideCursor = null;
+                
                 var err = new AlerteDlg("ERREUR", "Le chemin est incorrect !");
                 err.ShowDialog();
                 
@@ -138,6 +143,8 @@ namespace FilesDirWpf
                 .AddText(arg)
                 .SetToastDuration(ToastDuration.Short)
                 .Show();
+            
+            Mouse.OverrideCursor = null;
         }
 
         #endregion

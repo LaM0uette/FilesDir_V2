@@ -351,7 +351,7 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "FilesDir/2.0.44": {
+      "FilesDir/2.0.45": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1064,7 +1064,7 @@
         "version.txt"
       ]
     },
-    "FilesDir/2.0.44": {
+    "FilesDir/2.0.45": {
       "type": "project",
       "path": "../FilesDir/FilesDir.csproj",
       "msbuildProject": "../FilesDir/FilesDir.csproj"
@@ -1072,7 +1072,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows10.0.17763": [
-      "FilesDir >= 2.0.44",
+      "FilesDir >= 2.0.45",
       "MahApps.Metro >= 2.4.9",
       "Microsoft.Toolkit.Uwp.Notifications >= 7.1.2",
       "Ookii.Dialogs.Wpf >= 5.0.1"

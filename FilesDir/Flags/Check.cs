@@ -21,18 +21,24 @@ public partial class Flags
 
         Interlocked.Add(ref Var.Results.NbFiles, 1);
 
+#pragma warning disable CA1416
+        var prop = fi.GetAccessControl().GetOwner(typeof(System.Security.Principal.NTAccount))!.ToString();
+#pragma warning restore CA1416
+
         Var.Log.OkDel($"N°{Var.Results.NbFiles} => {fi.Name}");
-        Var.Dump.String($"{Var.Results.NbFiles};{fi.Name};{fi.CreationTime};{fi.LastWriteTime};{fi.LastAccessTime};{fi.FullName};{fi.Directory}");
+        Var.Dump.String($"{Var.Results.NbFiles};{fi.Name};{fi.Extension.Split(".")[1]};{fi.CreationTime};{fi.LastWriteTime};{fi.LastAccessTime};{fi.FullName};{fi.Directory};{prop}");
         
         Var.Exports.Add(new Exports
         {
             Id = Var.Results.NbFiles,
             Name = fi.Name,
+            Extension = fi.Extension.Split(".")[1],
             CreaDate = fi.CreationTime,
             ModifDate = fi.LastWriteTime,
             AccesDate = fi.LastAccessTime,
             FullName = fi.FullName,
-            Path = $"{fi.Directory}"
+            Path = $"{fi.Directory}",
+            Proprietaire = prop
         });
     }
     

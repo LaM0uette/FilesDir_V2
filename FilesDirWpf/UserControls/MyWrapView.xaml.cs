@@ -133,6 +133,14 @@ public partial class MyWrapView
 
         RefreshList();
     }
+
+    private void AddTag(string msg)
+    {
+        if (msg.Equals("") || Lst.Any(msg.Equals)) return;
+
+        Lst.Add(msg);
+        RefreshList();
+    }
     
     private void Clear()
     {
@@ -151,12 +159,7 @@ public partial class MyWrapView
         
         if (e.Key.Equals(Key.Enter))
         {
-            var msg = txt.Text;
-            
-            if (msg.Equals("") || Lst.Any(msg.Equals)) return;
-
-            Lst.Add(msg);
-            RefreshList();
+            AddTag(txt.Text);
         }
     }
     
@@ -176,6 +179,15 @@ public partial class MyWrapView
         
         if (string.IsNullOrWhiteSpace(txt.Text))
             txt.Text = $"{PhTitle}\n    {PhMsg}";
+        else
+        {
+            if (txt.Text.Equals("") || Lst.Any(txt.Text.Equals))
+            {
+                txt.Text = "Ajouter un mot...";
+                return;
+            }
+            AddTag(txt.Text);
+        }
     }
     
     private static void RemoveText(object sender, EventArgs e)
@@ -188,12 +200,21 @@ public partial class MyWrapView
         }
     }
 
-    private static void AddText(object sender, EventArgs e)
+    private void AddText(object sender, EventArgs e)
     {
         var txt = (TextBox) sender;
         
         if (string.IsNullOrWhiteSpace(txt.Text))
             txt.Text = "Ajouter un mot...";
+        else
+        {
+            if (txt.Text.Equals("") || Lst.Any(txt.Text.Equals))
+            {
+                txt.Text = "Ajouter un mot...";
+                return;
+            }
+            AddTag(txt.Text);
+        }
     }
 
     #endregion
