@@ -13,8 +13,6 @@ public partial class Flags
 
     private void CheckFile(FileInfo fi)
     {
-        // TODO: A optimiser tout les 500msg avec le mode silencieux
-        //if (!Words[0].Equals(""))
         Var.Log.ProgressInfini("Dossiers: ", Var.Results.NbFolders, " || Fichiers traités: ", Var.Results.NbFilesTotal, " || Fichiers trouvés: ", Var.Results.NbFiles);
 
         if (!FileInFilter(fi)) return;

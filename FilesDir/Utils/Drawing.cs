@@ -24,8 +24,10 @@ public static class Drawing
         
         Var.Log.Category("RESULTATS DE LA RECHERCHE");
         Var.Log.SubCategory("Dossiers traités", Var.Results.NbFolders.ToString());
+        Var.Log.SubCategory("Dossiers avec erreurs", Var.Results.NbErrFolders.ToString());
         Var.Log.SubCategory("Fichiers traités", Var.Results.NbFilesTotal.ToString());
         Var.Log.SubCategory("Fichiers trouvés", Var.Results.NbFiles.ToString());
+        Var.Log.SubCategory("Fichiers avec erreurs", Var.Results.NbErrFiles.ToString());
         Var.Log.Space();
         
         Var.Log.Category("TEMPS D'EXECUTIONS");

@@ -51,7 +51,6 @@ C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Themes\S
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Themes\Styles\Base\Widgets\textBlock.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Themes\Styles\Base\Widgets\textBox.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Themes\Styles\Base\Widgets\toggleButton.baml
-C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\UserControls\MyListView.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\UserControls\MyWrapView.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\Dialog\alerteDlg.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\Dialog\InfoDlg.baml
@@ -61,7 +60,6 @@ C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\Fi
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\SearchView.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\App.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\MainWindow.g.cs
-C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\UserControls\MyListView.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\UserControls\MyWrapView.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\Dialog\alerteDlg.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Debug\net7.0-windows10.0.17763.0\Views\Dialog\InfoDlg.g.cs

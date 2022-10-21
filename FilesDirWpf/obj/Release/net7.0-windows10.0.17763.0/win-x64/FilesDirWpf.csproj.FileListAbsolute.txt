@@ -507,7 +507,6 @@ C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x6
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Themes\Styles\Base\Widgets\textBlock.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Themes\Styles\Base\Widgets\textBox.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Themes\Styles\Base\Widgets\toggleButton.baml
-C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\UserControls\MyListView.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\UserControls\MyWrapView.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\Dialog\alerteDlg.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\Dialog\InfoDlg.baml
@@ -517,7 +516,6 @@ C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x6
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\SearchView.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\App.baml
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\MainWindow.g.cs
-C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\UserControls\MyListView.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\UserControls\MyWrapView.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\Dialog\alerteDlg.g.cs
 C:\Prog\C#\FilesDir_V2\FilesDirWpf\obj\Release\net7.0-windows10.0.17763.0\win-x64\Views\Dialog\InfoDlg.g.cs

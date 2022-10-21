@@ -30,6 +30,7 @@ public partial class Flags
             catch (Exception)
             {
                 Var.Log.NokDel($"Impossible d'accéder au dossier : {sDir}");
+                Interlocked.Add(ref Var.Results.NbErrFolders, 1);
             }
             finally
             {
@@ -56,6 +57,7 @@ public partial class Flags
             catch (Exception)
             {
                 Var.Log.NokDel($"Impossible d'accéder au fichier : {file}");
+                Interlocked.Add(ref Var.Results.NbErrFiles, 1);
             }
             finally
             {

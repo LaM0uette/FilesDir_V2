@@ -10,7 +10,7 @@
       "FilesDirCmd/1.0.0": {
         "dependencies": {
           "CommonTasks": "1.0.1",
-          "FilesDir": "2.0.51",
+          "FilesDir": "2.0.54",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.2",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "7.0.0-preview.6.22324.4",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.17763.26"
@@ -855,7 +855,7 @@
         }
       },
       "System.ValueTuple/4.5.0": {},
-      "FilesDir/2.0.51": {
+      "FilesDir/2.0.54": {
         "dependencies": {
           "CommonTasks": "1.0.1",
           "DotNetCore.NPOI": "1.2.3",
@@ -1024,7 +1024,7 @@
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
-    "FilesDir/2.0.51": {
+    "FilesDir/2.0.54": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

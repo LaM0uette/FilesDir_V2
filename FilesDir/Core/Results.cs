@@ -9,8 +9,12 @@ public struct Results
     public double SearchTimer;
 
     public int NbFiles;
+    
+    public int NbErrFiles;
 
     public int NbFilesTotal;
 
     public int NbFolders;
+    
+    public int NbErrFolders;
 }
