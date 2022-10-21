@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -68,11 +67,28 @@ namespace FilesDirWpf
 
                 var lb = new Label {Content = $" `{nWord}.{ext}` ", FontSize = 14};
                 
-                if (!word.Equals(nWord) && (filters.casse || filters.utf))
+                if (filters.casse)
                 {
-                    lb.Foreground = (Brush) _converter.ConvertFrom("#FF329BA8")!;
+                    var w = word.RemoveAccent();
+                    var wb = nWord.RemoveAccent();
+                    
+                    if (!w.ToLower().Equals(wb))
+                    {
+                        lb.Foreground = (Brush) _converter.ConvertFrom("#FF329BA8")!;
+                    }
                 }
                 
+                if (filters.utf)
+                {
+                    var w = word.ToLower();
+                    var wb = nWord.ToLower();
+                    
+                    if (!w.RemoveAccent().Equals(wb))
+                    {
+                        lb.Foreground = (Brush) _converter.ConvertFrom("#FF329BA8")!;
+                    }
+                }
+
                 WrapPanelExemples.Children.Add(lb);
                 
                 if (WrapPanelExemples.Children.Count >= 8) return;

@@ -17,15 +17,13 @@ public partial class MyWrapView
     public List<string> Lst = new();
     
     private BrushConverter _converter = new ();
-    public string Title;
     public string PhTitle;
     public string PhMsg;
     
-    public MyWrapView(string title, string phTitle = "", string phMsg = "")
+    public MyWrapView(string phTitle = "", string phMsg = "")
     {
         InitializeComponent();
 
-        Title = title;
         PhTitle = phTitle;
         PhMsg = phMsg;
 
@@ -107,6 +105,7 @@ public partial class MyWrapView
 
             WrapLst.Children.Add(bd);
         }
+        
         if (Lst.Count > 0)
         {
             var txt = new TextBox
