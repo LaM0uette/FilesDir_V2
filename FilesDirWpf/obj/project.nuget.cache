@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "D1cnTL8YqCpI6pjHTZXk+OyufsTReDOt8V0EZSgvHRPvYzg/tfIqsaAxpFf819veaeofix9CEt0PiX+PLKf3wA==",
+  "dgSpecHash": "TVCNGRiM6+cLARRkFC/TEx3WH09UbzIyRQf3QDPtHtYJYwZ7l89k0UOT3QHI4o99RCV/nrm0W0LnHNtxM0RNlg==",
   "success": true,
   "projectFilePath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDirWpf\\FilesDirWpf.csproj",
   "expectedPackageFiles": [
@@ -18,6 +18,7 @@
     "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.19\\microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\ookii.dialogs.wpf\\5.0.1\\ookii.dialogs.wpf.5.0.1.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\pastel\\3.0.1\\pastel.3.0.1.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",

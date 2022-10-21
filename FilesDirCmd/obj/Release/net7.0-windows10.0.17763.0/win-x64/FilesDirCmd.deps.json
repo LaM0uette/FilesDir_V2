@@ -10,7 +10,7 @@
       "FilesDirCmd/1.0.0": {
         "dependencies": {
           "CommonTasks": "1.0.1",
-          "FilesDir": "2.0.42",
+          "FilesDir": "2.0.44",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.2",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "7.0.0-preview.6.22324.4",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.17763.26"
@@ -759,11 +759,11 @@
           }
         }
       },
-      "Flaggers/1.0.7": {
+      "Flaggers/1.0.8": {
         "runtime": {
           "lib/net7.0/Flaggers.dll": {
-            "assemblyVersion": "1.0.7.0",
-            "fileVersion": "1.0.7.0"
+            "assemblyVersion": "1.0.8.0",
+            "fileVersion": "1.0.8.0"
           }
         }
       },
@@ -855,11 +855,11 @@
         }
       },
       "System.ValueTuple/4.5.0": {},
-      "FilesDir/2.0.42": {
+      "FilesDir/2.0.44": {
         "dependencies": {
           "CommonTasks": "1.0.1",
           "DotNetCore.NPOI": "1.2.3",
-          "Flaggers": "1.0.7",
+          "Flaggers": "1.0.8",
           "Logger": "1.2.27"
         },
         "runtime": {
@@ -919,12 +919,12 @@
       "path": "dotnetcore.npoi.openxmlformats/1.2.3",
       "hashPath": "dotnetcore.npoi.openxmlformats.1.2.3.nupkg.sha512"
     },
-    "Flaggers/1.0.7": {
+    "Flaggers/1.0.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BGChcmQVc2VIeYaGdDHfOupxGNwKjf/T5u9cu36EcDpACyTqNiE60XanhukdzfK3dNFQXmkv6Haa/DtINjnq2A==",
-      "path": "flaggers/1.0.7",
-      "hashPath": "flaggers.1.0.7.nupkg.sha512"
+      "sha512": "sha512-SUF+bmTUCu3S2lxy4kbX1zpCruanY4HzhQTgJp65HXVzs5aUnvqd5o1YzQ2Lt7mIrSWDRLzY3pOuS1n4G3iT+A==",
+      "path": "flaggers/1.0.8",
+      "hashPath": "flaggers.1.0.8.nupkg.sha512"
     },
     "Logger/1.2.27": {
       "type": "package",
@@ -1024,7 +1024,7 @@
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
-    "FilesDir/2.0.42": {
+    "FilesDir/2.0.44": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

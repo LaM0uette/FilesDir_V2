@@ -2,7 +2,6 @@
 using System.Windows.Controls;
 using FilesDir.Core;
 using FilesDir.Utils;
-using FilesDirWpf.Utils;
 
 namespace FilesDirWpf.Views;
 
@@ -86,4 +85,13 @@ public partial class SearchView
     }
 
     #endregion
+
+    private void ButtonOpenFolder_OnClick(object sender, RoutedEventArgs e)
+    {
+        var dialog = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
+        if (dialog.ShowDialog().GetValueOrDefault())
+        {
+            TextBoxFolder.Text = dialog.SelectedPath;
+        }
+    }
 }
