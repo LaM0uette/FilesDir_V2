@@ -14,7 +14,7 @@
                  Title="FilesDir V2"
                  Icon="{StaticResource Main}"
                  Width="600"
-                 Height="820"
+                 Height="875"
                  GlowBrush="{StaticResource RgbM2}"
                  WindowTitleBrush="{StaticResource RgbM1}"
                  NonActiveWindowTitleBrush="{StaticResource RgbM1}"
@@ -49,9 +49,9 @@
     
     <Grid Background="{StaticResource RgbM1}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="30*"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         
