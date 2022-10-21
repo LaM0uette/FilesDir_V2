@@ -150,5 +150,3 @@ namespace FilesDirWpf
         #endregion
     }
 }
-
-

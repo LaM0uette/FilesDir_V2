@@ -113,7 +113,7 @@ public partial class Flags : IFlags
         var req = "FilesDir ";
 
         req += $"-m={GetSearchModeReq(SearchMode)} ";
-        if (SearchMode.Equals(MyEnum.SearchMode.Re)) req += $"-re='{Re}' ";
+        if (SearchMode.Equals(MyEnum.SearchMode.Re)) req += $"-re=!re!{Re}!re! ";
         req += $"-p='{DirPath}' ";
         
         if (Words.Length > 0 && !Words[0].Equals("")) req += $"-wd={string.Join(":", Words)} ";

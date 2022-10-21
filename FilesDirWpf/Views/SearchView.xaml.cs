@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using FilesDir.Core;
@@ -37,7 +38,7 @@ public partial class SearchView
     {
         var folder = TextBoxFolder.Text.ToLower().Replace(@"\\BORDEAUX14\Agence".ToLower(), "G:".ToLower());
         var regex = TextBoxPaterneRegex.Text;
-            
+
         var mode = ComboBoxSearchMode.SelectedIndex switch
         {
             0 => MyEnum.SearchMode.In,

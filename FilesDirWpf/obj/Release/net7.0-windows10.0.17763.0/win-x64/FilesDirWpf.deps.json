@@ -9,7 +9,7 @@
     ".NETCoreApp,Version=v7.0/win-x64": {
       "FilesDirWpf/1.0.0": {
         "dependencies": {
-          "FilesDir": "2.0.48",
+          "FilesDir": "2.0.51",
           "MahApps.Metro": "2.4.9",
           "Microsoft.Toolkit.Uwp.Notifications": "7.1.2",
           "Ookii.Dialogs.Wpf": "5.0.1",
@@ -994,11 +994,11 @@
           }
         }
       },
-      "Flaggers/1.0.8": {
+      "Flaggers/1.0.9": {
         "runtime": {
           "lib/net7.0/Flaggers.dll": {
-            "assemblyVersion": "1.0.8.0",
-            "fileVersion": "1.0.8.0"
+            "assemblyVersion": "1.0.9.0",
+            "fileVersion": "1.0.9.0"
           }
         }
       },
@@ -1111,11 +1111,11 @@
       },
       "System.Text.Json/4.7.2": {},
       "System.ValueTuple/4.5.0": {},
-      "FilesDir/2.0.48": {
+      "FilesDir/2.0.51": {
         "dependencies": {
           "CommonTasks": "1.0.1",
           "DotNetCore.NPOI": "1.2.3",
-          "Flaggers": "1.0.8",
+          "Flaggers": "1.0.9",
           "Logger": "1.2.27"
         },
         "runtime": {
@@ -1187,12 +1187,12 @@
       "path": "dotnetcore.npoi.openxmlformats/1.2.3",
       "hashPath": "dotnetcore.npoi.openxmlformats.1.2.3.nupkg.sha512"
     },
-    "Flaggers/1.0.8": {
+    "Flaggers/1.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SUF+bmTUCu3S2lxy4kbX1zpCruanY4HzhQTgJp65HXVzs5aUnvqd5o1YzQ2Lt7mIrSWDRLzY3pOuS1n4G3iT+A==",
-      "path": "flaggers/1.0.8",
-      "hashPath": "flaggers.1.0.8.nupkg.sha512"
+      "sha512": "sha512-AQWcj6nAJ8nHXrkvqAMcMxm4dNsHyLhu5GpHRtnDtB/wfDUjZFDnVBvaLp/uqbFLylxMw3Vv2RnTPyTAJZ/MUA==",
+      "path": "flaggers/1.0.9",
+      "hashPath": "flaggers.1.0.9.nupkg.sha512"
     },
     "Logger/1.2.27": {
       "type": "package",
@@ -1320,7 +1320,7 @@
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
-    "FilesDir/2.0.48": {
+    "FilesDir/2.0.51": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

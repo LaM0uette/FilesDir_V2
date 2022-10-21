@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "a9Vx2UXywvaEs7yxz347IKvJ6WAZRu5vIL9ZSlgaeaOdaHS64a2RbuQKdZTKqcsjPFlXJDC1Gsk4DZh7MNtAMA==",
+  "dgSpecHash": "wHzo9NfQL4yN6p40ta06gm2mS5z7nRDVNcYj4AsWNvTIaOMa0qwjRjd4jR6KP3SpHEAW3JO7bEluAvXtNP6KYg==",
   "success": true,
   "projectFilePath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDirWpf\\FilesDirWpf.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,9 @@
     "C:\\Users\\XD5965\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\7.0.0-preview.6.22324.4\\microsoft.netcore.app.runtime.win-x64.7.0.0-preview.6.22324.4.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.0-preview.6.22351.3\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.0-preview.6.22351.3.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.0-preview.6.22330.3\\microsoft.aspnetcore.app.runtime.win-x64.7.0.0-preview.6.22330.3.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.26\\microsoft.windows.sdk.net.ref.10.0.17763.26.nupkg.sha512"
   ],
   "logs": []
