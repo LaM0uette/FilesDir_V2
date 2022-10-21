@@ -89,9 +89,10 @@ public partial class Flags : IFlags
 
     public string GetReqOfSearch()
     {
-        var req = @"T:\- 11 Outils\FilesDir\FD ";
+        var req = @"FD ";
 
         req += $"-m={GetSearchModeReq(SearchMode)} ";
+        if (SearchMode.Equals(MyEnum.SearchMode.Re)) req += $"-re='{Re}' ";
         
         if (Words.Length > 0 && !Words[0].Equals("")) req += $"-wd={string.Join(":", Words)} ";
         if (Extensions.Length > 0 && !Extensions[0].Equals("")) req += $"-e={string.Join(":", Extensions)} ";
@@ -112,6 +113,7 @@ public partial class Flags : IFlags
         var req = "FilesDir ";
 
         req += $"-m={GetSearchModeReq(SearchMode)} ";
+        if (SearchMode.Equals(MyEnum.SearchMode.Re)) req += $"-re='{Re}' ";
         req += $"-p='{DirPath}' ";
         
         if (Words.Length > 0 && !Words[0].Equals("")) req += $"-wd={string.Join(":", Words)} ";

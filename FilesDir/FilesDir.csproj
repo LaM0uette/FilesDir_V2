@@ -11,7 +11,7 @@
     <ItemGroup>
       <PackageReference Include="CommonTasks" Version="1.0.1" />
       <PackageReference Include="DotNetCore.NPOI" Version="1.2.3" />
-      <PackageReference Include="Flaggers" Version="1.0.8" />
+      <PackageReference Include="Flaggers" Version="1.0.9" />
       <PackageReference Include="Logger" Version="1.2.27" />
     </ItemGroup>
 

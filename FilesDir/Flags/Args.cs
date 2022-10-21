@@ -30,7 +30,7 @@ public static class Args
     
     public static string GetRegex()
     {
-        return Flaggers.Flags.String("re", "");
+        return Flaggers.Flags.Re("re", "");
     }
     
     public static string GetDirPath()
