@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rC4Uld1THzRqOvJakNfuDzlkIEzMmCVw6OFT7m87b9EVVBz2dwnw8lX403Ahfgkyjuxmc6VUOuD+4gIJUl8zKg==",
+  "dgSpecHash": "m8TRX+l9Rc/146wqdT41DgKqUdTWlp1G8GrOPmlVm7P7qztwPxRNZOtF2xrHVtpIt8O+OQeM0x9AkkU5lu2Z9Q==",
   "success": true,
   "projectFilePath": "C:\\Prog\\C#\\FilesDir_V2\\FilesDirCmd\\FilesDirCmd.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,7 @@
     "C:\\Users\\XD5965\\.nuget\\packages\\dotnetcore.npoi.core\\1.2.3\\dotnetcore.npoi.core.1.2.3.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\dotnetcore.npoi.openxml4net\\1.2.3\\dotnetcore.npoi.openxml4net.1.2.3.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\dotnetcore.npoi.openxmlformats\\1.2.3\\dotnetcore.npoi.openxmlformats.1.2.3.nupkg.sha512",
-    "C:\\Users\\XD5965\\.nuget\\packages\\flaggers\\1.0.7\\flaggers.1.0.7.nupkg.sha512",
+    "C:\\Users\\XD5965\\.nuget\\packages\\flaggers\\1.0.8\\flaggers.1.0.8.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\logger\\1.2.27\\logger.1.2.27.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\XD5965\\.nuget\\packages\\microsoft.toolkit.uwp.notifications\\7.1.2\\microsoft.toolkit.uwp.notifications.7.1.2.nupkg.sha512",

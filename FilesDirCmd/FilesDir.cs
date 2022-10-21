@@ -12,9 +12,7 @@ public static class FilesDir
     public static async Task Main()
     {
         await new Flags().RunFilesDir();
-        
-        Console.WriteLine("test");
-        
+
         new ToastContentBuilder()
             .AddText("Recherche terminées !")
             .AddText($"{Var.Results.NbFiles} fichiers trouvés en {Var.Results.SearchTimer}s")

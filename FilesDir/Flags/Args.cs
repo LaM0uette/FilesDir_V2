@@ -8,8 +8,6 @@ public static class Args
     public static MyEnum.SearchMode GetSearchMode()
     {
         var str = Flaggers.Flags.String("m", "%");
-        
-        Console.WriteLine(str);
 
         if (str.Contains('%')) return MyEnum.SearchMode.In;
         if (str.Contains('=')) return MyEnum.SearchMode.Equal;

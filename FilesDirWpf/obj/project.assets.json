@@ -86,7 +86,7 @@
           "lib/netstandard2.0/NPOI.OpenXmlFormats.dll": {}
         }
       },
-      "Flaggers/1.0.7": {
+      "Flaggers/1.0.8": {
         "type": "package",
         "compile": {
           "lib/net7.0/Flaggers.dll": {}
@@ -345,7 +345,7 @@
         "dependencies": {
           "CommonTasks": "1.0.1",
           "DotNetCore.NPOI": "1.2.3",
-          "Flaggers": "1.0.7",
+          "Flaggers": "1.0.8",
           "Logger": "1.2.27"
         },
         "compile": {
@@ -448,13 +448,13 @@
         "lib/netstandard2.0/NPOI.OpenXmlFormats.dll"
       ]
     },
-    "Flaggers/1.0.7": {
-      "sha512": "BGChcmQVc2VIeYaGdDHfOupxGNwKjf/T5u9cu36EcDpACyTqNiE60XanhukdzfK3dNFQXmkv6Haa/DtINjnq2A==",
+    "Flaggers/1.0.8": {
+      "sha512": "SUF+bmTUCu3S2lxy4kbX1zpCruanY4HzhQTgJp65HXVzs5aUnvqd5o1YzQ2Lt7mIrSWDRLzY3pOuS1n4G3iT+A==",
       "type": "package",
-      "path": "flaggers/1.0.7",
+      "path": "flaggers/1.0.8",
       "files": [
         ".nupkg.metadata",
-        "flaggers.1.0.7.nupkg.sha512",
+        "flaggers.1.0.8.nupkg.sha512",
         "flaggers.nuspec",
         "lib/net7.0/Flaggers.dll"
       ]
