@@ -63,7 +63,7 @@
             </StackPanel>
         </ScrollViewer>
         
-        <Label Grid.Row="1" Content="Exemples :" Style="{StaticResource LabelTransparentM2Title}"/>
+        <Label Grid.Row="1" Content="Fichiers d'exemples :" Style="{StaticResource LabelTransparentM2Title}"/>
         <WrapPanel x:Name="WrapPanelExemples" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         
         <Button x:Name="ButtonRunSearch" Grid.Row="3" VerticalAlignment="Bottom" Style="{StaticResource ButtonPlainOk}" 

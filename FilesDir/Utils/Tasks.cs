@@ -77,13 +77,13 @@ public static class Tasks
         var rowHeader = sht.CreateRow(0);
         rowHeader.CreateCell(0).SetCellValue("Id");
         rowHeader.CreateCell(1).SetCellValue("Nom du fichier");
-        rowHeader.CreateCell(1).SetCellValue("Extensions");
-        rowHeader.CreateCell(2).SetCellValue("Date de création");
-        rowHeader.CreateCell(3).SetCellValue("Date de modification");
-        rowHeader.CreateCell(4).SetCellValue("Date d'accès");
-        rowHeader.CreateCell(5).SetCellValue("Nom complet du fichier");
-        rowHeader.CreateCell(6).SetCellValue("Lien du fichier");
-        rowHeader.CreateCell(6).SetCellValue("Propriétaire");
+        rowHeader.CreateCell(2).SetCellValue("Extensions");
+        rowHeader.CreateCell(3).SetCellValue("Date de création");
+        rowHeader.CreateCell(4).SetCellValue("Date de modification");
+        rowHeader.CreateCell(5).SetCellValue("Date d'accès");
+        rowHeader.CreateCell(6).SetCellValue("Nom complet du fichier");
+        rowHeader.CreateCell(7).SetCellValue("Lien du fichier");
+        rowHeader.CreateCell(8).SetCellValue("Propriétaire");
 
         Var.Log.Separator("EXPORT EXCEL");
         
