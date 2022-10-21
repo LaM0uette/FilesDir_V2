@@ -9,22 +9,8 @@
             CornerRadius="3"
             BorderBrush="{StaticResource RgbM2}"
             BorderThickness="2">
-    <Grid Margin="5">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="25"/>
-        </Grid.ColumnDefinitions>
         
-        <WrapPanel Grid.Column="0" x:Name="WrapLst" 
-                   Margin="0, 0, 5, 0"/>
-        
-        <Button Grid.Column="1" x:Name="BtnPlus" MinHeight="25" Height="Auto" Click="BtnPlus_OnClick">
-            <Image Style="{StaticResource ImgPlusOk}"
-                   Width="18"
-                   Height="18" />
-        </Button>
-        
-    </Grid>
+        <WrapPanel x:Name="WrapLst" Margin="0, 0, 5, 0"/>
     </Border>
     
 </UserControl>

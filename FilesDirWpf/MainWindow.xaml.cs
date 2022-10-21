@@ -99,7 +99,7 @@ namespace FilesDirWpf
                 Extensions =  filters.extensions,
                 FoldersBlackList =  filters.blackList,
                 FoldersWhiteList =  filters.whiteList,
-                PoolSize = 666,
+                PoolSize = 500,
                 Casse = filters.casse,
                 Utf = filters.utf,
                 Silent = false,

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using FilesDirWpf.Utils;
-using FilesDirWpf.Views.Dialog;
 
 namespace FilesDirWpf.UserControls;
 
@@ -44,8 +44,22 @@ public partial class MyWrapView
 
         if (Lst.Count <= 0)
         {
-            WrapLst.Children.Add(new Label{Content = PhTitle, FontSize = 14});
-            WrapLst.Children.Add(new Label{Content = PhMsg, FontSize = 12, FontStyle = FontStyles.Italic});
+            var txt = new TextBox
+            {
+                Height = 55,
+                HorizontalContentAlignment = HorizontalAlignment.Left,
+                AcceptsReturn = false,
+                FontSize = 14,
+                FontStyle = FontStyles.Italic,
+                Text = $"{PhTitle}\n    {PhMsg}"
+            };
+            txt.GotFocus += RemoveTextB;
+            txt.LostFocus += AddTextB;
+            txt.KeyDown += TxtAddTag_OnClick;
+        
+            WrapLst.Children.Add(txt);
+            //WrapLst.Children.Add(new Label{Content = PhTitle, FontSize = 14});
+            //WrapLst.Children.Add(new Label{Content = PhMsg, FontSize = 12, FontStyle = FontStyles.Italic});
         }
 
         foreach (var item in Lst)
@@ -93,10 +107,24 @@ public partial class MyWrapView
 
             WrapLst.Children.Add(bd);
         }
+        if (Lst.Count > 0)
+        {
+            var txt = new TextBox
+            {
+                Width = 120,
+                HorizontalContentAlignment = HorizontalAlignment.Left,
+                Text = "Ajouter un mot..."
+            };
+            txt.GotFocus += RemoveText;
+            txt.LostFocus += AddText;
+            txt.KeyDown += TxtAddTag_OnClick;
+        
+            WrapLst.Children.Add(txt);
+        }
         
         MyEvent.InvokeParamChanged();
     }
-
+    
     private void BtnTag_OnClick(object sender, RoutedEventArgs e)
     {
         var btn = (Button) sender;
@@ -117,16 +145,56 @@ public partial class MyWrapView
     //
 
     #region Actions
-
-    private void BtnPlus_OnClick(object sender, RoutedEventArgs e)
+    
+    private void TxtAddTag_OnClick(object sender, KeyEventArgs e)
     {
-        var txt = new TextBoxDlg(Title);
-        txt.ShowDialog();
+        var txt = (TextBox) sender;
         
-        if (txt.Msg.Equals("") || Lst.Any(txt.Msg.Equals)) return;
+        if (e.Key.Equals(Key.Enter))
+        {
+            var msg = txt.Text;
+            
+            if (msg.Equals("") || Lst.Any(msg.Equals)) return;
 
-        Lst.Add(txt.Msg);
-        RefreshList();
+            Lst.Add(msg);
+            RefreshList();
+        }
+    }
+    
+    private void RemoveTextB(object sender, EventArgs e)
+    {
+        var txt = (TextBox) sender;
+        
+        if (txt.Text == $"{PhTitle}\n    {PhMsg}") 
+        {
+            txt.Text = "";
+        }
+    }
+
+    private void AddTextB(object sender, EventArgs e)
+    {
+        var txt = (TextBox) sender;
+        
+        if (string.IsNullOrWhiteSpace(txt.Text))
+            txt.Text = $"{PhTitle}\n    {PhMsg}";
+    }
+    
+    private static void RemoveText(object sender, EventArgs e)
+    {
+        var txt = (TextBox) sender;
+        
+        if (txt.Text == "Ajouter un mot...") 
+        {
+            txt.Text = "";
+        }
+    }
+
+    private static void AddText(object sender, EventArgs e)
+    {
+        var txt = (TextBox) sender;
+        
+        if (string.IsNullOrWhiteSpace(txt.Text))
+            txt.Text = "Ajouter un mot...";
     }
 
     #endregion
