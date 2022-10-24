@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>preview</LangVersion>
-        <Version>2.0.54</Version>
+        <Version>2.0.55</Version>
         <Company>LaM0uette</Company>
         <PublicSign>false</PublicSign>
     </PropertyGroup>
@@ -14,7 +14,7 @@
       <PackageReference Include="CommonTasks" Version="1.0.1" />
       <PackageReference Include="DotNetCore.NPOI" Version="1.2.3" />
       <PackageReference Include="Flaggers" Version="1.0.9" />
-      <PackageReference Include="Logger" Version="1.2.27" />
+      <PackageReference Include="Logger" Version="1.2.28" />
     </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,6 +10,7 @@ using FilesDir.Utils;
 using FilesDirWpf.Utils;
 using FilesDirWpf.Views;
 using FilesDirWpf.Views.Dialog;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace FilesDirWpf
 {
@@ -148,9 +150,13 @@ namespace FilesDirWpf
 
             var arg = flags.GetReqOfSearch(true);
             
-            FilesDirCmd.Utils.Tasks.SendNotif("Recherche lancée !", arg);
+            new ToastContentBuilder()
+                .AddText("Recherche lancée !")
+                .AddText(arg)
+                .SetToastDuration(ToastDuration.Short)
+                .Show();
             
-            Process.Start(@"T:\- 11 Outils\FilesDir\FD.exe", arg);
+            Process.Start(@"T:\- 11 Outils\FilesDir\FilesDir.exe", arg);
 
             Mouse.OverrideCursor = null;
         }
