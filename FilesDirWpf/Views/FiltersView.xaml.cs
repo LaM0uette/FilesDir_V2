@@ -12,10 +12,10 @@ public partial class FiltersView
     public static FiltersView Instance { get; private set; } = new();
     public record Filters(string[] Words, bool Casse, bool Utf, string[] Extensions, string[] BlackList, string[] WhiteList);
 
-    public readonly MyWrapView MlvWords = new("Intègre les fichiers dont le nom contient le(s) terme(s) saisis.", """Ex : "appui", "C3A", "fiche appui", "etudes", "retour travaux", ...""");
-    private MyWrapView _mlvExtensions = new("Restreint la recherche à des extensions de fichiers spécifiques.", """Ex : "jpg", "jpeg", "png", "xlsx", "pdf", ...""");
-    private MyWrapView _mlvBlackList = new("Exclut des dossiers/sous dossiers spécifiques à la recherche.       ", """Ex : "Old", "Archives", ...              """);
-    private MyWrapView _mlvWhiteList = new("Restreint la recherche à des dossiers/sous dossiers spécifiques.     ", """Ex : "retour", "retour terrain", ...              """);
+    public readonly MyWrapView MlvWords = new("Saisir le(s) mots(s) devant être contenus dans les noms des fichiers recherchés.", """Ex : "appui", "C3A", "fiche appui", "etudes", "retour travaux", ...""");
+    private MyWrapView _mlvExtensions = new("Saisir une/des extension(s) de fichier pour restreindre la recherche à certains types de fichiers spécifiques.", """Ex : "jpg", "jpeg", "png", "xlsx", "pdf", ...""");
+    private MyWrapView _mlvBlackList = new("Saisir des noms de dossiers/sous dossiers à exclure des résultats de la recherche.", """Ex : "Old", "Archives", ...              """);
+    private MyWrapView _mlvWhiteList = new("Saisir des noms de dossiers/sous dossiers pour restreindre les résultats de la recherche à ces seuls dossiers/sous dossiers.", """Ex : "retour", "retour terrain", ...              """);
 
     public FiltersView()
     {
@@ -29,7 +29,7 @@ public partial class FiltersView
     #endregion
 
     //
-
+    
     #region Fonctions
     
     private void CreateUiList()

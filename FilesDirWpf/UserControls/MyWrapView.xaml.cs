@@ -42,14 +42,15 @@ public partial class MyWrapView
         {
             var txt = new TextBox
             {
-                Height = 55,
+                Height = 60,
                 MaxLength = 60,
                 Foreground = (Brush)Tasks.Converter.ConvertFrom("#FFCFCFDC")!,
                 HorizontalContentAlignment = HorizontalAlignment.Left,
                 AcceptsReturn = false,
+                TextWrapping = TextWrapping.Wrap,
                 FontSize = 14,
-                FontStyle = FontStyles.Italic,
-                Text = $"{PhTitle}\n    {PhMsg}"
+                FontStyle = FontStyles.Oblique,
+                Text = $"{PhTitle}\n        {PhMsg}"
             };
             
             txt.GotFocus += RemoveTextInit;
@@ -150,7 +151,7 @@ public partial class MyWrapView
     {
         var txt = (TextBox) sender;
         
-        if (txt.Text == $"{PhTitle}\n    {PhMsg}") 
+        if (txt.Text == $"{PhTitle}\n        {PhMsg}") 
         {
             txt.Text = "";
         }
@@ -160,7 +161,7 @@ public partial class MyWrapView
         var txt = (TextBox) sender;
         
         if (string.IsNullOrWhiteSpace(txt.Text))
-            txt.Text = $"{PhTitle}\n    {PhMsg}";
+            txt.Text = $"{PhTitle}\n        {PhMsg}";
         else
         {
             if (txt.Text.Equals("") || Lst.Any(txt.Text.Equals))

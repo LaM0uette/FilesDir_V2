@@ -78,14 +78,14 @@ public partial class SearchView
         
         FiltersView.Instance.MlvWords.PhTitle = ComboBoxSearchMode.SelectedIndex switch
         {
-            0 => "Intègre les fichiers dont le nom contient le(s) terme(s) saisis.",
-            1 => "Intègre les fichiers dont le nom est égal au(x) terme(s) saisis.",
-            2 => "Intègre les fichiers dont le nom commence par le(s) terme(s) saisis.",
-            3 => "Intègre les fichiers dont le nom se termine par le(s) terme(s) saisis.",
-            4 => "Intègre les fichiers dont le nom match avec le(s) terme(s) saisis.",
-            _ => "Intègre les fichiers dont le nom contient le(s) terme(s) saisis.",
+            0 => "Saisir le(s) mots(s) devant être contenus dans les noms des fichiers recherchés.",
+            1 => "Saisir le(s) mot(s) correspondant exactement aux noms des fichiers recherchés.",
+            2 => "Saisir le(s) mot(s) devant être situés au début des noms des fichiers recherchés.",
+            3 => "Saisir le(s) mot(s) devant être situés à la fin des noms des fichiers recherchés.",
+            4 => "Saisir le(s) mots(s) devant match dans les noms des fichiers recherchés.",
+            _ => "Saisir le(s) mots(s) devant être contenus dans les noms des fichiers recherchés.",
         };
-
+        
         FiltersView.Instance.MlvWords.RefreshList();
     }
 
