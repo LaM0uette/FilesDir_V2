@@ -20,6 +20,8 @@ namespace FilesDirWpf
         public MainWindow()
         {
             InitializeComponent();
+
+            LabelVersion.Content = $"Version : {Cst.Version}";
             
             MyEvent.OnParamChanged += ParamChanged;
             ParamChanged();
