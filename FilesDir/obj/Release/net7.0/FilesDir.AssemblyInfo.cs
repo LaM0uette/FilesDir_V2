@@ -12,11 +12,11 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("LaM0uette")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.64.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.64")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.65.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.65")]
 [assembly: System.Reflection.AssemblyProductAttribute("FilesDir")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FilesDir")]
-[assembly: System.Reflection.AssemblyVersionAttribute("2.0.64.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2.0.65.0")]
 
 // Généré par la classe MSBuild WriteCodeFragment.
 
