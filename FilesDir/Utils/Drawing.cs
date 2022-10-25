@@ -31,8 +31,8 @@ public static class Drawing
         Var.Log.Space();
         
         Var.Log.Category("TEMPS D'EXECUTIONS");
-        Var.Log.SubCategory("Temps total", Var.Results.TotalTimer.ToString(CultureInfo.InvariantCulture));
-        Var.Log.SubCategory("Temps de la recherche", Var.Results.SearchTimer.ToString(CultureInfo.InvariantCulture));
+        Var.Log.SubCategory("Temps total", Var.Results.TotalTimer.GetCleenTimer());
+        Var.Log.SubCategory("Temps total", Var.Results.SearchTimer.GetCleenTimer());
         Var.Log.Space();
         
         Var.Log.Category("EXPORTS");

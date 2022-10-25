@@ -4,9 +4,9 @@ public struct Results
 {
     public string Req;
 
-    public double TotalTimer;
+    public TimeSpan TotalTimer;
 
-    public double SearchTimer;
+    public TimeSpan SearchTimer;
 
     public int NbFiles;
     

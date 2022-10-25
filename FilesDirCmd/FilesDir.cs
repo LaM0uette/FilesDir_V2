@@ -10,8 +10,8 @@ public static class FilesDir
     public static async Task Main()
     {
         await new Flags().RunFilesDir();
-
-        Utils.Tasks.SendNotif("Recherche terminées !", $"{Var.Results.NbFiles} fichiers trouvés en {Var.Results.SearchTimer}s");
+        
+        Utils.Tasks.SendNotif("Recherche terminées !", Var.Results.SearchTimer.GetCleenTimer());
         Drawing.End();
     }
 

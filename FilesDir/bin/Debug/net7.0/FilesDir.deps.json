@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "FilesDir/2.0.54": {
+      "FilesDir/2.0.55": {
         "dependencies": {
           "CommonTasks": "1.0.1",
           "DotNetCore.NPOI": "1.2.3",
           "Flaggers": "1.0.9",
-          "Logger": "1.2.27"
+          "Logger": "1.2.28"
         },
         "runtime": {
           "FilesDir.dll": {}
@@ -81,7 +81,7 @@
           }
         }
       },
-      "Logger/1.2.27": {
+      "Logger/1.2.28": {
         "dependencies": {
           "CommonTasks": "1.0.1",
           "Pastel": "3.0.1"
@@ -165,7 +165,7 @@
     }
   },
   "libraries": {
-    "FilesDir/2.0.54": {
+    "FilesDir/2.0.55": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -212,12 +212,12 @@
       "path": "flaggers/1.0.9",
       "hashPath": "flaggers.1.0.9.nupkg.sha512"
     },
-    "Logger/1.2.27": {
+    "Logger/1.2.28": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jHjBCciWStqntvjUlWNuomRH+oF1H5Nvpg5hVYTC8a2UbrIgaEuqc87PMSZIGlMDDqQtVGr1Vbp4gtsKImbVLQ==",
-      "path": "logger/1.2.27",
-      "hashPath": "logger.1.2.27.nupkg.sha512"
+      "sha512": "sha512-SWLzy04PwjdBf3NPApAKIA+ByOdbQ8dVhpEcXDXI9Q9ZPdJCYwfuqsWPp4ERKByLWkNfD1YhOYTTQNz+S9RQWQ==",
+      "path": "logger/1.2.28",
+      "hashPath": "logger.1.2.28.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
       "type": "package",

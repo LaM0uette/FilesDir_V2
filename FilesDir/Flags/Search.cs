@@ -16,7 +16,7 @@ public partial class Flags
         await DirSearchAsync(DirPath);
 
         sw.Stop();
-        Var.Results.SearchTimer = sw.Elapsed.TotalSeconds;
+        Var.Results.SearchTimer = TimeSpan.FromSeconds(sw.Elapsed.TotalSeconds);
     }
 
     private async Task DirSearchAsync(string sDir)

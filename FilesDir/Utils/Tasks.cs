@@ -150,5 +150,17 @@ public static class Tasks
         Var.Log.OkDel("Fichier ouvert !");
     }
 
+    public static string GetCleenTimer(this TimeSpan time)
+    {
+        var timeTotal = time.TotalSeconds;
+
+        return timeTotal switch
+        {
+            < 60 => $"{time.Seconds:D2}s",
+            < 3600 => $"{time.Minutes:D2}m:{time.Seconds:D2}s",
+            _ => $"{time.Hours:D2}h:{time.Minutes:D2}m:{time.Seconds:D2}s"
+        };
+    }
+
     #endregion
 }

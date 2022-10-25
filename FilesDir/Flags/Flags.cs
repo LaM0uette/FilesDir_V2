@@ -80,7 +80,7 @@ public partial class Flags : IFlags
         await RunSearch();
 
         sw.Stop();
-        Var.Results.TotalTimer = sw.Elapsed.TotalSeconds;
+        Var.Results.TotalTimer = TimeSpan.FromSeconds(sw.Elapsed.TotalSeconds);
 
         Tasks.GenerateExcel();
         
