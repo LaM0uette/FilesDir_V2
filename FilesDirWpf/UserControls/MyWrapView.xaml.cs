@@ -43,6 +43,8 @@ public partial class MyWrapView
             var txt = new TextBox
             {
                 Height = 55,
+                MaxLength = 60,
+                Foreground = (Brush)Tasks.Converter.ConvertFrom("#FFCFCFDC")!,
                 HorizontalContentAlignment = HorizontalAlignment.Left,
                 AcceptsReturn = false,
                 FontSize = 14,
@@ -68,7 +70,7 @@ public partial class MyWrapView
             };
             var lb = new Label
             {
-                Content = item, 
+                Content = item.Replace("_", "__"), 
                 Foreground = (Brush)Tasks.Converter.ConvertFrom("#FFFFFAFF")!,
                 FontSize = 12
             };
@@ -107,6 +109,8 @@ public partial class MyWrapView
             var txt = new TextBox
             {
                 Width = 120,
+                MaxLength = 60,
+                Foreground = (Brush)Tasks.Converter.ConvertFrom("#FFCFCFDC")!,
                 HorizontalContentAlignment = HorizontalAlignment.Left,
                 Text = "Ajouter un mot..."
             };

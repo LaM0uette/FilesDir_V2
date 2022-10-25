@@ -77,7 +77,7 @@ namespace FilesDirWpf
                 if (!filters.Casse) newWord = newWord.ToLower();
                 if (!filters.Utf) newWord = newWord.RemoveAccent();
 
-                var lb = new Label {Content = $" `{newWord}.{ext}` ", FontSize = 14};
+                var lb = new Label {Content = $" `{newWord}.{ext}` ".Replace("_", "__"), FontSize = 14};
                 
                 if (filters.Casse)
                 {
