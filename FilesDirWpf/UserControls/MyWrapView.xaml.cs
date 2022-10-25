@@ -116,6 +116,8 @@ public partial class MyWrapView
             txt.KeyDown += TxtAddTag;
         
             WrapLst.Children.Add(txt);
+
+            txt.Focus();
         }
         
         MyEvent.InvokeParamChanged();
