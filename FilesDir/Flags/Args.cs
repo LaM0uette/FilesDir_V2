@@ -16,16 +16,6 @@ public static class Args
         if (str.Contains('r')) return MyEnum.SearchMode.Re;
         
         return MyEnum.SearchMode.In;
-
-        // return Flaggers.Flags.String("m", "%") switch
-        // {
-        //     "%" => MyEnum.SearchMode.In,
-        //     "=" => MyEnum.SearchMode.Equal,
-        //     "^" => MyEnum.SearchMode.Begin,
-        //     "$" => MyEnum.SearchMode.End,
-        //     "r" => MyEnum.SearchMode.Re,
-        //     _ => MyEnum.SearchMode.In
-        // };
     }
     
     public static string GetRegex()
