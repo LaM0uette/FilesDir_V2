@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using FilesDir.Interfaces;
+﻿using FilesDir.Interfaces;
 using Logger;
 
 namespace FilesDir.Utils;
